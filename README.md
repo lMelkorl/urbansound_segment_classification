@@ -17,6 +17,8 @@ Bu repo, UrbanSound8K dataseti üzerinde segment tabanlı sınıflandırmayı i�
 
 ```bash
 pip install -r requirements.txt
+or
+!pip install -r ./urbansound_segment_task/requirements.txt
 ```
 
 (örnek requirements.txt içeriği: tensorflow, tensorflow_hub, lightgbm, xgboost, scikit-learn, tqdm, pandas, matplotlib, torch, torchaudio, pytorch-ignite vb.)
