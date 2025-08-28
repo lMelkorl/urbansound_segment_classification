@@ -65,6 +65,18 @@ data/
 
 👉 [Kaggle linki](https://www.kaggle.com/datasets/chrisfilo/urbansound8k)
 
+eğer google colab kullanıyorsanız:
+```
+data/
+!chmod 600 /content/kaggle.json
+!mkdir -p ~/.kaggle
+!cp /content/kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+!kaggle datasets download -d chrisfilo/urbansound8k -p ./data --unzip
+
+```
+
+
 İndirdikten sonra `fold*` klasörlerini ve `metadata/UrbanSound8K.csv` dosyasını `data/` altına yerleştir.
 
 ### Beklenen yapı:
