@@ -67,7 +67,6 @@ data/
 
 eğer google colab kullanıyorsanız:
 ```
-data/
 !chmod 600 /content/kaggle.json
 !mkdir -p ~/.kaggle
 !cp /content/kaggle.json ~/.kaggle/
