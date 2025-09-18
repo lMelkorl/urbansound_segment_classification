@@ -1,5 +1,5 @@
 # UrbanSound8K Segment-Based Classification
-https://colab.research.google.com/drive/1-lNzYTJY6OsZ5vqcBOOi106G2mldRUqv#scrollTo=P_76mSPzkAPC
+https://colab.research.google.com/drive/1-lNzYTJY6OsZ5vqcBOOi106G2mldRUqv
 This repository contains three different approaches for segment-based audio classification on the **UrbanSound8K** dataset:
 
 1. **GOAL 1** – YAMNet Embeddings → LightGBM (Baseline)
