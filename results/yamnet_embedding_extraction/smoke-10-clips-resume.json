@@ -1,0 +1,82 @@
+{
+  "artifact_identity": "yamnet-tfhub-v1",
+  "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+  "cache_identity_fields": {
+    "cache_schema_version": "edge-v2.yamnet-embedding-cache.v1",
+    "output_dtype": "float32",
+    "resampling": {
+      "implementation": "librosa.load-soxr_hq",
+      "librosa_version": "0.10.2.post1",
+      "mono": true,
+      "res_type": "soxr_hq"
+    },
+    "segmentation": {
+      "channels": "mono",
+      "hop_samples": 7680,
+      "model_input_dtype": "float32",
+      "normalization": "pcm_waveform_to_minus_one_plus_one",
+      "overlap_fraction": 0.5,
+      "policy_id": "yamnet-legacy-full-window-v1",
+      "short_clip_policy": "emit_zero_segment",
+      "tail_policy": "drop",
+      "target_sample_rate": 16000,
+      "window_duration_seconds": 0.96,
+      "window_samples": 15360
+    },
+    "target_sample_rate": 16000,
+    "yamnet_artifact_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2"
+  },
+  "cache_index": {
+    "relative_path": "cache-index.jsonl",
+    "sha256": "9af574a2f830dfe1659362f921bc939c159cc61189efa924c57bff357e7d3638"
+  },
+  "cache_size_bytes": 71420,
+  "cache_validation": {
+    "all_valid": true,
+    "failed_artifacts": 0,
+    "verified_artifacts": 10
+  },
+  "counts": {
+    "failed": 0,
+    "regenerated_corrupt": 0,
+    "skipped": 10,
+    "successful": 0
+  },
+  "created_at_utc": "2026-07-12T18:52:11Z",
+  "dataset_manifest_sha256": "c77946581016eba9aacf00683ba073ccb537f0ca6bfd86ab50d9cea3734c7d2e",
+  "duration_seconds": 0.08500187494792044,
+  "operational": {
+    "force": false,
+    "limit_clips": 10,
+    "threads": 8
+  },
+  "operational_segments_per_second": 0.0,
+  "repeatability_validation": null,
+  "schema_version": "edge-v2.yamnet-embedding-cache.v1",
+  "segmentation_policy": {
+    "channels": "mono",
+    "hop_samples": 7680,
+    "model_input_dtype": "float32",
+    "normalization": "pcm_waveform_to_minus_one_plus_one",
+    "overlap_fraction": 0.5,
+    "policy_id": "yamnet-legacy-full-window-v1",
+    "short_clip_policy": "emit_zero_segment",
+    "tail_policy": "drop",
+    "target_sample_rate": 16000,
+    "window_duration_seconds": 0.96,
+    "window_samples": 15360
+  },
+  "segmentation_summary": {
+    "clips_with_segments": 10,
+    "short_clips_zero_segments": 0,
+    "total_clips": 10,
+    "total_dropped_tail_samples": 27040,
+    "total_segments": 62
+  },
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "summary_sha256": "f574229e58b0e332fc855543dbacdb6b69b41f12f191634cb67c9421edc5faf8",
+  "yamnet_artifact_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2"
+}

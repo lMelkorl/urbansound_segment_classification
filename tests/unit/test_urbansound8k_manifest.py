@@ -70,6 +70,14 @@ class UrbanSoundManifestTests(unittest.TestCase):
         self.assertEqual(document["missing_audio"], ["fold1/1-fixture.wav"])
         self.assertEqual(document["extra_audio"], ["fold1/extra.wav"])
 
+    def test_non_audio_sidecar_files_are_not_counted_as_extra_audio(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = create_dataset(Path(directory), folds=[1])
+            (root / "audio" / "fold1" / ".DS_Store").write_bytes(b"sidecar")
+            document = inspect_urbansound8k(root)
+        self.assertEqual(document["extra_audio"], [])
+        self.assertEqual(document["counts"]["discovered_audio_files"], 1)
+
     def test_manifest_hash_is_deterministic_across_timestamps_and_has_no_absolute_path(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = create_dataset(Path(directory), folds=[1])

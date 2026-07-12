@@ -150,7 +150,7 @@ def inspect_urbansound8k(
     actual_audio = {
         path.relative_to(layout.audio_root).as_posix()
         for path in layout.audio_root.glob("fold*/*")
-        if path.is_file()
+        if path.is_file() and path.suffix.lower() == ".wav"
     }
     expected_audio = {clip["clip_key"] for clip in clips}
     missing_audio = sorted(expected_audio - actual_audio)
