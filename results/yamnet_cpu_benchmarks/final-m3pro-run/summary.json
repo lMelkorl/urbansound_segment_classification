@@ -1,0 +1,516 @@
+{
+  "artifact_identity": "yamnet-tfhub-v1",
+  "artifact_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2",
+  "created_at_utc": "2026-07-12T18:26:32Z",
+  "embedded_schema_versions": {
+    "lifecycle": "edge-v2.lifecycle-benchmark.v1",
+    "pipeline": "edge-v2.pipeline-benchmark.v1",
+    "raw_run": "edge-v2.yamnet-cpu-raw-run.v1"
+  },
+  "git_revision": "fa60d21059c0e96ca2a7d617d50cd179d6d69959",
+  "hardware": {
+    "architecture": "arm64",
+    "cpu_name": "arm",
+    "logical_cores": 12,
+    "os": "Darwin",
+    "os_version": "26.5",
+    "physical_cores": null,
+    "total_ram_bytes": 19327352832
+  },
+  "headline_result": {
+    "aggregation_across_repetitions": "median",
+    "artifact_verification_ms": 7.996583,
+    "baseline_peak_rss_bytes": 29065216.0,
+    "duration_seconds": 0.96,
+    "final_peak_rss_bytes": 620281856.0,
+    "first_call_ms": 76.470125,
+    "incremental_peak_rss_bytes": 591216640.0,
+    "legacy_feature_pipeline_segments_per_second": 422.78695171909993,
+    "legacy_pipeline_p50_ms": 2.332854,
+    "legacy_pipeline_p95_ms": 2.59341315,
+    "model_inference_segments_per_second": 407.45686980411256,
+    "model_load_ms": 959.0375,
+    "process_startup_ms": 69.495833,
+    "real_time_factor": 405.8754736503359,
+    "sample_count": 15360,
+    "steady_state_model_p50_ms": 2.4245625,
+    "steady_state_model_p95_ms": 2.6748583499999996,
+    "tensorflow_import_ms": 1917.433291
+  },
+  "input_identity": {
+    "duration_seconds": 0.96,
+    "generator": "seeded_multisine_with_uniform_noise_v1",
+    "pcm_encoding": "signed_16_bit_little_endian_mono",
+    "sample_count": 15360,
+    "sample_rate": 16000,
+    "seed": 20240701,
+    "sha256": "e545a8f54b2f78b6ae7d136bca42eff7815686f6c52774ad9dd9e8b7bb9395eb"
+  },
+  "input_length_sensitivity": [
+    {
+      "duration_seconds": 0.96,
+      "frame_count": 1,
+      "incremental_peak_rss_bytes": 588218368,
+      "legacy_feature_pipeline_segments_per_second": 336.0696403508735,
+      "legacy_pipeline_p50_ns": 2656187.5,
+      "legacy_pipeline_p95_ns": 5006835.1,
+      "model_inference_segments_per_second": 395.66927005967625,
+      "real_time_factor": 322.62685473683854,
+      "sample_count": 15360,
+      "status": "success",
+      "steady_state_model_p50_ns": 2485625.0,
+      "steady_state_model_p95_ns": 2858452.05,
+      "two_frame_compute_warning": false
+    },
+    {
+      "duration_seconds": 0.975,
+      "frame_count": 1,
+      "incremental_peak_rss_bytes": 592855040,
+      "legacy_feature_pipeline_segments_per_second": 408.90464447552614,
+      "legacy_pipeline_p50_ns": 2407187.5,
+      "legacy_pipeline_p95_ns": 2635135.75,
+      "model_inference_segments_per_second": 395.2546454535395,
+      "real_time_factor": 398.682028363638,
+      "sample_count": 15600,
+      "status": "success",
+      "steady_state_model_p50_ns": 2486042.0,
+      "steady_state_model_p95_ns": 2742870.85,
+      "two_frame_compute_warning": false
+    },
+    {
+      "duration_seconds": 1.0,
+      "frame_count": 2,
+      "incremental_peak_rss_bytes": 591872000,
+      "legacy_feature_pipeline_segments_per_second": 331.00307170850544,
+      "legacy_pipeline_p50_ns": 3009083.0,
+      "legacy_pipeline_p95_ns": 3136454.45,
+      "model_inference_segments_per_second": 313.6099213735081,
+      "real_time_factor": 331.00307170850544,
+      "sample_count": 16000,
+      "status": "success",
+      "steady_state_model_p50_ns": 3131396.0,
+      "steady_state_model_p95_ns": 3514866.65,
+      "two_frame_compute_warning": true
+    }
+  ],
+  "limitations": [
+    "Synthetic non-silent in-memory PCM; no file I/O or dataset quality metric is measured.",
+    "Darwin ru_maxrss is a process-lifetime high-water mark; incremental RSS is approximate.",
+    "Power state and concurrent system load are not machine-verifiable in this artifact.",
+    "The historical A100 throughput is unverified context and is not used for a speed ratio.",
+    "The 16000-sample case produces two YAMNet frames and is not equal compute to one-frame inputs."
+  ],
+  "python_version": "3.11.15",
+  "raw_runs": [
+    {
+      "relative_path": "summary.raw/run-001-t1-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "9610f50a434a5ee3662702a246de2395e84c47fe5b70f5d4d5db63265c2568df",
+      "thread_count": 1
+    },
+    {
+      "relative_path": "summary.raw/run-002-t1-n15360-r2.json",
+      "repetition": 2,
+      "sample_count": 15360,
+      "sha256": "fdd1e50547f34f516ccdb25d635b896d6810f7ff2fab5dc8f4b8ce87965f8ea5",
+      "thread_count": 1
+    },
+    {
+      "relative_path": "summary.raw/run-003-t1-n15360-r3.json",
+      "repetition": 3,
+      "sample_count": 15360,
+      "sha256": "26c48909ddc88614a315020686c7dfd1546d33e8dce0851807c08b9c5713a066",
+      "thread_count": 1
+    },
+    {
+      "relative_path": "summary.raw/run-004-t2-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "2975791b1e11cdbc9683c6ec842b42cd0190b9d2fafc455fa8656a30555a9b14",
+      "thread_count": 2
+    },
+    {
+      "relative_path": "summary.raw/run-005-t2-n15360-r2.json",
+      "repetition": 2,
+      "sample_count": 15360,
+      "sha256": "5e78a38b203e0be443e904bd569173bdfb60a2ee7f3472695a98b382838d9c09",
+      "thread_count": 2
+    },
+    {
+      "relative_path": "summary.raw/run-006-t2-n15360-r3.json",
+      "repetition": 3,
+      "sample_count": 15360,
+      "sha256": "8acac97c4f7fe02f1f977a8771f12f81dd70fd4cb6158054bd9f822a7e56ad8c",
+      "thread_count": 2
+    },
+    {
+      "relative_path": "summary.raw/run-007-t4-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "9eb7136b17d9b8bdc43189ca0c7714df272a7d4f1a9e088ce6c5006a0c72da50",
+      "thread_count": 4
+    },
+    {
+      "relative_path": "summary.raw/run-008-t4-n15360-r2.json",
+      "repetition": 2,
+      "sample_count": 15360,
+      "sha256": "2bf5b4ac5b53dee75539a681489563bfa53dd6d488cad5a55398987506a6ed85",
+      "thread_count": 4
+    },
+    {
+      "relative_path": "summary.raw/run-009-t4-n15360-r3.json",
+      "repetition": 3,
+      "sample_count": 15360,
+      "sha256": "a2787e4a7ca4e1cc9d4d54fa81a84d626464f35de6f44bb0e353330924d26d27",
+      "thread_count": 4
+    },
+    {
+      "relative_path": "summary.raw/run-010-t8-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "0925a64e0629dac29757d29d47581a521e6d5345b9ea932c616e547abdbdc440",
+      "thread_count": 8
+    },
+    {
+      "relative_path": "summary.raw/run-011-t8-n15360-r2.json",
+      "repetition": 2,
+      "sample_count": 15360,
+      "sha256": "990ee8959b4a6d74d1a35f86cb75c4e7706cedfd0cce8b3eb9bed62167545662",
+      "thread_count": 8
+    },
+    {
+      "relative_path": "summary.raw/run-012-t8-n15360-r3.json",
+      "repetition": 3,
+      "sample_count": 15360,
+      "sha256": "fc36ffa02480f7f28e5617bef70fa347e06da71817736381977c6c2aebc3de9d",
+      "thread_count": 8
+    },
+    {
+      "relative_path": "summary.raw/run-013-t12-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "d5837e1234377ee144d8a901384e16194937a73c37c243b52c3e23c185bb46df",
+      "thread_count": 12
+    },
+    {
+      "relative_path": "summary.raw/run-014-t12-n15360-r2.json",
+      "repetition": 2,
+      "sample_count": 15360,
+      "sha256": "f7bdc5bd7285dfbaa8ba99174031cd30ee9ae3c2ea076a231714090150e1f4de",
+      "thread_count": 12
+    },
+    {
+      "relative_path": "summary.raw/run-015-t12-n15360-r3.json",
+      "repetition": 3,
+      "sample_count": 15360,
+      "sha256": "6231707241a81a37b29073685c2ff640ff7d711ae37899252c5424a74248b252",
+      "thread_count": 12
+    },
+    {
+      "relative_path": "summary.raw/run-016-t8-n15360-r1.json",
+      "repetition": 1,
+      "sample_count": 15360,
+      "sha256": "65d5cbd6cf9c4cb6e83c8d469c44e1f4a8f57f3983f66905879af54a423a2811",
+      "thread_count": 8
+    },
+    {
+      "relative_path": "summary.raw/run-017-t8-n15600-r1.json",
+      "repetition": 1,
+      "sample_count": 15600,
+      "sha256": "37efc8c89e7bb7923b6d861999b871679cba1b841ce635830e33ca16eb255a4a",
+      "thread_count": 8
+    },
+    {
+      "relative_path": "summary.raw/run-018-t8-n16000-r1.json",
+      "repetition": 1,
+      "sample_count": 16000,
+      "sha256": "1e9a04504d8621d05b02bfb0d63f84f303834fba2f727fd38ed29fc6ee7b531f",
+      "thread_count": 8
+    }
+  ],
+  "schema_version": "edge-v2.yamnet-cpu-benchmark.v1",
+  "selected_thread_configuration": {
+    "selection_rule": "highest_legacy_throughput_then_within_3_percent_lower_p95_then_lower_threads_then_lower_incremental_peak_rss",
+    "summary": {
+      "median_incremental_peak_rss_bytes": 591216640.0,
+      "median_legacy_feature_pipeline_segments_per_second": 422.78695171909993,
+      "median_legacy_pipeline_p50_ns": 2332854.0,
+      "median_legacy_pipeline_p95_ns": 2593413.15,
+      "median_model_inference_segments_per_second": 407.45686980411256,
+      "median_real_time_factor": 405.8754736503359,
+      "median_steady_state_model_p50_ns": 2424562.5,
+      "median_steady_state_model_p95_ns": 2674858.3499999996,
+      "repetition_count": 3,
+      "status": "success",
+      "thread_count": 8
+    },
+    "thread_count": 8,
+    "throughput_tie_threshold_percent": 3.0
+  },
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "tensorflow_devices": [
+    "CPU"
+  ],
+  "tensorflow_version": "2.15.1",
+  "thread_sweep": [
+    {
+      "median_incremental_peak_rss_bytes": 586252288.0,
+      "median_legacy_feature_pipeline_segments_per_second": 327.6536763812279,
+      "median_legacy_pipeline_p50_ns": 2978520.5,
+      "median_legacy_pipeline_p95_ns": 3566687.5,
+      "median_model_inference_segments_per_second": 334.79845041215617,
+      "median_real_time_factor": 314.54752932597876,
+      "median_steady_state_model_p50_ns": 2979708.0,
+      "median_steady_state_model_p95_ns": 3217931.25,
+      "repetition_count": 3,
+      "repetitions": [
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 585842688,
+          "legacy_feature_pipeline_segments_per_second": 327.6536763812279,
+          "legacy_pipeline_p50_ns": 2977437.0,
+          "legacy_pipeline_p95_ns": 3566687.5,
+          "model_inference_segments_per_second": 334.79845041215617,
+          "real_time_factor": 314.54752932597876,
+          "status": "success",
+          "steady_state_model_p50_ns": 2979708.0,
+          "steady_state_model_p95_ns": 3217931.25
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 586252288,
+          "legacy_feature_pipeline_segments_per_second": 299.25515571296137,
+          "legacy_pipeline_p50_ns": 3304062.5,
+          "legacy_pipeline_p95_ns": 3722431.25,
+          "model_inference_segments_per_second": 294.7073477938959,
+          "real_time_factor": 287.2849494844429,
+          "status": "success",
+          "steady_state_model_p50_ns": 3310792.0,
+          "steady_state_model_p95_ns": 4051787.1999999997
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 586645504,
+          "legacy_feature_pipeline_segments_per_second": 334.9518485783178,
+          "legacy_pipeline_p50_ns": 2978520.5,
+          "legacy_pipeline_p95_ns": 3205445.5,
+          "model_inference_segments_per_second": 338.87516563074394,
+          "real_time_factor": 321.5537746351851,
+          "status": "success",
+          "steady_state_model_p50_ns": 2950166.5,
+          "steady_state_model_p95_ns": 3103909.0
+        }
+      ],
+      "status": "success",
+      "thread_count": 1
+    },
+    {
+      "median_incremental_peak_rss_bytes": 587415552.0,
+      "median_legacy_feature_pipeline_segments_per_second": 393.44443202121795,
+      "median_legacy_pipeline_p50_ns": 2538646.0,
+      "median_legacy_pipeline_p95_ns": 2613807.7,
+      "median_model_inference_segments_per_second": 376.87109952780196,
+      "median_real_time_factor": 377.70665474036923,
+      "median_steady_state_model_p50_ns": 2642645.5,
+      "median_steady_state_model_p95_ns": 2735319.4,
+      "repetition_count": 3,
+      "repetitions": [
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 587415552,
+          "legacy_feature_pipeline_segments_per_second": 393.7029264174742,
+          "legacy_pipeline_p50_ns": 2538646.0,
+          "legacy_pipeline_p95_ns": 2613807.7,
+          "model_inference_segments_per_second": 375.30999338782607,
+          "real_time_factor": 377.95480936077524,
+          "status": "success",
+          "steady_state_model_p50_ns": 2642645.5,
+          "steady_state_model_p95_ns": 2845106.25
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 586612736,
+          "legacy_feature_pipeline_segments_per_second": 352.1657414814822,
+          "legacy_pipeline_p50_ns": 2765458.0,
+          "legacy_pipeline_p95_ns": 3390618.3999999994,
+          "model_inference_segments_per_second": 376.87109952780196,
+          "real_time_factor": 338.0791118222229,
+          "status": "success",
+          "steady_state_model_p50_ns": 2651709.0,
+          "steady_state_model_p95_ns": 2735319.4
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 587431936,
+          "legacy_feature_pipeline_segments_per_second": 393.44443202121795,
+          "legacy_pipeline_p50_ns": 2533896.0,
+          "legacy_pipeline_p95_ns": 2610535.7,
+          "model_inference_segments_per_second": 395.26179761998327,
+          "real_time_factor": 377.70665474036923,
+          "status": "success",
+          "steady_state_model_p50_ns": 2527166.5,
+          "steady_state_model_p95_ns": 2606322.6
+        }
+      ],
+      "status": "success",
+      "thread_count": 2
+    },
+    {
+      "median_incremental_peak_rss_bytes": 589185024.0,
+      "median_legacy_feature_pipeline_segments_per_second": 373.6795686787137,
+      "median_legacy_pipeline_p50_ns": 2624292.0,
+      "median_legacy_pipeline_p95_ns": 3145699.6999999997,
+      "median_model_inference_segments_per_second": 389.8379035674585,
+      "median_real_time_factor": 358.7323859315651,
+      "median_steady_state_model_p50_ns": 2539125.0,
+      "median_steady_state_model_p95_ns": 2768220.5,
+      "repetition_count": 3,
+      "repetitions": [
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 586088448,
+          "legacy_feature_pipeline_segments_per_second": 415.4201966357436,
+          "legacy_pipeline_p50_ns": 2399750.0,
+          "legacy_pipeline_p95_ns": 2528218.1,
+          "model_inference_segments_per_second": 355.6157756890622,
+          "real_time_factor": 398.80338877031386,
+          "status": "success",
+          "steady_state_model_p50_ns": 2539125.0,
+          "steady_state_model_p95_ns": 3902870.849999998
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 589185024,
+          "legacy_feature_pipeline_segments_per_second": 373.6795686787137,
+          "legacy_pipeline_p50_ns": 2624292.0,
+          "legacy_pipeline_p95_ns": 3145699.6999999997,
+          "model_inference_segments_per_second": 389.8379035674585,
+          "real_time_factor": 358.7323859315651,
+          "status": "success",
+          "steady_state_model_p50_ns": 2559020.5,
+          "steady_state_model_p95_ns": 2768220.5
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 590430208,
+          "legacy_feature_pipeline_segments_per_second": 359.9932839652943,
+          "legacy_pipeline_p50_ns": 2760833.0,
+          "legacy_pipeline_p95_ns": 3209737.1999999997,
+          "model_inference_segments_per_second": 405.88471466495326,
+          "real_time_factor": 345.5935526066825,
+          "status": "success",
+          "steady_state_model_p50_ns": 2436000.0,
+          "steady_state_model_p95_ns": 2663310.4499999997
+        }
+      ],
+      "status": "success",
+      "thread_count": 4
+    },
+    {
+      "median_incremental_peak_rss_bytes": 591216640.0,
+      "median_legacy_feature_pipeline_segments_per_second": 422.78695171909993,
+      "median_legacy_pipeline_p50_ns": 2332854.0,
+      "median_legacy_pipeline_p95_ns": 2593413.15,
+      "median_model_inference_segments_per_second": 407.45686980411256,
+      "median_real_time_factor": 405.8754736503359,
+      "median_steady_state_model_p50_ns": 2424562.5,
+      "median_steady_state_model_p95_ns": 2674858.3499999996,
+      "repetition_count": 3,
+      "repetitions": [
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 592314368,
+          "legacy_feature_pipeline_segments_per_second": 425.14951551874384,
+          "legacy_pipeline_p50_ns": 2325771.0,
+          "legacy_pipeline_p95_ns": 2532997.25,
+          "model_inference_segments_per_second": 407.45686980411256,
+          "real_time_factor": 408.1435348979941,
+          "status": "success",
+          "steady_state_model_p50_ns": 2424562.5,
+          "steady_state_model_p95_ns": 2674858.3499999996
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 591200256,
+          "legacy_feature_pipeline_segments_per_second": 352.2878375386026,
+          "legacy_pipeline_p50_ns": 2742167.0,
+          "legacy_pipeline_p95_ns": 3505081.2499999995,
+          "model_inference_segments_per_second": 387.19862941597466,
+          "real_time_factor": 338.1963240370585,
+          "status": "success",
+          "steady_state_model_p50_ns": 2471145.5,
+          "steady_state_model_p95_ns": 3279262.8
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 591216640,
+          "legacy_feature_pipeline_segments_per_second": 422.78695171909993,
+          "legacy_pipeline_p50_ns": 2332854.0,
+          "legacy_pipeline_p95_ns": 2593413.15,
+          "model_inference_segments_per_second": 433.703450798371,
+          "real_time_factor": 405.8754736503359,
+          "status": "success",
+          "steady_state_model_p50_ns": 2294687.5,
+          "steady_state_model_p95_ns": 2397947.9
+        }
+      ],
+      "status": "success",
+      "thread_count": 8
+    },
+    {
+      "median_incremental_peak_rss_bytes": 591118336.0,
+      "median_legacy_feature_pipeline_segments_per_second": 392.3094188010892,
+      "median_legacy_pipeline_p50_ns": 2542896.0,
+      "median_legacy_pipeline_p95_ns": 2609575.0,
+      "median_model_inference_segments_per_second": 392.9976928677442,
+      "median_real_time_factor": 376.6170420490456,
+      "median_steady_state_model_p50_ns": 2537270.5,
+      "median_steady_state_model_p95_ns": 2645501.75,
+      "repetition_count": 3,
+      "repetitions": [
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 591380480,
+          "legacy_feature_pipeline_segments_per_second": 392.37349138032937,
+          "legacy_pipeline_p50_ns": 2539396.0,
+          "legacy_pipeline_p95_ns": 2609575.0,
+          "model_inference_segments_per_second": 392.9976928677442,
+          "real_time_factor": 376.67855172511617,
+          "status": "success",
+          "steady_state_model_p50_ns": 2537270.5,
+          "steady_state_model_p95_ns": 2645501.75
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 590610432,
+          "legacy_feature_pipeline_segments_per_second": 392.3094188010892,
+          "legacy_pipeline_p50_ns": 2542896.0,
+          "legacy_pipeline_p95_ns": 2593278.55,
+          "model_inference_segments_per_second": 393.71144861158876,
+          "real_time_factor": 376.6170420490456,
+          "status": "success",
+          "steady_state_model_p50_ns": 2533417.0,
+          "steady_state_model_p95_ns": 2613153.5
+        },
+        {
+          "frame_count": 1,
+          "incremental_peak_rss_bytes": 591118336,
+          "legacy_feature_pipeline_segments_per_second": 335.039941920692,
+          "legacy_pipeline_p50_ns": 2968500.0,
+          "legacy_pipeline_p95_ns": 3168568.75,
+          "model_inference_segments_per_second": 289.95529530147655,
+          "real_time_factor": 321.6383442438643,
+          "status": "success",
+          "steady_state_model_p50_ns": 3043604.0,
+          "steady_state_model_p95_ns": 7212054.149999999
+        }
+      ],
+      "status": "success",
+      "thread_count": 12
+    }
+  ]
+}
