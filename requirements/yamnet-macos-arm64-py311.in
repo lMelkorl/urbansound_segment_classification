@@ -1,0 +1,11 @@
+# Isolated YAMNet CPU environment candidate for macOS arm64 and Python 3.11.
+# Resolve and freeze only after the complete set installs without substitution.
+tensorflow==2.15.1
+tensorflow-hub==0.16.1
+tf-keras==2.15.1
+numpy==1.26.4
+pandas==2.2.3
+lightgbm==4.6.0
+librosa==0.10.2.post1
+soundfile==0.12.1
+scikit-learn==1.5.2

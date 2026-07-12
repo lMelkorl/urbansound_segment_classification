@@ -30,7 +30,7 @@ def inspect_yamnet_lgbm(inspector: InspectorProtocol) -> dict:
         inspector.artifact(
             ArtifactSpec(
                 "yamnet_model_directory",
-                "artifacts/models/yamnet",
+                "artifacts/yamnet/tfhub-v1/model",
                 "directory",
                 notes="Expected immutable local YAMNet model directory.",
             )
@@ -38,7 +38,7 @@ def inspect_yamnet_lgbm(inspector: InspectorProtocol) -> dict:
         inspector.artifact(
             ArtifactSpec(
                 "yamnet_manifest",
-                "artifacts/models/yamnet/manifest.json",
+                "artifacts/yamnet/tfhub-v1/artifact-manifest.json",
                 "file",
                 notes="Expected provenance manifest containing source, license, and checksum.",
             )
