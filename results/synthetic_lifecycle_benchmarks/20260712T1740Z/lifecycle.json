@@ -1,0 +1,162 @@
+{
+  "benchmark": {
+    "description": "Deterministic standard-library synthetic lifecycle benchmark.",
+    "item_duration_seconds": null,
+    "items_per_call": 1,
+    "name": "synthetic-lifecycle",
+    "steady_state_iterations": 30,
+    "warmup_runs": 5,
+    "workload": {
+      "load_size": 200000,
+      "name": "synthetic",
+      "work_size": 5000
+    }
+  },
+  "created_at_utc": "2026-07-12T17:38:06Z",
+  "environment": {
+    "architecture": "arm64",
+    "os": "Darwin",
+    "os_version": "26.5",
+    "python_version": "3.13.5"
+  },
+  "execution_policy": {
+    "affinity_applied": false,
+    "effective_thread_environment": {
+      "MKL_NUM_THREADS": "4",
+      "NUMEXPR_NUM_THREADS": "4",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "VECLIB_MAXIMUM_THREADS": "4"
+    },
+    "gc_manipulation_applied": false,
+    "multiprocessing_start_method": "spawn",
+    "previous_thread_environment": {
+      "MKL_NUM_THREADS": {
+        "configured": false,
+        "value": null
+      },
+      "NUMEXPR_NUM_THREADS": {
+        "configured": false,
+        "value": null
+      },
+      "OMP_NUM_THREADS": {
+        "configured": false,
+        "value": null
+      },
+      "OPENBLAS_NUM_THREADS": {
+        "configured": false,
+        "value": null
+      },
+      "VECLIB_MAXIMUM_THREADS": {
+        "configured": false,
+        "value": null
+      }
+    },
+    "process_isolation": "fresh_child_process",
+    "requested_thread_count": 4
+  },
+  "lifecycle": {
+    "first_call_latency": {
+      "duration": 1602291,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "load_time": {
+      "duration": 16064416,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "process_startup_time": {
+      "duration": 73882458,
+      "measurement": "parent_observed_spawn_to_child_entry",
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "status": {
+      "error": null,
+      "outcome": "success"
+    },
+    "steady_state": {
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "throughput": {
+        "calls_per_second": 3322.5667403981147,
+        "items_per_second": 3322.5667403981147,
+        "real_time_factor": null
+      },
+      "timing": {
+        "maximum": 394500,
+        "mean": 300972.13333333336,
+        "minimum": 293042,
+        "p50": 296895.5,
+        "p95": 306385.3,
+        "p99": 369680.93000000005,
+        "percentile_method": "linear_interpolation_at_rank_(n-1)*q",
+        "raw_samples": [
+          302625,
+          296417,
+          295291,
+          293541,
+          293917,
+          293458,
+          293042,
+          299625,
+          308917,
+          302958,
+          296708,
+          394500,
+          303042,
+          295959,
+          297417,
+          297042,
+          296875,
+          296791,
+          297500,
+          299750,
+          297542,
+          295583,
+          293208,
+          296916,
+          302916,
+          303291,
+          299791,
+          293750,
+          294833,
+          295959
+        ],
+        "standard_deviation": 17760.459738293812,
+        "timer_source": "time.perf_counter_ns",
+        "unit": "nanoseconds"
+      }
+    }
+  },
+  "memory": {
+    "approximate_incremental_peak_rss_bytes": 8192000,
+    "baseline_peak_rss_bytes": 24510464,
+    "final_peak_rss_bytes": 32702464,
+    "platform_limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+    "reason": null,
+    "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+    "supported": true,
+    "unit": "bytes"
+  },
+  "schema_version": "edge-v2.lifecycle-benchmark.v1",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  }
+}
