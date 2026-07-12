@@ -1,0 +1,181 @@
+{
+  "artifact_identity": {
+    "architecture_id": "linear",
+    "onnx_manifest_sha256": "e058298d78ae44196d7d2910aed74cc7625e4f0ac3ecbd3d3a51f009241fe9e9",
+    "onnx_sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+    "precision": "fp32",
+    "source_model_identity": "21c902924da3de90c68fbdd6b7a7bc2151de5f06a96156653e303490343f1e86",
+    "source_model_sha256": "7538f47869e4ad5901074a1602e1217d3a9192f98fbd6d3d9f9ebac9bc708301",
+    "test_fold": 1,
+    "validation_fold": 2
+  },
+  "benchmark_config": {
+    "batch_size": 1,
+    "iterations": 1000,
+    "repetitions": 5,
+    "runtime_order_per_repetition": [
+      "keras",
+      "onnxruntime"
+    ],
+    "threads": 1,
+    "timer_source": "time.perf_counter_ns",
+    "warmup": 20
+  },
+  "comparison": {
+    "artifact_size_reduction_percent": 12.781719532554256,
+    "latency_speedup_keras_p50_over_onnx_p50": 41.347548518896836,
+    "load_time_ratio_keras_over_onnx": 15.198850406901082,
+    "memory_reduction_percent": 95.39712501815015,
+    "throughput_ratio_onnx_over_keras": 24.13501847414018,
+    "top1_class": 3,
+    "top1_prediction_agreement": true
+  },
+  "created_at_utc": "2026-07-12T21:09:02Z",
+  "environment": {
+    "accelerator": "none_cpu_only",
+    "configured_threads": 1,
+    "python_version": "3.11.15",
+    "system": {
+      "architecture": "arm64",
+      "cpu_name": "arm",
+      "logical_cores": 12,
+      "os": "Darwin",
+      "os_version": "26.5",
+      "physical_cores": null,
+      "total_ram_bytes": 19327352832
+    }
+  },
+  "input_identity": {
+    "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+    "cache_index_sha256": "49d72c482e2fdda86ccf8f1b980fc1ae35fd8c44fcb77aa93f4848d6a06a1829",
+    "class_id": 3,
+    "clip_key": "fold1/101415-3-0-2.wav",
+    "dtype": "float32",
+    "embedding_sha256": "422840e0ca9d8175328ac8bbd87c6a8eaf46198c9a37183d630ba2815937c770",
+    "fold": 1,
+    "input_identity_sha256": "f87a799929c978a23957d6dff066a4df7cddf83ea30ad20b49cbb4ca59dfbb52",
+    "segment_index": 0,
+    "segment_start_sample": 0,
+    "shape": [
+      1,
+      1024
+    ]
+  },
+  "keras_runtime": {
+    "artifact_size_bytes": 47920,
+    "fresh_child_pids_unique": true,
+    "median_first_call_ns": 1305375.0,
+    "median_model_load_ns": 24152250.0,
+    "median_predictions_per_second": 4700.912592392382,
+    "median_process_startup_ns": 129969000.0,
+    "median_runtime_import_configuration_ns": 1617372292.0,
+    "median_steady_p50_ns": 161917.0,
+    "median_steady_p95_ns": 174935.74999999997,
+    "median_steady_p99_ns": 191352.74,
+    "memory": {
+      "limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+      "median_approximate_incremental_peak_rss_bytes": 338509824.0,
+      "median_baseline_peak_rss_bytes": 41680896.0,
+      "median_final_peak_rss_bytes": 380223488.0,
+      "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+    },
+    "repetitions": 5,
+    "top1_class": 3
+  },
+  "limitations": [
+    "Classifier-only benchmark accepts one precomputed 1024-value YAMNet embedding.",
+    "YAMNet, audio decoding, segmentation, embedding extraction, and clip aggregation are excluded.",
+    "macOS peak RSS is a process-lifetime high-water mark; incremental RSS is approximate.",
+    "Fresh process startup includes Python and benchmark module bootstrap before child entry.",
+    "Results describe this machine, dependency lock, and one-thread configuration only."
+  ],
+  "onnx_runtime": {
+    "artifact_size_bytes": 41795,
+    "fresh_child_pids_unique": true,
+    "median_first_call_ns": 145708.0,
+    "median_model_load_ns": 1589084.0,
+    "median_predictions_per_second": 113456.61226270834,
+    "median_process_startup_ns": 139085375.0,
+    "median_runtime_import_configuration_ns": 18375917.0,
+    "median_steady_p50_ns": 3916.0,
+    "median_steady_p95_ns": 9500.0,
+    "median_steady_p99_ns": 11842.99999999999,
+    "memory": {
+      "limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+      "median_approximate_incremental_peak_rss_bytes": 15581184.0,
+      "median_baseline_peak_rss_bytes": 41680896.0,
+      "median_final_peak_rss_bytes": 57344000.0,
+      "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+    },
+    "repetitions": 5,
+    "top1_class": 3
+  },
+  "raw_run_references": [
+    {
+      "relative_path": "raw/keras-repetition-01.json",
+      "repetition": 1,
+      "runtime": "keras",
+      "sha256": "4c313347360c8f2a5e5cb66f164679943bb72757110ce8d97e21b785d1a9dafb"
+    },
+    {
+      "relative_path": "raw/onnxruntime-repetition-01.json",
+      "repetition": 1,
+      "runtime": "onnxruntime",
+      "sha256": "5d711529ccbba45519d62d417a1532042b6e9e84ebf082eb17d4c55268bf6549"
+    },
+    {
+      "relative_path": "raw/keras-repetition-02.json",
+      "repetition": 2,
+      "runtime": "keras",
+      "sha256": "1e7b99e82ea3650cd1915d7f60ff4c0e4b83774e3933927963416c457a5cae1e"
+    },
+    {
+      "relative_path": "raw/onnxruntime-repetition-02.json",
+      "repetition": 2,
+      "runtime": "onnxruntime",
+      "sha256": "b83e090a6f6d0bcb4065001555d0c1fe9d1325d1ec73f3182d8003dd0f597fa0"
+    },
+    {
+      "relative_path": "raw/keras-repetition-03.json",
+      "repetition": 3,
+      "runtime": "keras",
+      "sha256": "f14cc1cd171b2ee228dce04f80b5bc2fd08cd8fd867713074bfa0bcc3373f548"
+    },
+    {
+      "relative_path": "raw/onnxruntime-repetition-03.json",
+      "repetition": 3,
+      "runtime": "onnxruntime",
+      "sha256": "772f90652bb4714a06d076a58b083708146a150b5ea52e19eb83b342e24a6f5a"
+    },
+    {
+      "relative_path": "raw/keras-repetition-04.json",
+      "repetition": 4,
+      "runtime": "keras",
+      "sha256": "dca999e0a3a0db54a156891c9afdd18042c4b94310ae86d8bbaabc2d55eba311"
+    },
+    {
+      "relative_path": "raw/onnxruntime-repetition-04.json",
+      "repetition": 4,
+      "runtime": "onnxruntime",
+      "sha256": "dcb3e73d8fac80667cb9462dfa55da4d64084a7235ded62199c220b9f4ad966e"
+    },
+    {
+      "relative_path": "raw/keras-repetition-05.json",
+      "repetition": 5,
+      "runtime": "keras",
+      "sha256": "bbe01f6daea00d16974c243f4a23cc1a94d12d91eafd8f6b69feb202ef7b6f2b"
+    },
+    {
+      "relative_path": "raw/onnxruntime-repetition-05.json",
+      "repetition": 5,
+      "runtime": "onnxruntime",
+      "sha256": "74ea73351b478597839f6395174696d07c73a08cfbc12e06cde26eb03aa6310f"
+    }
+  ],
+  "schema_version": "edge-v2.onnx-classifier-benchmark.v1",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "summary_sha256": "64f0ccd386f1814bd8c74ade244056302d90142ea5d196ae11cb25f14aa93b04"
+}
