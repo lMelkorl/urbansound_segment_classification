@@ -1,4 +1,6 @@
 data/
+!urbansound_segment_task/edge_v2/data/
+!urbansound_segment_task/edge_v2/data/*.py
 sample_data/
 kaggle.json
 
@@ -10,6 +12,7 @@ __pycache__/
 
 .venv-yamnet/
 artifacts/yamnet/tfhub-v1/model/
+cache/yamnet_embeddings/
 
 *.npy
 *.npz
