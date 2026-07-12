@@ -1,0 +1,474 @@
+{
+  "created_at_utc": "2026-07-12T17:46:28Z",
+  "environment": {
+    "architecture": "arm64",
+    "os": "Darwin",
+    "os_version": "26.5",
+    "python_version": "3.13.5"
+  },
+  "methods": [
+    {
+      "artifacts": [
+        {
+          "artifact_id": "yamnet_model_directory",
+          "exists": false,
+          "kind": "directory",
+          "notes": "Expected immutable local YAMNet model directory.",
+          "provenance_status": "missing",
+          "relative_path": "artifacts/models/yamnet",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "yamnet_manifest",
+          "exists": false,
+          "kind": "file",
+          "notes": "Expected provenance manifest containing source, license, and checksum.",
+          "provenance_status": "missing",
+          "relative_path": "artifacts/models/yamnet/manifest.json",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "lightgbm_model",
+          "exists": false,
+          "kind": "file",
+          "notes": "A trained classifier artifact is required for inference-only benchmarking.",
+          "provenance_status": "missing",
+          "relative_path": "artifacts/models/yamnet_lgbm/model.txt",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        }
+      ],
+      "benchmark_readiness": "blocked",
+      "cpu_support": {
+        "code_path_detected": true,
+        "declared": true,
+        "notes": "TensorFlow/YAMNet and LightGBM have a CPU candidate path, but this preflight does not import or execute them.",
+        "runtime_verified": false
+      },
+      "dependencies": [
+        {
+          "import_name": "tensorflow",
+          "installed": false,
+          "notes": "",
+          "package_name": "tensorflow",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "tensorflow_hub",
+          "installed": false,
+          "notes": "",
+          "package_name": "tensorflow-hub",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "lightgbm",
+          "installed": false,
+          "notes": "",
+          "package_name": "lightgbm",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "librosa",
+          "installed": false,
+          "notes": "",
+          "package_name": "librosa",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "soundfile",
+          "installed": false,
+          "notes": "",
+          "package_name": "soundfile",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "numpy",
+          "installed": true,
+          "notes": "",
+          "package_name": "numpy",
+          "required": true,
+          "version": "2.2.6"
+        },
+        {
+          "import_name": "pandas",
+          "installed": true,
+          "notes": "",
+          "package_name": "pandas",
+          "required": true,
+          "version": "2.3.1"
+        },
+        {
+          "import_name": "sklearn",
+          "installed": false,
+          "notes": "",
+          "package_name": "scikit-learn",
+          "required": true,
+          "version": null
+        }
+      ],
+      "display_name": "YAMNet embeddings + LightGBM",
+      "implementation_status": "implemented",
+      "issues": [
+        {
+          "code": "YAMNET_RUNTIME_DOWNLOAD",
+          "message": "Legacy code loads YAMNet from a remote TF Hub URL at runtime; offline benchmarks require a reviewed local immutable artifact.",
+          "severity": "blocker"
+        },
+        {
+          "code": "MISSING_DEPENDENCIES",
+          "message": "Required dependency group is incomplete: tensorflow, tensorflow-hub, lightgbm, librosa, soundfile, scikit-learn.",
+          "severity": "blocker"
+        },
+        {
+          "code": "MISSING_LOCAL_ARTIFACTS",
+          "message": "Required local artifacts are missing: yamnet_model_directory, yamnet_manifest, lightgbm_model.",
+          "severity": "blocker"
+        }
+      ],
+      "method_id": "yamnet_lgbm",
+      "required_actions": [
+        "Create a reviewed local YAMNet artifact acquisition step with URL, license, immutable identity, and SHA-256.",
+        "Provide a traceable LightGBM model artifact or approve a separate reproducible training step before inference benchmarking.",
+        "Install the approved YAMNet benchmark dependency group in a project virtual environment."
+      ],
+      "source_code": {
+        "entry_point_exists": true,
+        "entry_points": [
+          "urbansound_segment_task/goals/goal1_yamnet_lgbm/run.py"
+        ],
+        "runtime_url_detected": true,
+        "runtime_urls": [
+          "https://tfhub.dev/google/yamnet/1"
+        ],
+        "static_checks_only": true
+      },
+      "status": {
+        "error": null,
+        "outcome": "success"
+      }
+    },
+    {
+      "artifacts": [
+        {
+          "artifact_id": "esresnext_source",
+          "exists": true,
+          "kind": "gitlink",
+          "notes": "Expected external ESResNeXt-fbsp source checkout.",
+          "provenance_status": "broken_reference",
+          "relative_path": "external/ESResNeXt_fbsp",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": "7c1488a27e15a28c1af6fca7974334a9eef3f533"
+        },
+        {
+          "artifact_id": "gitmodules",
+          "exists": false,
+          "kind": "file",
+          "notes": "Required to map the recorded gitlink to an upstream URL.",
+          "provenance_status": "missing",
+          "relative_path": ".gitmodules",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "esresnext_audioset_checkpoint",
+          "exists": false,
+          "kind": "file",
+          "notes": "Expected AudioSet checkpoint; never deserialized during preflight.",
+          "provenance_status": "missing",
+          "relative_path": "urbansound_segment_task/goals/goal2_esresnext/checkpoints/ESResNeXtFBSP_AudioSet.pt",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "checkpoint_download_script",
+          "exists": true,
+          "kind": "file",
+          "notes": "Legacy acquisition script is inspected only as text.",
+          "provenance_status": "present_unverified",
+          "relative_path": "urbansound_segment_task/scripts/download_checkpoint_goal2.sh",
+          "required": false,
+          "sha256": "bba6ac0714b94173fdf173c0112b79a7f82dd49101b041b945009d60aeb0975f",
+          "size_bytes": 479,
+          "source_revision": null
+        }
+      ],
+      "benchmark_readiness": "blocked",
+      "cpu_support": {
+        "code_path_detected": true,
+        "declared": true,
+        "notes": "Both legacy scripts contain a CUDA-or-CPU device fallback; no model import or runtime verification was performed.",
+        "runtime_verified": false
+      },
+      "dependencies": [
+        {
+          "import_name": "torch",
+          "installed": true,
+          "notes": "Imported by both legacy Goal 2 scripts but absent from legacy requirements.txt.",
+          "package_name": "torch",
+          "required": true,
+          "version": "2.7.1"
+        },
+        {
+          "import_name": "torchaudio",
+          "installed": false,
+          "notes": "Not imported by the current Goal 2 scripts; retained as an optional upstream compatibility check.",
+          "package_name": "torchaudio",
+          "required": false,
+          "version": null
+        },
+        {
+          "import_name": "librosa",
+          "installed": false,
+          "notes": "",
+          "package_name": "librosa",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "soundfile",
+          "installed": false,
+          "notes": "",
+          "package_name": "soundfile",
+          "required": true,
+          "version": null
+        },
+        {
+          "import_name": "numpy",
+          "installed": true,
+          "notes": "",
+          "package_name": "numpy",
+          "required": true,
+          "version": "2.2.6"
+        },
+        {
+          "import_name": "pandas",
+          "installed": true,
+          "notes": "",
+          "package_name": "pandas",
+          "required": true,
+          "version": "2.3.1"
+        }
+      ],
+      "display_name": "ESResNeXt-fbsp",
+      "implementation_status": "implemented",
+      "issues": [
+        {
+          "code": "BROKEN_GITLINK_MAPPING",
+          "message": "external/ESResNeXt_fbsp is a gitlink but .gitmodules does not provide a usable mapping.",
+          "severity": "blocker"
+        },
+        {
+          "code": "EXTERNAL_SOURCE_UNAVAILABLE",
+          "message": "Expected ESResNeXt implementation files are unavailable in the external source directories.",
+          "severity": "blocker"
+        },
+        {
+          "code": "EXTERNAL_PATH_IMPORT_INCONSISTENCY",
+          "message": "Head-only and fine-tune scripts use inconsistent external directory and import namespaces.",
+          "severity": "blocker"
+        },
+        {
+          "code": "TORCH_UNDECLARED",
+          "message": "PyTorch is imported by Goal 2 but is not declared in legacy requirements.txt.",
+          "severity": "blocker"
+        },
+        {
+          "code": "CHECKPOINT_CHECKSUM_MISSING",
+          "message": "The legacy checkpoint download script does not verify a checksum.",
+          "severity": "blocker"
+        },
+        {
+          "code": "MISSING_DEPENDENCIES",
+          "message": "Required dependency group is incomplete: librosa, soundfile.",
+          "severity": "blocker"
+        },
+        {
+          "code": "CHECKPOINT_MISSING",
+          "message": "The required AudioSet checkpoint is missing.",
+          "severity": "blocker"
+        }
+      ],
+      "method_id": "esresnext",
+      "required_actions": [
+        "Repair and review ESResNeXt source provenance, URL, immutable revision, and local checkout before inference.",
+        "Define one reviewed external directory and import contract for the future adapter without rewriting legacy scripts.",
+        "Provide the checkpoint through an approved manual acquisition step with license, size, and SHA-256 verification.",
+        "Define and install a reviewed ESResNeXt benchmark dependency group in a project virtual environment."
+      ],
+      "source_code": {
+        "checkpoint_checksum_verification_detected": false,
+        "entry_points": [
+          "urbansound_segment_task/goals/goal2_esresnext/run_finetune.py",
+          "urbansound_segment_task/goals/goal2_esresnext/run_head_only.py"
+        ],
+        "entry_points_exist": true,
+        "expected_source_revision": "7c1488a27e15a28c1af6fca7974334a9eef3f533",
+        "external_source_files_present": false,
+        "gitlink_detected": true,
+        "gitmodules_mapping_present": false,
+        "path_import_inconsistent": true,
+        "static_checks_only": true,
+        "torch_declared_in_legacy_requirements": false
+      },
+      "status": {
+        "error": null,
+        "outcome": "success"
+      }
+    },
+    {
+      "artifacts": [
+        {
+          "artifact_id": "audioclip_external_source",
+          "exists": false,
+          "kind": "directory",
+          "notes": "Expected external AudioCLIP source checkout.",
+          "provenance_status": "missing",
+          "relative_path": "external/AudioCLIP",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "audioclip_checkpoint",
+          "exists": false,
+          "kind": "file",
+          "notes": "Expected immutable local model weights.",
+          "provenance_status": "missing",
+          "relative_path": "artifacts/models/audioclip/audio_model.pt",
+          "required": true,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "audioclip_metrics_test",
+          "exists": false,
+          "kind": "file",
+          "notes": "README-referenced legacy result artifact.",
+          "provenance_status": "missing",
+          "relative_path": "urbansound_segment_task/goals/goal3_audioclip/results_ft_q/metrics_test.json",
+          "required": false,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "audioclip_metrics_throughput",
+          "exists": false,
+          "kind": "file",
+          "notes": "README-referenced legacy throughput artifact.",
+          "provenance_status": "missing",
+          "relative_path": "urbansound_segment_task/goals/goal3_audioclip/results_ft_q/metrics_throughput.json",
+          "required": false,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        },
+        {
+          "artifact_id": "audioclip_run_args",
+          "exists": false,
+          "kind": "file",
+          "notes": "README-referenced legacy run configuration.",
+          "provenance_status": "missing",
+          "relative_path": "urbansound_segment_task/goals/goal3_audioclip/results_ft_q/run_args.json",
+          "required": false,
+          "sha256": null,
+          "size_bytes": null,
+          "source_revision": null
+        }
+      ],
+      "benchmark_readiness": "unavailable",
+      "cpu_support": {
+        "code_path_detected": false,
+        "declared": true,
+        "notes": "README text describes a fallback, but the repository has no implementation from which CPU compatibility can be verified.",
+        "runtime_verified": false
+      },
+      "dependencies": [
+        {
+          "import_name": "torch",
+          "installed": true,
+          "notes": "Expected by the README-described AudioCLIP architecture, but the implementation is absent.",
+          "package_name": "torch",
+          "required": true,
+          "version": "2.7.1"
+        }
+      ],
+      "display_name": "AudioCLIP audio branch",
+      "implementation_status": "placeholder",
+      "issues": [
+        {
+          "code": "IMPLEMENTATION_PLACEHOLDER",
+          "message": "Legacy AudioCLIP run.py is only a placeholder.",
+          "severity": "blocker"
+        },
+        {
+          "code": "EXTERNAL_SOURCE_MISSING",
+          "message": "Expected AudioCLIP external source is unavailable.",
+          "severity": "blocker"
+        },
+        {
+          "code": "CHECKPOINT_IDENTITY_MISSING",
+          "message": "No local AudioCLIP checkpoint identity or SHA-256 is available.",
+          "severity": "blocker"
+        },
+        {
+          "code": "README_RESULT_ARTIFACTS_MISSING",
+          "message": "README-referenced artifacts are missing: audioclip_metrics_test, audioclip_metrics_throughput, audioclip_run_args.",
+          "severity": "blocker"
+        }
+      ],
+      "method_id": "audioclip",
+      "required_actions": [
+        "Recover or explicitly retire the missing AudioCLIP implementation and its immutable source revision.",
+        "Recover traceable checkpoint and README result provenance before any benchmark attempt."
+      ],
+      "source_code": {
+        "entry_point_exists": true,
+        "entry_points": [
+          "urbansound_segment_task/goals/goal3_audioclip/run.py"
+        ],
+        "external_source_exists": false,
+        "missing_readme_artifacts": [
+          "audioclip_metrics_test",
+          "audioclip_metrics_throughput",
+          "audioclip_run_args"
+        ],
+        "placeholder_detected": true,
+        "static_checks_only": true
+      },
+      "status": {
+        "error": null,
+        "outcome": "success"
+      }
+    }
+  ],
+  "schema_version": "edge-v2.model-preflight.v1",
+  "summary": {
+    "blocked_count": 2,
+    "ready_count": 0,
+    "recommended_first_method": "yamnet_lgbm",
+    "unavailable_count": 1,
+    "unverified_count": 0
+  }
+}
