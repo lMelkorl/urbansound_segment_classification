@@ -1,0 +1,116 @@
+{
+  "created_at_utc": "2026-07-12T17:11:01Z",
+  "git": {
+    "available": true,
+    "branch": "feat/edge-audio-v2",
+    "clean": false,
+    "commit": "301ca614687b14686b76f8c6348408882918e834",
+    "repository": true
+  },
+  "packages": {
+    "librosa": {
+      "installed": false,
+      "version": null
+    },
+    "lightgbm": {
+      "installed": false,
+      "version": null
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "onnx": {
+      "installed": false,
+      "version": null
+    },
+    "onnxruntime": {
+      "installed": false,
+      "version": null
+    },
+    "pandas": {
+      "installed": true,
+      "version": "2.3.1"
+    },
+    "scikit-learn": {
+      "installed": false,
+      "version": null
+    },
+    "scipy": {
+      "installed": true,
+      "version": "1.16.0"
+    },
+    "soundfile": {
+      "installed": false,
+      "version": null
+    },
+    "tensorflow": {
+      "installed": false,
+      "version": null
+    },
+    "tensorflow-hub": {
+      "installed": false,
+      "version": null
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.7.1"
+    },
+    "torchaudio": {
+      "installed": false,
+      "version": null
+    }
+  },
+  "python": {
+    "executable_name": "python3.13",
+    "implementation": "CPython",
+    "version": "3.13.5"
+  },
+  "pytorch": {
+    "cuda_available": false,
+    "importable": true,
+    "installed": true,
+    "mps_available": false,
+    "version": "2.7.1"
+  },
+  "schema_version": "edge-v2.environment.v1",
+  "system": {
+    "architecture": "arm64",
+    "cpu_name": "arm",
+    "logical_cores": 12,
+    "os": "Darwin",
+    "os_version": "26.5",
+    "physical_cores": null,
+    "total_ram_bytes": 19327352832
+  },
+  "thread_environment": {
+    "MKL_NUM_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "NUMEXPR_NUM_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "OMP_NUM_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "OPENBLAS_NUM_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "TF_NUM_INTEROP_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "TF_NUM_INTRAOP_THREADS": {
+      "configured": false,
+      "value": null
+    },
+    "VECLIB_MAXIMUM_THREADS": {
+      "configured": false,
+      "value": null
+    }
+  }
+}
