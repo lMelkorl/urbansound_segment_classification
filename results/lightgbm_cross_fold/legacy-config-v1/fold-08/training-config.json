@@ -1,0 +1,42 @@
+{
+  "class_weight": {
+    "method": "sklearn.utils.class_weight.compute_class_weight",
+    "mode": "balanced",
+    "source": "training_segments_only"
+  },
+  "classifier": "lightgbm.LGBMClassifier",
+  "config_sha256": "bdb6b2b77f576a5c46870e83fa92f7c39afc4e0b6833f02f15df9fcd2f82df25",
+  "early_stopping": false,
+  "effective_reproduction_parameters": {
+    "colsample_bytree": 0.9,
+    "learning_rate": 0.05,
+    "n_estimators": 700,
+    "n_jobs": 8,
+    "num_leaves": 64,
+    "random_state": 42,
+    "subsample": 0.9
+  },
+  "explicit_legacy_parameters": {
+    "colsample_bytree": 0.9,
+    "learning_rate": 0.05,
+    "n_estimators": 700,
+    "n_jobs": -1,
+    "num_leaves": 64,
+    "random_state": 42,
+    "subsample": 0.9
+  },
+  "library_defaults": {
+    "boosting_type": "gbdt",
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "objective": "library_default_inferred_multiclass",
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0,
+    "subsample_freq": 0
+  },
+  "seed_deviation_from_legacy": false,
+  "source_path": "urbansound_segment_task/goals/goal1_yamnet_lgbm/run.py",
+  "subsample_effective_note": "subsample=0.9 is explicit legacy code, but library-default subsample_freq=0 means row subsampling is not activated",
+  "thread_deviation_from_legacy": true,
+  "validation_used_during_fit": false
+}
