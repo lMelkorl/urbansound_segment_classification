@@ -44,8 +44,9 @@ class VerifiedClassifier:
     onnx_sha256: str
     size_bytes: int
     architecture_id: str
-    test_fold: int
-    validation_fold: int
+    test_fold: Optional[int]
+    validation_fold: Optional[int]
+    deployment_only: bool = False
 
 
 class LocalYamnetAdapter:
@@ -147,8 +148,19 @@ def verify_classifier_artifact(artifact_directory: Path) -> VerifiedClassifier:
         raise ValueError("FP32 ONNX relative path is unsafe")
     model_path = root / relative
     digest = streaming_file_sha256(model_path)
-    if digest != EXPECTED_ONNX_SHA256 or digest != artifact.get("sha256"):
+    deployment_only = manifest.get("deployment_only") is True
+    if digest != artifact.get("sha256"):
         raise ValueError("FP32 ONNX artifact SHA-256 mismatch")
+    if not deployment_only and digest != EXPECTED_ONNX_SHA256:
+        raise ValueError("FP32 ONNX artifact SHA-256 mismatch")
+    if deployment_only and (
+        manifest.get("deployment_id") != "linear-all-data-deployment-v1"
+        or manifest.get("independent_test_metrics_available") is not False
+        or manifest.get("source_model", {}).get("cache_identity")
+        != "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce"
+        or int(manifest.get("source_model", {}).get("training_segment_count", 0)) != 53_918
+    ):
+        raise ValueError("deployment-only classifier provenance mismatch")
     size = model_path.stat().st_size
     if size != int(artifact.get("size_bytes", -1)):
         raise ValueError("FP32 ONNX artifact size mismatch")
@@ -168,8 +180,9 @@ def verify_classifier_artifact(artifact_directory: Path) -> VerifiedClassifier:
         onnx_sha256=digest,
         size_bytes=size,
         architecture_id=str(manifest.get("architecture_id")),
-        test_fold=int(fold.get("test_fold")),
-        validation_fold=int(fold.get("validation_fold")),
+        test_fold=None if deployment_only else int(fold.get("test_fold")),
+        validation_fold=None if deployment_only else int(fold.get("validation_fold")),
+        deployment_only=deployment_only,
     )
 
 
@@ -257,6 +270,7 @@ def run_offline_audio_inference(
             "precision": "fp32", "architecture_id": classifier_identity.architecture_id,
             "test_fold": classifier_identity.test_fold,
             "validation_fold": classifier_identity.validation_fold,
+            "deployment_only": classifier_identity.deployment_only,
         },
         "providers": [], "segment_predictions": [], "clip_prediction": None,
         "ground_truth_comparison": (
@@ -268,7 +282,11 @@ def run_offline_audio_inference(
         ),
         "limitations": [
             SOFTMAX_LIMITATION,
-            "The classifier is a deterministic Fold 1 export-smoke artifact, not a general production model.",
+            (
+                "The classifier is deployment-only and trained on all evaluable cached folds; no independent test metrics are available."
+                if classifier_identity.deployment_only
+                else "The classifier is a deterministic Fold 1 export-smoke artifact, not a general production model."
+            ),
             "This single-clip integration result is not an accuracy, macro-F1, or latency benchmark.",
             "YAMNet scores are validated but are not used as the final UrbanSound class prediction.",
         ],

@@ -1,0 +1,190 @@
+{
+  "audio_identity": {
+    "safe_name": "101415-3-0-2.wav",
+    "sha256": "ccc21ebf9d9ca26effe83a99446ae2708fec9381c473e11a8bd015d78a7d5c75",
+    "stable_clip_key": "fold1/101415-3-0-2.wav"
+  },
+  "audio_metadata": {
+    "original_channel_count": 1,
+    "original_duration_seconds": 4.0,
+    "original_frame_count": 192000,
+    "original_sample_rate": 48000
+  },
+  "classifier_artifact": {
+    "architecture_id": "linear",
+    "artifact_identity": "a4b38a584600c2326f465b6ce395c34ba1c974afe4f2477d0e0f8389479423fd",
+    "deployment_only": true,
+    "onnx_sha256": "334279603fcb0805d7803ab73157cc60208d31c7142f13ea2ccf388f40561f19",
+    "precision": "fp32",
+    "size_bytes": 41795,
+    "test_fold": null,
+    "validation_fold": null
+  },
+  "clip_prediction": {
+    "class_id": 3,
+    "class_name": "dog_bark",
+    "confidence": 0.8853688729660851,
+    "segment_count": 7,
+    "top3": [
+      {
+        "class_id": 3,
+        "class_name": "dog_bark",
+        "confidence": 0.8853688729660851
+      },
+      {
+        "class_id": 2,
+        "class_name": "children_playing",
+        "confidence": 0.07625661559963451
+      },
+      {
+        "class_id": 6,
+        "class_name": "gun_shot",
+        "confidence": 0.037735372433319626
+      }
+    ]
+  },
+  "created_at_utc": "2026-07-12T21:54:08Z",
+  "ground_truth_comparison": {
+    "class_id": 3,
+    "class_name": "dog_bark",
+    "prediction_matches": true
+  },
+  "limitations": [
+    "Softmax confidence is not calibrated and must not be interpreted as a guaranteed probability of correctness.",
+    "The classifier is deployment-only and trained on all evaluable cached folds; no independent test metrics are available.",
+    "This single-clip integration result is not an accuracy, macro-F1, or latency benchmark.",
+    "YAMNet scores are validated but are not used as the final UrbanSound class prediction."
+  ],
+  "preprocessing": {
+    "output_channels": "mono",
+    "output_dtype": "float32",
+    "resampled_sample_count": 64000,
+    "resampling": {
+      "implementation": "librosa.resample",
+      "res_type": "soxr_hq"
+    },
+    "target_sample_rate": 16000
+  },
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "runtime": {
+    "mode": "offline_local_only",
+    "model_load_counts": {
+      "onnx_classifier": 1,
+      "yamnet": 1
+    },
+    "onnxruntime_version": "1.20.1",
+    "tensorflow_version": "2.15.1",
+    "tensorflow_visible_device_types": [
+      "CPU"
+    ],
+    "threads": 1,
+    "yamnet_loader_method": "tf.saved_model.load(local_path)"
+  },
+  "schema_version": "edge-v2.offline-audio-inference.v1",
+  "segment_predictions": [
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9999406337738037,
+      "segment_index": 0,
+      "start_sample": 0,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9998840093612671,
+      "segment_index": 1,
+      "start_sample": 7680,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9999878406524658,
+      "segment_index": 2,
+      "start_sample": 15360,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 2,
+      "class_name": "children_playing",
+      "confidence": 0.5336836576461792,
+      "segment_index": 3,
+      "start_sample": 23040,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9999452829360962,
+      "segment_index": 4,
+      "start_sample": 30720,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9999898672103882,
+      "segment_index": 5,
+      "start_sample": 38400,
+      "yamnet_frame_count": 1
+    },
+    {
+      "class_id": 3,
+      "class_name": "dog_bark",
+      "confidence": 0.9997444748878479,
+      "segment_index": 6,
+      "start_sample": 46080,
+      "yamnet_frame_count": 1
+    }
+  ],
+  "segmentation": {
+    "channels": "mono",
+    "dropped_tail_samples": 2560,
+    "hop_samples": 7680,
+    "model_input_dtype": "float32",
+    "normalization": "pcm_waveform_to_minus_one_plus_one",
+    "overlap_fraction": 0.5,
+    "policy_id": "yamnet-legacy-full-window-v1",
+    "segment_count": 7,
+    "segment_start_samples": [
+      0,
+      7680,
+      15360,
+      23040,
+      30720,
+      38400,
+      46080
+    ],
+    "short_clip_policy": "emit_zero_segment",
+    "short_clip_zero_segment": false,
+    "tail_policy": "drop",
+    "target_sample_rate": 16000,
+    "window_duration_seconds": 0.96,
+    "window_samples": 15360
+  },
+  "status": {
+    "error": null,
+    "outcome": "success",
+    "reason": null
+  },
+  "timing": {
+    "aggregation_ns": 50667,
+    "artifact_verification_ns": 11046000,
+    "audio_decode_ns": 9338042,
+    "classification": "descriptive_smoke_wall_time_not_a_benchmark",
+    "end_to_end_ns": 3578160167,
+    "onnx_session_creation_ns": 16533667,
+    "resampling_and_preprocessing_ns": 809544250,
+    "segment_inference_total_ns": 106878292,
+    "yamnet_load_ns": 2624584333
+  },
+  "yamnet_artifact": {
+    "artifact_id": "yamnet-tfhub-v1",
+    "file_count": 4,
+    "tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2"
+  }
+}

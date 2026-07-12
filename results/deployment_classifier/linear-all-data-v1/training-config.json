@@ -1,0 +1,52 @@
+{
+  "architecture": {
+    "architecture_id": "linear",
+    "input_features": 1024,
+    "layers": [
+      {
+        "activation": "softmax",
+        "type": "dense",
+        "units": 10
+      }
+    ],
+    "parameter_count": 10250
+  },
+  "batch_size": 512,
+  "class_weight": {
+    "mode": "balanced",
+    "source": "all_53918_training_segments"
+  },
+  "config_sha256": "1ea003079b2fc07b097a8863f14818715246933806fe9036dd11873444ab71b0",
+  "cpu_only": true,
+  "deployment_id": "linear-all-data-deployment-v1",
+  "deployment_only": true,
+  "early_stopping": false,
+  "epoch_selection": {
+    "best_epochs": [
+      17,
+      12,
+      13,
+      4,
+      8,
+      11,
+      5,
+      5,
+      3,
+      5
+    ],
+    "median": 6.5,
+    "rounding": "round_half_up",
+    "selected_epochs": 7,
+    "source": "validated_10_fold_linear_best_epochs"
+  },
+  "epochs": 7,
+  "independent_test_metrics_available": false,
+  "learning_rate": 0.001,
+  "loss": "sparse_categorical_crossentropy",
+  "optimizer": "keras.optimizers.Adam",
+  "seed": 42,
+  "shuffle": true,
+  "test_split": null,
+  "threads": 1,
+  "validation_split": null
+}

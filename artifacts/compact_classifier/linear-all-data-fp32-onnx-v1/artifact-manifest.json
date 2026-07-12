@@ -1,0 +1,100 @@
+{
+  "architecture_id": "linear",
+  "converter": {
+    "method": "tf2onnx.convert.from_keras",
+    "onnx_version": "1.17.0",
+    "tensorflow_version": "2.15.1",
+    "tf2onnx_version": "1.16.1",
+    "tf_keras_version": "2.15.1"
+  },
+  "created_at_utc": "2026-07-12T21:52:29Z",
+  "deployment_id": "linear-all-data-deployment-v1",
+  "deployment_only": true,
+  "independent_test_metrics_available": false,
+  "input_contract": {
+    "dtype": "float32",
+    "name": "embedding",
+    "shape": [
+      "batch",
+      1024
+    ]
+  },
+  "limitations": [
+    "Deployment-only model trained on all evaluable segments from all ten folds.",
+    "No independent test metrics are available for this artifact.",
+    "Accepts only 1024-value YAMNet embeddings and excludes preprocessing/YAMNet.",
+    "No INT8, FP16, or alternate provider conversion is included."
+  ],
+  "manifest_sha256": "a4b38a584600c2326f465b6ce395c34ba1c974afe4f2477d0e0f8389479423fd",
+  "onnx_artifact": {
+    "precision": "fp32",
+    "relative_path": "model.onnx",
+    "sha256": "334279603fcb0805d7803ab73157cc60208d31c7142f13ea2ccf388f40561f19",
+    "size_bytes": 41795
+  },
+  "onnx_graph": {
+    "graph": {
+      "custom_domains": [],
+      "initializer_count": 2,
+      "input": {
+        "dtype": "float32",
+        "name": "embedding",
+        "shape": [
+          "unk__6",
+          1024
+        ]
+      },
+      "node_count": 3,
+      "node_types": [
+        "MatMul",
+        "Add",
+        "Softmax"
+      ],
+      "output": {
+        "dtype": "float32",
+        "name": "probabilities",
+        "shape": [
+          "unk__7",
+          10
+        ]
+      }
+    },
+    "ir_version": 8,
+    "opset": 15,
+    "opset_imports": {
+      "": 15,
+      "ai.onnx.ml": 2
+    }
+  },
+  "opset": 15,
+  "output_contract": {
+    "dtype": "float32",
+    "name": "probabilities",
+    "semantic": "softmax_probabilities",
+    "shape": [
+      "batch",
+      10
+    ]
+  },
+  "parameter_count": 10250,
+  "runtime": {
+    "target": "onnxruntime_cpu"
+  },
+  "schema_version": "edge-v2.onnx-export.v1",
+  "scientific_scope": "deployment-only; not an independently evaluated test model",
+  "source_model": {
+    "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+    "cache_index_sha256": "49d72c482e2fdda86ccf8f1b980fc1ae35fd8c44fcb77aa93f4848d6a06a1829",
+    "config_sha256": "1ea003079b2fc07b097a8863f14818715246933806fe9036dd11873444ab71b0",
+    "dataset_manifest_sha256": "c77946581016eba9aacf00683ba073ccb537f0ca6bfd86ab50d9cea3734c7d2e",
+    "deployment_result_sha256": "547af2b6090194842f98cd9830fd3dcfec76689f27d393a607898bb906c40adb",
+    "training_segment_count": 53918,
+    "yamnet_artifact_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2"
+  },
+  "source_model_identity": "547af2b6090194842f98cd9830fd3dcfec76689f27d393a607898bb906c40adb",
+  "source_model_sha256": "20be865a31320c0a52345a1f98201bc3ab03ed00105b7e1fae271fa0630d625c",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  }
+}

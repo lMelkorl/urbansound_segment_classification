@@ -1,0 +1,10 @@
+# Isolated FP32 ONNX export environment for macOS arm64 / Python 3.11.
+# TensorFlow, Keras, and NumPy match the compact classifier training runtime.
+tensorflow==2.15.1
+tf-keras==2.15.1
+numpy==1.26.4
+
+# Conservative converter/runtime candidates resolved together with TensorFlow.
+tf2onnx==1.16.1
+onnx==1.17.0
+onnxruntime==1.20.1

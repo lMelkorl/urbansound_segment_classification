@@ -1,0 +1,229 @@
+{
+  "batch_results": [
+    {
+      "batch_size": 1,
+      "fixture_id": "synthetic_zero",
+      "maximum_absolute_error": 7.450580596923828e-09,
+      "maximum_error_location": {
+        "class_index": 3,
+        "fixture_record": {
+          "fixture_id": "synthetic_zero",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 2.2351741790771484e-09,
+      "probability_sum": {
+        "keras_maximum_deviation_from_one": 0.0,
+        "onnx_maximum_deviation_from_one": 0.0
+      },
+      "rmse": 4.080851059445486e-09,
+      "sample_count": 1,
+      "shape": [
+        1,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 7,
+      "fixture_id": "synthetic_small_positive",
+      "maximum_absolute_error": 7.450580596923828e-09,
+      "maximum_error_location": {
+        "class_index": 8,
+        "fixture_record": {
+          "fixture_id": "synthetic_small_positive",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 6.386211940220424e-10,
+      "probability_sum": {
+        "keras_maximum_deviation_from_one": 5.960464477539063e-08,
+        "onnx_maximum_deviation_from_one": 5.960464477539063e-08
+      },
+      "rmse": 2.181306644414067e-09,
+      "sample_count": 7,
+      "shape": [
+        7,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 32,
+      "fixture_id": "synthetic_small_negative",
+      "maximum_absolute_error": 7.450580596923828e-09,
+      "maximum_error_location": {
+        "class_index": 0,
+        "fixture_record": {
+          "fixture_id": "synthetic_small_negative",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 5.960464477539063e-09,
+      "probability_sum": {
+        "keras_maximum_deviation_from_one": 0.0,
+        "onnx_maximum_deviation_from_one": 1.1920928955078125e-07
+      },
+      "rmse": 6.664001874625056e-09,
+      "sample_count": 32,
+      "shape": [
+        32,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 128,
+      "fixture_id": "synthetic_seeded_random",
+      "maximum_absolute_error": 7.450580596923828e-08,
+      "maximum_error_location": {
+        "class_index": 9,
+        "fixture_record": {
+          "fixture_id": "synthetic_seeded_random",
+          "sample_index": 23
+        }
+      },
+      "mean_absolute_error": 9.988434612751007e-09,
+      "probability_sum": {
+        "keras_maximum_deviation_from_one": 1.1920928955078125e-07,
+        "onnx_maximum_deviation_from_one": 1.7881393432617188e-07
+      },
+      "rmse": 1.4239645020092286e-08,
+      "sample_count": 128,
+      "shape": [
+        128,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 1000,
+      "fixture_id": "a3bed1830532864c4dbf61ed55a4bdaf82bd11174ac409a2029074e9ee180c4d",
+      "maximum_absolute_error": 4.470348358154297e-07,
+      "maximum_error_location": {
+        "class_index": 2,
+        "fixture_record": {
+          "class_id": 8,
+          "clip_key": "fold10/159742-8-0-0.wav",
+          "fold": 10,
+          "segment_index": 0,
+          "segment_start_sample": 0
+        }
+      },
+      "mean_absolute_error": 7.2257903225492295e-09,
+      "probability_sum": {
+        "keras_maximum_deviation_from_one": 2.384185791015625e-07,
+        "onnx_maximum_deviation_from_one": 2.384185791015625e-07
+      },
+      "rmse": 2.4022122895360105e-08,
+      "sample_count": 1000,
+      "shape": [
+        1000,
+        10
+      ],
+      "top1_agreement": 1.0
+    }
+  ],
+  "batch_sizes": [
+    1,
+    7,
+    32,
+    128
+  ],
+  "created_at_utc": "2026-07-12T21:52:52Z",
+  "deployment_id": "linear-all-data-deployment-v1",
+  "deployment_only": true,
+  "fixture_identity": "a3bed1830532864c4dbf61ed55a4bdaf82bd11174ac409a2029074e9ee180c4d",
+  "independent_test_metrics_available": false,
+  "numeric_error": {
+    "maximum_absolute_error": 4.470348358154297e-07,
+    "maximum_error_location": {
+      "class_index": 2,
+      "fixture_record": {
+        "class_id": 8,
+        "clip_key": "fold10/159742-8-0-0.wav",
+        "fold": 10,
+        "segment_index": 0,
+        "segment_start_sample": 0
+      }
+    },
+    "mean_absolute_error": 7.450128714725889e-09,
+    "probability_sum": {
+      "keras_maximum_deviation_from_one": 2.384185791015625e-07,
+      "onnx_maximum_deviation_from_one": 2.384185791015625e-07
+    },
+    "rmse": 2.2749523415631042e-08,
+    "sample_count": 1168,
+    "shape": [
+      1168,
+      10
+    ],
+    "top1_agreement": 1.0
+  },
+  "onnx_graph": {
+    "graph": {
+      "custom_domains": [],
+      "initializer_count": 2,
+      "input": {
+        "dtype": "float32",
+        "name": "embedding",
+        "shape": [
+          "unk__6",
+          1024
+        ]
+      },
+      "node_count": 3,
+      "node_types": [
+        "MatMul",
+        "Add",
+        "Softmax"
+      ],
+      "output": {
+        "dtype": "float32",
+        "name": "probabilities",
+        "shape": [
+          "unk__7",
+          10
+        ]
+      }
+    },
+    "ir_version": 8,
+    "opset": 15,
+    "opset_imports": {
+      "": 15,
+      "ai.onnx.ml": 2
+    }
+  },
+  "onnx_sha256": "334279603fcb0805d7803ab73157cc60208d31c7142f13ea2ccf388f40561f19",
+  "parity_sha256": "392579646863f10b0cd43b2aff1132a9b95d5a8a62136e8c4764687305465ac7",
+  "runtime": {
+    "active_session_providers": [
+      "CPUExecutionProvider"
+    ],
+    "configured_providers": [
+      "CPUExecutionProvider"
+    ],
+    "onnxruntime_version": "1.20.1"
+  },
+  "sample_count": 1000,
+  "schema_version": "edge-v2.deployment-onnx-parity.v1",
+  "scope": {
+    "accuracy_or_macro_f1_generated": false,
+    "fold_metric_parity_performed": false,
+    "numeric_and_prediction_parity_only": true
+  },
+  "source_model_sha256": "20be865a31320c0a52345a1f98201bc3ab03ed00105b7e1fae271fa0630d625c",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "synthetic_sample_count": 168,
+  "thresholds": {
+    "maximum_absolute_error": 1e-05,
+    "mean_absolute_error": 1e-06,
+    "probability_sum_tolerance": 1e-05,
+    "top1_agreement": 1.0
+  },
+  "top1_agreement": 1.0,
+  "total_numeric_sample_count": 1168
+}
