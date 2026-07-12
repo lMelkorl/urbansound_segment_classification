@@ -1,0 +1,247 @@
+{
+  "benchmark_config": {
+    "batch_size": 1,
+    "execution_mode": "ORT_SEQUENTIAL",
+    "graph_optimization": "ORT_ENABLE_ALL",
+    "iterations": 1000,
+    "provider": "CPUExecutionProvider",
+    "repetitions": 5,
+    "runtime_order_by_repetition": {
+      "1": [
+        "fp32",
+        "int8"
+      ],
+      "2": [
+        "int8",
+        "fp32"
+      ],
+      "3": [
+        "fp32",
+        "int8"
+      ],
+      "4": [
+        "int8",
+        "fp32"
+      ],
+      "5": [
+        "fp32",
+        "int8"
+      ]
+    },
+    "threads": 1,
+    "warmup": 20
+  },
+  "comparison": {
+    "artifact_size_reduction_percent": 70.45818877856203,
+    "int8_latency_speedup_fp32_p50_over_int8_p50": 0.41221052631578947,
+    "int8_throughput_ratio": 0.7927440277042505,
+    "memory_reduction_percent": -1.0570824524312896,
+    "session_load_ratio_fp32_over_int8": 0.4424458925356019,
+    "top1_prediction_agreement": true
+  },
+  "created_at_utc": "2026-07-12T21:23:09Z",
+  "decision_reasons": [
+    {
+      "criterion": "parity_thresholds_pass",
+      "passed": false
+    },
+    {
+      "criterion": "clip_macro_f1_delta_lte_0.002",
+      "passed": true,
+      "value": 0.0011466318315314084
+    },
+    {
+      "criterion": "int8_artifact_smaller_than_fp32",
+      "fp32_bytes": 41795,
+      "int8_bytes": 12347,
+      "passed": true
+    },
+    {
+      "criterion": "p50_latency_at_least_5_percent_lower",
+      "improvement_percent": -142.59448416751786,
+      "passed": false
+    },
+    {
+      "criterion": "incremental_rss_at_least_10_percent_lower",
+      "improvement_percent": -1.0570824524312896,
+      "passed": false
+    },
+    {
+      "criterion": "latency_or_memory_improvement",
+      "passed": false
+    }
+  ],
+  "deployment_decision": "fp32_onnx",
+  "environment": {
+    "accelerator": "none_cpu_only",
+    "configured_threads": 1,
+    "python_version": "3.11.15",
+    "system": {
+      "architecture": "arm64",
+      "cpu_name": "arm",
+      "logical_cores": 12,
+      "os": "Darwin",
+      "os_version": "26.5",
+      "physical_cores": null,
+      "total_ram_bytes": 19327352832
+    }
+  },
+  "fp32_artifact": {
+    "manifest_sha256": "e058298d78ae44196d7d2910aed74cc7625e4f0ac3ecbd3d3a51f009241fe9e9",
+    "onnx_sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+    "precision": "fp32",
+    "size_bytes": 41795
+  },
+  "fp32_runtime": {
+    "artifact_size_bytes": 41795,
+    "fresh_child_pids_unique": true,
+    "median_first_call_ns": 127750.0,
+    "median_model_load_ns": 1510916.0,
+    "median_predictions_per_second": 169364.18652010115,
+    "median_process_startup_ns": 142762958.0,
+    "median_runtime_import_configuration_ns": 18455750.0,
+    "median_steady_p50_ns": 3916.0,
+    "median_steady_p95_ns": 4209.0,
+    "median_steady_p99_ns": 10802.40999999999,
+    "memory": {
+      "limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+      "median_approximate_incremental_peak_rss_bytes": 15499264.0,
+      "median_baseline_peak_rss_bytes": 41926656.0,
+      "median_final_peak_rss_bytes": 57425920.0,
+      "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+    },
+    "repetitions": 5,
+    "top1_class": 3
+  },
+  "input_identity": {
+    "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+    "cache_index_sha256": "49d72c482e2fdda86ccf8f1b980fc1ae35fd8c44fcb77aa93f4848d6a06a1829",
+    "class_id": 3,
+    "clip_key": "fold1/101415-3-0-2.wav",
+    "dtype": "float32",
+    "embedding_sha256": "422840e0ca9d8175328ac8bbd87c6a8eaf46198c9a37183d630ba2815937c770",
+    "fold": 1,
+    "input_identity_sha256": "f87a799929c978a23957d6dff066a4df7cddf83ea30ad20b49cbb4ca59dfbb52",
+    "segment_index": 0,
+    "segment_start_sample": 0,
+    "shape": [
+      1,
+      1024
+    ]
+  },
+  "int8_artifact": {
+    "manifest_sha256": "7817069e6b827b8102667bfd66334a0fa750803b692a3e1ff97d3509a39eca7c",
+    "onnx_sha256": "c2640460d5a4ccf2fe03a9e80a7a5f05f59401cb9156e81aaa73c33f0655eeb5",
+    "precision": "dynamic_int8_weights_float32_io",
+    "size_bytes": 12347
+  },
+  "int8_runtime": {
+    "artifact_size_bytes": 12347,
+    "fresh_child_pids_unique": true,
+    "median_first_call_ns": 157500.0,
+    "median_model_load_ns": 3414917.0,
+    "median_predictions_per_second": 134262.4473707989,
+    "median_process_startup_ns": 130015125.0,
+    "median_runtime_import_configuration_ns": 13996625.0,
+    "median_steady_p50_ns": 9500.0,
+    "median_steady_p95_ns": 10209.0,
+    "median_steady_p99_ns": 14001.249999999998,
+    "memory": {
+      "limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+      "median_approximate_incremental_peak_rss_bytes": 15663104.0,
+      "median_baseline_peak_rss_bytes": 41926656.0,
+      "median_final_peak_rss_bytes": 57589760.0,
+      "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+    },
+    "repetitions": 5,
+    "top1_class": 3
+  },
+  "limitations": [
+    "Classifier-only benchmark excludes YAMNet, audio decoding, segmentation, and clip aggregation.",
+    "Dynamic quantization uses QInt8 weights with float32 input, output, and Softmax.",
+    "macOS peak RSS is a process-lifetime high-water mark and incremental values are approximate.",
+    "This very small graph may gain overhead from dynamic quantization; no speedup is assumed.",
+    "Results apply to one cached embedding, one thread, this machine, and the locked runtime."
+  ],
+  "parity_result": {
+    "clip_macro_f1_delta": 0.0011466318315314084,
+    "relative_path": "../parity/parity-result.json",
+    "sha256": "91f25373d09dbb755fcfdd349542bb53835a6fedb6ab617bf8d408972142aa11",
+    "status": {
+      "error": {
+        "type": "Int8ParityThresholdFailure"
+      },
+      "outcome": "failure"
+    }
+  },
+  "raw_run_references": [
+    {
+      "relative_path": "raw/fp32-repetition-01.json",
+      "repetition": 1,
+      "runtime": "fp32",
+      "sha256": "f7ab1634d084556ab1d2fbdc5d9b77448486b3c870a1e470de6c2a371aeb9cd3"
+    },
+    {
+      "relative_path": "raw/int8-repetition-01.json",
+      "repetition": 1,
+      "runtime": "int8",
+      "sha256": "c84c926447099e08dc5774568fc9d1a0c2788cf1c58bfdfc88d78f5d0eda1ab6"
+    },
+    {
+      "relative_path": "raw/int8-repetition-02.json",
+      "repetition": 2,
+      "runtime": "int8",
+      "sha256": "34f4c69ef4d237e3f863b414123a0df44f8545ec14b681a051e3797e5a080b26"
+    },
+    {
+      "relative_path": "raw/fp32-repetition-02.json",
+      "repetition": 2,
+      "runtime": "fp32",
+      "sha256": "92f03106c0dfba02f1da36f4a2440f09ce91aa4b383ecc51f1b7028778bd1c37"
+    },
+    {
+      "relative_path": "raw/fp32-repetition-03.json",
+      "repetition": 3,
+      "runtime": "fp32",
+      "sha256": "53d1769c4cdb7b6865cc9ffff67ed67c8d260d92c02ac011d89069cbf22efb7e"
+    },
+    {
+      "relative_path": "raw/int8-repetition-03.json",
+      "repetition": 3,
+      "runtime": "int8",
+      "sha256": "a34bdae15f8e2c96772804405007c6533e21c43ca9b917d3983a3562533739d1"
+    },
+    {
+      "relative_path": "raw/int8-repetition-04.json",
+      "repetition": 4,
+      "runtime": "int8",
+      "sha256": "07b67b9f4158e7497c6c4922dae2ac053b2e136db81ee23155f5f60fd758d5dd"
+    },
+    {
+      "relative_path": "raw/fp32-repetition-04.json",
+      "repetition": 4,
+      "runtime": "fp32",
+      "sha256": "63df2cac7d428fea801ccfbf605ecf72f967ca1f5f564915cdc9814c0a250980"
+    },
+    {
+      "relative_path": "raw/fp32-repetition-05.json",
+      "repetition": 5,
+      "runtime": "fp32",
+      "sha256": "0cb4786580588fc245a8ea7a6d6665d40bd587ad62778a9796d07bf6447e9d8f"
+    },
+    {
+      "relative_path": "raw/int8-repetition-05.json",
+      "repetition": 5,
+      "runtime": "int8",
+      "sha256": "554f566237ded819e84c19e4301b2cbb1ff03e10d8b9cef58a818539a37ab168"
+    }
+  ],
+  "schema_version": "edge-v2.onnx-int8-benchmark.v1",
+  "status": {
+    "error": {
+      "type": "BenchmarkOrParityFailure"
+    },
+    "outcome": "failure"
+  },
+  "summary_sha256": "662ee790fbdf4924943282ce41efe9f40ed9002bc1c928b13c1f93e1a95c6ba3"
+}

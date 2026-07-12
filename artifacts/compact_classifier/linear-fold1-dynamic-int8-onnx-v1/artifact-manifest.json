@@ -1,0 +1,145 @@
+{
+  "created_at_utc": "2026-07-12T21:21:39Z",
+  "graph_summary": {
+    "changed_node_types": {
+      "added": [
+        "Cast",
+        "DynamicQuantizeLinear",
+        "MatMulInteger",
+        "Mul"
+      ],
+      "removed": [
+        "MatMul"
+      ]
+    },
+    "fp32": {
+      "initializer_count": 2,
+      "ir_version": 8,
+      "node_count": 3,
+      "node_types": [
+        "MatMul",
+        "Add",
+        "Softmax"
+      ],
+      "opset": 15
+    },
+    "int8": {
+      "custom_domains": [],
+      "initializer_count": 4,
+      "initializer_dtype_counts": {
+        "FLOAT": 2,
+        "INT8": 2
+      },
+      "input": {
+        "dtype": "float32",
+        "name": "embedding",
+        "shape": [
+          "unk__6",
+          1024
+        ]
+      },
+      "ir_version": 8,
+      "node_count": 7,
+      "node_type_counts": {
+        "Add": 1,
+        "Cast": 1,
+        "DynamicQuantizeLinear": 1,
+        "MatMulInteger": 1,
+        "Mul": 2,
+        "Softmax": 1
+      },
+      "opset": 15,
+      "opset_imports": {
+        "": 15,
+        "ai.onnx.ml": 2
+      },
+      "output": {
+        "dtype": "float32",
+        "name": "probabilities",
+        "shape": [
+          "unk__7",
+          10
+        ]
+      },
+      "quantized_node_types": [
+        "DynamicQuantizeLinear",
+        "MatMulInteger"
+      ],
+      "quantized_weight_initializers": [
+        {
+          "dtype": "INT8",
+          "name": "linear_fold1_export/probabilities/MatMul/ReadVariableOp:0_zero_point",
+          "shape": []
+        },
+        {
+          "dtype": "INT8",
+          "name": "linear_fold1_export/probabilities/MatMul/ReadVariableOp:0_quantized",
+          "shape": [
+            1024,
+            10
+          ]
+        }
+      ],
+      "softmax": {
+        "output_dtype": "float32",
+        "present": true
+      }
+    }
+  },
+  "input_contract": {
+    "dtype": "float32",
+    "name": "embedding",
+    "shape": [
+      "batch",
+      1024
+    ]
+  },
+  "int8_artifact": {
+    "precision": "dynamic_int8_weights_float32_io",
+    "relative_path": "model.int8.onnx",
+    "sha256": "c2640460d5a4ccf2fe03a9e80a7a5f05f59401cb9156e81aaa73c33f0655eeb5",
+    "size_bytes": 12347
+  },
+  "limitations": [
+    "Dynamic quantization targets eligible Linear MatMul weights only.",
+    "Input and output remain float32; Softmax remains float.",
+    "No static calibration, QAT, FP16, INT4, or YAMNet quantization is included.",
+    "A larger or slower INT8 artifact is a valid outcome for this very small graph."
+  ],
+  "manifest_sha256": "7817069e6b827b8102667bfd66334a0fa750803b692a3e1ff97d3509a39eca7c",
+  "output_contract": {
+    "dtype": "float32",
+    "name": "probabilities",
+    "semantic": "softmax_probabilities",
+    "shape": [
+      "batch",
+      10
+    ]
+  },
+  "quantization_config": {
+    "api": "onnxruntime.quantization.quantize_dynamic",
+    "per_channel": false,
+    "reduce_range": false,
+    "weight_type": "QInt8"
+  },
+  "quantization_method": "dynamic_weight_only_int8",
+  "schema_version": "edge-v2.onnx-quantized-artifact.v1",
+  "size_comparison": {
+    "fp32_size_bytes": 41795,
+    "int8_minus_fp32_bytes": -29448,
+    "int8_size_bytes": 12347,
+    "size_reduction_percent": 70.45818877856203
+  },
+  "source_fp32_identity": "e058298d78ae44196d7d2910aed74cc7625e4f0ac3ecbd3d3a51f009241fe9e9",
+  "source_fp32_sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+  "source_model_sha256": "7538f47869e4ad5901074a1602e1217d3a9192f98fbd6d3d9f9ebac9bc708301",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "tool_versions": {
+    "numpy": "1.26.4",
+    "onnx": "1.17.0",
+    "onnxruntime": "1.20.1"
+  }
+}

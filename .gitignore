@@ -11,7 +11,10 @@ __pycache__/
 .DS_Store
 
 .venv-yamnet/
+.venv-onnx/
 artifacts/yamnet/tfhub-v1/model/
+artifacts/compact_classifier/*/model.onnx
+artifacts/compact_classifier/*/model.int8.onnx
 cache/yamnet_embeddings/
 results/lightgbm_legacy_reproduction/*/model.txt
 results/lightgbm_cross_fold/*/fold-*/model.txt

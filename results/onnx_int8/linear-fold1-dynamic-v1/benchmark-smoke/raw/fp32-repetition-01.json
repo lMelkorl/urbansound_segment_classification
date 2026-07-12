@@ -1,0 +1,160 @@
+{
+  "artifact_sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+  "artifact_size_bytes": 41795,
+  "benchmark_config": {
+    "batch_size": 1,
+    "iterations": 20,
+    "process_isolation": "fresh_spawned_process",
+    "threads": 1,
+    "warmup": 2
+  },
+  "child_pid": 44210,
+  "consumer": {
+    "checksum": 2.0000014004988564,
+    "consumed_count": 23,
+    "expected_count": 23,
+    "output_materialized_each_call": true
+  },
+  "created_at_utc": "2026-07-12T21:22:44Z",
+  "input_identity": {
+    "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+    "cache_index_sha256": "49d72c482e2fdda86ccf8f1b980fc1ae35fd8c44fcb77aa93f4848d6a06a1829",
+    "class_id": 3,
+    "clip_key": "fold1/101415-3-0-2.wav",
+    "dtype": "float32",
+    "embedding_sha256": "422840e0ca9d8175328ac8bbd87c6a8eaf46198c9a37183d630ba2815937c770",
+    "fold": 1,
+    "input_identity_sha256": "f87a799929c978a23957d6dff066a4df7cddf83ea30ad20b49cbb4ca59dfbb52",
+    "segment_index": 0,
+    "segment_start_sample": 0,
+    "shape": [
+      1,
+      1024
+    ]
+  },
+  "lifecycle": {
+    "first_call_latency": {
+      "duration": 810125,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "load_time": {
+      "duration": 33359542,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "status": {
+      "error": null,
+      "outcome": "success"
+    },
+    "steady_state": {
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "throughput": {
+        "calls_per_second": 209329.83054750218,
+        "items_per_second": 209329.83054750218,
+        "real_time_factor": null
+      },
+      "timing": {
+        "maximum": 7291,
+        "mean": 4777.15,
+        "minimum": 3959,
+        "p50": 4375.5,
+        "p95": 6381.85,
+        "p99": 7109.169999999999,
+        "percentile_method": "linear_interpolation_at_rank_(n-1)*q",
+        "raw_samples": [
+          6334,
+          5792,
+          5125,
+          4792,
+          7291,
+          5792,
+          5209,
+          4541,
+          4500,
+          4417,
+          4208,
+          4208,
+          4166,
+          4167,
+          4167,
+          4291,
+          3959,
+          4209,
+          4334,
+          4041
+        ],
+        "standard_deviation": 869.0743509619876,
+        "timer_source": "time.perf_counter_ns",
+        "unit": "nanoseconds"
+      }
+    }
+  },
+  "memory": {
+    "approximate_incremental_peak_rss_bytes": 15499264,
+    "baseline_peak_rss_bytes": 41877504,
+    "final_peak_rss_bytes": 57376768,
+    "platform_limitation": "Darwin ru_maxrss is a process-lifetime high-water mark reported in bytes. Incremental RSS is the difference between two process high-water marks, not exact model allocation.",
+    "reason": null,
+    "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss",
+    "supported": true,
+    "unit": "bytes"
+  },
+  "model_variant": "fp32",
+  "output_validation": {
+    "dtype": "float32",
+    "finite": true,
+    "output_sha256": "718fa61f7975d5f4818adbf30c35265a9a355aae536f615ff7637695aaa6750e",
+    "probability_sum": 0.9999999403953552,
+    "probability_sum_deviation": 5.960464477539063e-08,
+    "shape": [
+      1,
+      10
+    ],
+    "top1_class": 3
+  },
+  "process_startup": {
+    "duration": 184073125,
+    "timer_source": "time.perf_counter_ns",
+    "unit": "nanoseconds"
+  },
+  "repetition": 1,
+  "runtime": "fp32",
+  "runtime_import_configuration": {
+    "duration": 50627417,
+    "timer_source": "time.perf_counter_ns",
+    "unit": "nanoseconds"
+  },
+  "runtime_state": {
+    "effective_provider_list": [
+      "CPUExecutionProvider"
+    ],
+    "effective_session_options": {
+      "execution_mode": "ORT_SEQUENTIAL",
+      "graph_optimization_level": "ORT_ENABLE_ALL",
+      "inter_op_num_threads": 1,
+      "intra_op_num_threads": 1
+    },
+    "onnxruntime_version": "1.20.1",
+    "requested_provider_list": [
+      "CPUExecutionProvider"
+    ],
+    "runtime": "onnxruntime"
+  },
+  "schema_version": "edge-v2.onnx-classifier-benchmark-run.v1",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  }
+}

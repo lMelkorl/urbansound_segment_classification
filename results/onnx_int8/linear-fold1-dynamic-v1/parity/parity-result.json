@@ -1,0 +1,296 @@
+{
+  "batch_results": [
+    {
+      "batch_size": 1,
+      "changed_top1_count": 0,
+      "changed_top1_samples": [],
+      "fixture_id": "synthetic_zero",
+      "maximum_absolute_error": 0.0,
+      "maximum_error_location": {
+        "class_index": 0,
+        "fixture_record": {
+          "fixture_id": "synthetic_zero",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 0.0,
+      "probability_sum": {
+        "fp32_maximum_deviation_from_one": 0.0,
+        "int8_maximum_deviation_from_one": 0.0
+      },
+      "rmse": 0.0,
+      "sample_count": 1,
+      "shape": [
+        1,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 7,
+      "changed_top1_count": 0,
+      "changed_top1_samples": [],
+      "fixture_id": "synthetic_small_positive",
+      "maximum_absolute_error": 1.5333294868469238e-05,
+      "maximum_error_location": {
+        "class_index": 9,
+        "fixture_record": {
+          "fixture_id": "synthetic_small_positive",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 5.5104494094848635e-06,
+      "probability_sum": {
+        "fp32_maximum_deviation_from_one": 5.960464477539063e-08,
+        "int8_maximum_deviation_from_one": 0.0
+      },
+      "rmse": 6.9217746340778004e-06,
+      "sample_count": 7,
+      "shape": [
+        7,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 32,
+      "changed_top1_count": 0,
+      "changed_top1_samples": [],
+      "fixture_id": "synthetic_small_negative",
+      "maximum_absolute_error": 1.4230608940124512e-05,
+      "maximum_error_location": {
+        "class_index": 9,
+        "fixture_record": {
+          "fixture_id": "synthetic_small_negative",
+          "sample_index": 0
+        }
+      },
+      "mean_absolute_error": 5.4031610488891605e-06,
+      "probability_sum": {
+        "fp32_maximum_deviation_from_one": 0.0,
+        "int8_maximum_deviation_from_one": 5.960464477539063e-08
+      },
+      "rmse": 6.706622649390385e-06,
+      "sample_count": 32,
+      "shape": [
+        32,
+        10
+      ],
+      "top1_agreement": 1.0
+    },
+    {
+      "batch_size": 128,
+      "changed_top1_count": 2,
+      "changed_top1_samples": [
+        {
+          "fixture_record": {
+            "fixture_id": "synthetic_seeded_random",
+            "sample_index": 14
+          },
+          "fp32_top1_class": 2,
+          "fp32_top1_margin": 0.0001779496669769287,
+          "int8_top1_class": 1
+        },
+        {
+          "fixture_record": {
+            "fixture_id": "synthetic_seeded_random",
+            "sample_index": 102
+          },
+          "fp32_top1_class": 4,
+          "fp32_top1_margin": 0.002772897481918335,
+          "int8_top1_class": 6
+        }
+      ],
+      "fixture_id": "synthetic_seeded_random",
+      "maximum_absolute_error": 0.004331484436988831,
+      "maximum_error_location": {
+        "class_index": 4,
+        "fixture_record": {
+          "fixture_id": "synthetic_seeded_random",
+          "sample_index": 107
+        }
+      },
+      "mean_absolute_error": 0.000649187809904106,
+      "probability_sum": {
+        "fp32_maximum_deviation_from_one": 1.7881393432617188e-07,
+        "int8_maximum_deviation_from_one": 1.7881393432617188e-07
+      },
+      "rmse": 0.0008891585447927934,
+      "sample_count": 128,
+      "shape": [
+        128,
+        10
+      ],
+      "top1_agreement": 0.984375
+    },
+    {
+      "batch_size": 128,
+      "changed_top1_count": 0,
+      "changed_top1_samples": [],
+      "fixture_id": "a3bed1830532864c4dbf61ed55a4bdaf82bd11174ac409a2029074e9ee180c4d",
+      "maximum_absolute_error": 0.03158015012741089,
+      "maximum_error_location": {
+        "class_index": 8,
+        "fixture_record": {
+          "class_id": 8,
+          "clip_key": "fold10/159742-8-0-0.wav",
+          "fold": 10,
+          "segment_index": 3,
+          "segment_start_sample": 23040
+        }
+      },
+      "mean_absolute_error": 0.0006719164875714631,
+      "probability_sum": {
+        "fp32_maximum_deviation_from_one": 2.384185791015625e-07,
+        "int8_maximum_deviation_from_one": 2.384185791015625e-07
+      },
+      "rmse": 0.0020391682456840465,
+      "sample_count": 1000,
+      "shape": [
+        1000,
+        10
+      ],
+      "top1_agreement": 1.0
+    }
+  ],
+  "batch_sizes": [
+    1,
+    7,
+    32,
+    128
+  ],
+  "created_at_utc": "2026-07-12T21:22:03Z",
+  "fixture_identity": "a3bed1830532864c4dbf61ed55a4bdaf82bd11174ac409a2029074e9ee180c4d",
+  "fold1_metric_parity": {
+    "clip_accuracy_delta": 0.001204819277108471,
+    "clip_macro_f1_delta": 0.0011466318315314084,
+    "evaluable_clip_count": 830,
+    "excluded_zero_segment_clip_count": 43,
+    "fold": 1,
+    "fp32_int8_clip_prediction_agreement": 0.9987951807228915,
+    "fp32_int8_segment_prediction_agreement": 0.995217951075961,
+    "metadata_clip_count": 873,
+    "metrics": {
+      "fp32": {
+        "clip": {
+          "accuracy": 0.8,
+          "macro_f1": 0.8261592124213399,
+          "prediction_count": 830
+        },
+        "segment": {
+          "accuracy": 0.7279749862056281,
+          "macro_f1": 0.7323369909635862,
+          "prediction_count": 5437
+        }
+      },
+      "int8": {
+        "clip": {
+          "accuracy": 0.7987951807228916,
+          "macro_f1": 0.8250125805898085,
+          "prediction_count": 830
+        },
+        "segment": {
+          "accuracy": 0.72668751149531,
+          "macro_f1": 0.7310750375554094,
+          "prediction_count": 5437
+        }
+      },
+      "keras": {
+        "clip": {
+          "accuracy": 0.8,
+          "macro_f1": 0.8261592124213399,
+          "prediction_count": 830
+        },
+        "segment": {
+          "accuracy": 0.7279749862056281,
+          "macro_f1": 0.7323369909635862,
+          "prediction_count": 5437
+        }
+      }
+    },
+    "segment_count": 5437
+  },
+  "fp32_onnx_sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+  "int8_onnx_sha256": "c2640460d5a4ccf2fe03a9e80a7a5f05f59401cb9156e81aaa73c33f0655eeb5",
+  "keras_fp32_top1_agreement": 1.0,
+  "metric_thresholds": {
+    "maximum_clip_accuracy_delta": 0.002,
+    "maximum_clip_macro_f1_delta": 0.002,
+    "minimum_clip_prediction_agreement": 0.995
+  },
+  "numeric_error": {
+    "changed_top1_count": 2,
+    "changed_top1_samples": [
+      {
+        "fixture_record": {
+          "fixture_id": "synthetic_seeded_random",
+          "sample_index": 14
+        },
+        "fp32_top1_class": 2,
+        "fp32_top1_margin": 0.0001779496669769287,
+        "int8_top1_class": 1
+      },
+      {
+        "fixture_record": {
+          "fixture_id": "synthetic_seeded_random",
+          "sample_index": 102
+        },
+        "fp32_top1_class": 4,
+        "fp32_top1_margin": 0.002772897481918335,
+        "int8_top1_class": 6
+      }
+    ],
+    "maximum_absolute_error": 0.03158015012741089,
+    "maximum_error_location": {
+      "class_index": 8,
+      "fixture_record": {
+        "class_id": 8,
+        "clip_key": "fold10/159742-8-0-0.wav",
+        "fold": 10,
+        "segment_index": 3,
+        "segment_start_sample": 23040
+      }
+    },
+    "mean_absolute_error": 0.0006465958917282701,
+    "probability_sum": {
+      "fp32_maximum_deviation_from_one": 2.384185791015625e-07,
+      "int8_maximum_deviation_from_one": 2.384185791015625e-07
+    },
+    "rmse": 0.0019096470309613032,
+    "sample_count": 1168,
+    "shape": [
+      1168,
+      10
+    ],
+    "top1_agreement": 0.9982876712328768
+  },
+  "numeric_thresholds": {
+    "maximum_absolute_error": 0.02,
+    "mean_absolute_error": 0.002,
+    "minimum_top1_agreement": 0.995
+  },
+  "parity_sha256": "91f25373d09dbb755fcfdd349542bb53835a6fedb6ab617bf8d408972142aa11",
+  "runtime": {
+    "configured_providers": [
+      "CPUExecutionProvider"
+    ],
+    "fp32_active_providers": [
+      "CPUExecutionProvider"
+    ],
+    "int8_active_providers": [
+      "CPUExecutionProvider"
+    ],
+    "onnxruntime_version": "1.20.1"
+  },
+  "sample_count": 1000,
+  "schema_version": "edge-v2.onnx-int8-parity.v1",
+  "source_model_sha256": "7538f47869e4ad5901074a1602e1217d3a9192f98fbd6d3d9f9ebac9bc708301",
+  "status": {
+    "error": {
+      "type": "Int8ParityThresholdFailure"
+    },
+    "outcome": "failure"
+  },
+  "synthetic_sample_count": 168,
+  "total_numeric_sample_count": 1168
+}
