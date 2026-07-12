@@ -1,0 +1,81 @@
+{
+  "artifact_identity": "yamnet-tfhub-v1",
+  "artifact_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2",
+  "created_at_utc": "2026-07-12T18:08:07Z",
+  "input_cases": [
+    {
+      "duration_seconds": 0.96,
+      "embeddings_shape": [
+        1,
+        1024
+      ],
+      "error_type": null,
+      "frame_count": 1,
+      "sample_count": 15360,
+      "scores_shape": [
+        1,
+        521
+      ],
+      "spectrogram_shape": [
+        96,
+        64
+      ],
+      "success": true
+    },
+    {
+      "duration_seconds": 0.975,
+      "embeddings_shape": [
+        1,
+        1024
+      ],
+      "error_type": null,
+      "frame_count": 1,
+      "sample_count": 15600,
+      "scores_shape": [
+        1,
+        521
+      ],
+      "spectrogram_shape": [
+        96,
+        64
+      ],
+      "success": true
+    },
+    {
+      "duration_seconds": 1.0,
+      "embeddings_shape": [
+        2,
+        1024
+      ],
+      "error_type": null,
+      "frame_count": 2,
+      "sample_count": 16000,
+      "scores_shape": [
+        2,
+        521
+      ],
+      "spectrogram_shape": [
+        144,
+        64
+      ],
+      "success": true
+    }
+  ],
+  "lightgbm": {
+    "cpu_available": true,
+    "error_type": null,
+    "importable": true,
+    "model_artifact_present": false,
+    "version": "4.6.0"
+  },
+  "loader": "tf.saved_model.load",
+  "schema_version": "edge-v2.yamnet-smoke.v1",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "tensorflow_version": "2.15.1",
+  "visible_devices": [
+    "CPU"
+  ]
+}

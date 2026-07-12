@@ -1,5 +1,7 @@
 # Isolated YAMNet CPU environment candidate for macOS arm64 and Python 3.11.
 # Resolve and freeze only after the complete set installs without substitution.
+# tensorflow-hub 0.16.1 imports pkg_resources, which setuptools 83 no longer ships.
+setuptools==80.9.0
 tensorflow==2.15.1
 tensorflow-hub==0.16.1
 tf-keras==2.15.1
