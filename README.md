@@ -1,258 +1,287 @@
-# UrbanSound8K Segment-Based Classification
-https://colab.research.google.com/drive/1-lNzYTJY6OsZ5vqcBOOi106G2mldRUqv
-This repository contains three different approaches for segment-based audio classification on the **UrbanSound8K** dataset:
+# Edge Audio V2 — Offline Urban Sound Classification
 
-1. **GOAL 1** – YAMNet Embeddings → LightGBM (Baseline)
-2. **GOAL 2** – ESResNeXt-fbsp Fine-tuning  
-3. **GOAL 3** – AudioCLIP Fine-tuning  
+## Project overview
 
-Accuracy and macro-F1 scores are reported at both segment-level and clip-level for each goal.
+Edge Audio V2 is a reproducible, CPU-first environmental sound classification system built on the UrbanSound8K case study in this repository. The deployable path is:
+
+```text
+local WAV or microphone recording
+→ mono 16 kHz preprocessing
+→ 0.96 s legacy windows with 50% overlap
+→ local YAMNet embeddings
+→ 10-class Linear softmax classifier
+→ arithmetic mean of segment probabilities
+→ clip prediction and segment timeline
+```
+
+Inference is local and does not require a cloud API. The final classifier is exported to FP32 ONNX and runs with ONNX Runtime's CPU provider. The original YAMNet + LightGBM, ESResNeXt, and AudioCLIP implementations remain documented in the [historical task README](urbansound_segment_task/README.md) and preserved under `urbansound_segment_task/goals/`.
+
+## Why this revision exists
+
+The original case study demonstrated three GPU-oriented approaches, primarily with a legacy Fold 1–8 training, Fold 9 validation, Fold 10 test split. Edge Audio V2 adds:
+
+- official rotating 10-fold evaluation without clip leakage;
+- a compact 10,250-parameter classifier over cached YAMNet embeddings;
+- reproducible CPU and ONNX Runtime measurements;
+- a provenance-bound deployment-only model trained on all available embeddings;
+- offline file-upload and microphone demo flows;
+- a deterministic, held-out-fold audio robustness evaluation;
+- machine-readable manifests, hashes, dependency locks, and result artifacts.
+
+The revision does not rewrite or relabel the historical results. Scientific performance claims come from official cross-fold results; the all-data deployment artifact has no independent test metric.
+
+## System architecture
+
+The canonical audio contract is mono float32 at 16 kHz. Legacy segmentation uses 15,360-sample windows, a 7,680-sample hop, and drops incomplete tails. Clips shorter than one full window produce no prediction; no artificial padding is introduced.
+
+YAMNet is loaded from a verified local SavedModel. Each segment produces a 1,024-dimensional mean embedding. The FP32 ONNX classifier maps `[batch, 1024]` embeddings to `[batch, 10]` softmax outputs. Clip aggregation is the arithmetic mean of canonical-class probabilities.
+
+The ten classes, in fixed output order, are: `air_conditioner`, `car_horn`, `children_playing`, `dog_bark`, `drilling`, `engine_idling`, `gun_shot`, `jackhammer`, `siren`, and `street_music`.
+
+## Main scientific results
+
+Official evaluation uses each UrbanSound8K fold exactly once as test data. For test fold `k`, validation fold is `k % 10 + 1`; the remaining eight folds are training data. Mean and population standard deviation are reported across ten held-out folds.
+
+| Model | Clip accuracy | Clip macro-F1 | Segment accuracy | Segment macro-F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Linear softmax | **0.780485 ± 0.036271** | **0.789331 ± 0.033921** | 0.716043 ± 0.036224 | 0.708456 ± 0.030906 |
+| LightGBM | 0.778559 ± 0.034277 | 0.789059 ± 0.031768 | 0.719978 ± 0.033083 | 0.725402 ± 0.030103 |
+
+Sources: [compact classifier aggregate](results/compact_classifier_cross_fold/fixed-baselines-v1/aggregate.json) and [LightGBM aggregate](results/lightgbm_cross_fold/legacy-config-v1/aggregate.json).
+
+These results are not directly comparable with the historical single-split numbers without an explicit protocol warning. See [BENCHMARKS.md](docs/BENCHMARKS.md) for scope separation.
+
+## Compact classifier result
+
+The selected architecture is one Dense softmax layer over 1,024-dimensional YAMNet embeddings:
+
+- 10,250 parameters;
+- 47,920-byte Keras weights artifact during fold evaluation;
+- 0.789331 ± 0.033921 official clip macro-F1;
+- Pareto-preferred over the tested MLP-128 on macro-F1, serialized size, and classifier-only latency.
+
+The deployment classifier uses the same architecture but is trained on all 53,918 verified segments after the evaluation protocol and epoch-selection rule were frozen. It is marked `deployment_only: true`; `independent_test_metrics_available` is `false`. Its 41,795-byte FP32 ONNX artifact is for local inference, not a new scientific test result. Provenance is recorded in the [deployment artifact manifest](artifacts/compact_classifier/linear-all-data-fp32-onnx-v1/artifact-manifest.json).
+
+## CPU and ONNX benchmark
+
+The representative Fold 1 classifier-only benchmark measured:
+
+| Runtime | Batch-1 p50 | Batch-1 p95 | Artifact size |
+| --- | ---: | ---: | ---: |
+| Keras | 0.161917 ms | 0.174936 ms | 47,920 bytes |
+| ONNX Runtime CPU | 0.003916 ms | 0.009500 ms | 41,795 bytes |
+
+The p50 ratio is **41.35×**, but this is strictly a classifier-only comparison on precomputed 1,024-dimensional embeddings. It is not a 41× full-pipeline speedup. YAMNet remains the dominant latency and memory component.
+
+On the documented Apple M3 Pro CPU run, the selected eight-thread YAMNet configuration recorded a 2.424563 ms steady-state model p50 and approximately 591 MB incremental peak RSS. These are benchmark-process measurements, not interactive demo request guarantees. See the [authoritative YAMNet summary](results/yamnet_cpu_benchmarks/final-m3pro-run/summary.json) and [ONNX benchmark summary](results/onnx_benchmark/linear-fold1-fp32-v1/summary.json).
+
+Dynamic INT8 reduced the classifier artifact by about 70.46%, but it was slower, did not reduce measured memory, and failed the parity gate. FP32 ONNX therefore remains the deployment candidate. See [BENCHMARKS.md](docs/BENCHMARKS.md).
+
+## Robustness results
+
+The authoritative robustness panel contains 1,978 evaluable clips, selected deterministically with up to 20 clips per fold and class. Each fold-specific Linear model is evaluated only on its own held-out fold. Perturbations are applied to canonical waveform audio before segmentation and YAMNet extraction.
+
+| Condition | Clip accuracy | Clip macro-F1 | Accuracy drop | Macro-F1 drop | Flip rate | Degradation |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Clean | 0.833140 ± 0.060407 | 0.826161 ± 0.063502 | 0.000000 | 0.000000 | 0.000000 | Minor |
+| White noise, 20 dB SNR | 0.783637 ± 0.069998 | 0.778345 ± 0.070533 | 0.049503 | 0.047816 | 0.119815 | Moderate |
+| White noise, 10 dB SNR | 0.646313 ± 0.084660 | 0.636696 ± 0.090411 | 0.186827 | 0.189465 | 0.306698 | Major |
+| White noise, 0 dB SNR | 0.395738 ± 0.086018 | 0.347563 ± 0.086023 | 0.437402 | 0.478598 | 0.572808 | Major |
+| Gain −12 dB | 0.787730 ± 0.065254 | 0.775732 ± 0.071825 | 0.045410 | 0.050429 | 0.138535 | Moderate |
+| 8 kHz bandlimit roundtrip | 0.797119 ± 0.075748 | 0.787245 ± 0.080990 | 0.036022 | 0.038916 | 0.162312 | Moderate |
+
+Source: [authoritative 10-fold robustness aggregate](results/audio_robustness/linear-cross-fold-v1/aggregate.json).
+
+Clean runtime predictions agree 100% with cached-pipeline top-1 predictions in every fold. The clean panel score is not the official full-fold score: the robustness panel is class-capped, excludes zero-segment clips, and has a different sample composition. A general claim that the model is “robust” is not justified; degradation must be interpreted condition by condition.
+
+## Offline demo
+
+The Gradio demo accepts a local WAV upload or a completed microphone recording, displays the current clip prediction, top three classes, segment timeline, audio metadata, and request timing. It binds only to localhost, disables sharing and analytics, uses `CPUExecutionProvider`, and does not upload audio to an application cloud service.
+
+The demo is request-based, not continuous streaming. Softmax confidence is not calibrated. See [DEMO.md](docs/DEMO.md) for setup, privacy behavior, permissions, and troubleshooting.
 
 ## Installation
 
-### Requirements
-- Python 3.9+
-- GPU recommended (NVIDIA A100/V100 ideal, required for Goals 2 and 3)
-- ~8GB RAM minimum
+The validated local environments target macOS arm64 and Python 3.11. Other platforms require compatible TensorFlow and ONNX Runtime wheels and have not been validated by the included lock files.
 
-### Environment Setup
 ```bash
-# Extract from zip file
-unzip urbansound_segment_classification.zip
-cd urbansound_segment_classification
-pip install -r requirements.txt
+python3.11 -m venv .venv-yamnet
+.venv-yamnet/bin/python -m pip install --upgrade pip wheel setuptools
+.venv-yamnet/bin/python -m pip install \
+  -r requirements/yamnet-macos-arm64-py311.lock
+
+python3.11 -m venv .venv-onnx
+.venv-onnx/bin/python -m pip install --upgrade pip wheel setuptools
+.venv-onnx/bin/python -m pip install \
+  -r requirements/onnx-export-macos-arm64-py311.lock
+
+python3.11 -m venv .venv-edge-runtime
+.venv-edge-runtime/bin/python -m pip install --upgrade pip wheel setuptools
+.venv-edge-runtime/bin/python -m pip install \
+  -r requirements/edge-runtime-macos-arm64-py311.lock
+
+python3.11 -m venv .venv-demo
+.venv-demo/bin/python -m pip install --upgrade pip wheel setuptools
+.venv-demo/bin/python -m pip install \
+  -r requirements/demo-macos-arm64-py311.lock
 ```
 
-### Dataset Setup
+UrbanSound8K must remain outside the repository. Model binaries are intentionally ignored by Git; only their small provenance manifests are trackable. Acquire and verify YAMNet locally with:
+
 ```bash
-mkdir data
-# UrbanSound8K dataset (fold1..fold10 folders + UrbanSound8K.csv) should be placed here
+.venv-yamnet/bin/python scripts/acquire_yamnet_artifact.py \
+  --allow-network \
+  --output artifacts/yamnet/tfhub-v1
+
+.venv-yamnet/bin/python scripts/verify_yamnet_artifact.py \
+  --artifact artifacts/yamnet/tfhub-v1
 ```
 
-**UrbanSound8K Download:** [Kaggle link](https://www.kaggle.com/datasets/chrisfilo/urbansound8k)
+Network access is required only for the explicit acquisition command. Evaluation and demo commands use local artifacts.
 
-**Expected structure:**
-```
-data/
-├── fold1/
-├── fold2/
-├── ...
-├── fold10/
-└── UrbanSound8K.csv
-```
+## Running the demo
 
----
+The deployment ONNX binary must exist under the directory bound by its checked manifest. Then run:
 
-## GOAL 1 — YAMNet + LightGBM (Baseline)
-
-### Working Principle
-Uses YAMNet as a **fixed feature extractor**. Extracts 1024-D embeddings for each segment, then performs classification with LightGBM on these features. Not transfer learning, just feature extraction + tabular learning.
-
-### Description
-- Each audio recording is segmented into **0.96s windows** with **50% overlap**
-- **YAMNet (1024-D) embeddings** are extracted per segment
-- **LightGBM** based classifier predicts segment labels
-- Clip-level scores are calculated by **averaging** segment probabilities
-- **Fold-based split:** Train (Fold 1-8), Val (Fold 9), Test (Fold 10)
-
-### Running
 ```bash
-python -m urbansound_segment_task.goals.goal1_yamnet_lgbm.run \
-  --data_dir ./data \
-  --out ./urbansound_segment_task/goals/goal1_yamnet_lgbm/results \
-  --win_sec 0.96 \
-  --overlap 0.5 \
-  --seed 42
+GRADIO_ANALYTICS_ENABLED=False \
+GRADIO_SHARE=False \
+.venv-demo/bin/python scripts/run_audio_demo.py \
+  --yamnet-artifact artifacts/yamnet/tfhub-v1 \
+  --classifier-artifact artifacts/compact_classifier/linear-all-data-fp32-onnx-v1 \
+  --host 127.0.0.1 \
+  --port 7860
 ```
 
-### Results
-**Source:** `results/metrics_test.json`
-- **Segment-level:** accuracy = 0.744, macro-F1 = 0.758
-- **Clip-level:** accuracy = 0.802, macro-F1 = 0.819
-- **Inference speed:** ~220 segments/second*
-- **Training time:** ~15 minutes (GPU)
+Open `http://127.0.0.1:7860`, choose upload or microphone input, and select **Analyze Audio**. Stop the demo with `Ctrl-C` in its terminal.
 
-**Note:** Advanced V5 version (LightGBM + MLP ensemble) is available for further research and achieves 0.828 clip F1 score. (`urbansound_segment_task/goals/goal1_yamnet_lgbm/results_v5`)
+## Reproducing evaluations
 
-### Output Files
-```
-urbansound_segment_task/goals/goal1_yamnet_lgbm/results/
-├── metrics_val.json              # Validation metrics
-├── metrics_test.json             # Test metrics  
-├── val_classification_report.csv # Class-wise details
-└── val_confusion_matrix.png      # Confusion matrix
-```
+Set a local dataset path without writing it into result artifacts:
 
----
-
-## GOAL 2 — ESResNeXt-fbsp Fine-tuning
-
-### Working Principle
-Adapts AudioSet pretrained ESResNeXt model to UrbanSound8K via **domain adaptation**. Performs transfer learning by fully fine-tuning the backbone when GPU is available. True end-to-end deep learning approach.
-
-### Description
-- **ESResNeXt-fbsp** model is used (frequency band-based attention mechanism)
-- Uses pre-trained weights from **AudioSet**
-- Fully fine-tunes the backbone when GPU is available
-
-### Model and Checkpoint Setup
-
-#### Download ESResNeXt Repository
 ```bash
-git clone --depth 1 https://github.com/AndreyGuzhov/ESResNeXt-fbsp.git ./external/ESResNeXt_fbsp
+export URBANSOUND8K_ROOT=../datasets/UrbanSound8K
 ```
 
-#### Download Pretrained Checkpoint
+Inventory and official split manifests:
+
 ```bash
-bash urbansound_segment_task/scripts/download_checkpoint_goal2.sh
+.venv-yamnet/bin/python scripts/inspect_urbansound8k.py \
+  --dataset-root "$URBANSOUND8K_ROOT" \
+  --output results/reproduction/dataset-inventory.json --pretty
+
+.venv-yamnet/bin/python scripts/build_urbansound8k_manifests.py \
+  --dataset-root "$URBANSOUND8K_ROOT" \
+  --output-dir results/reproduction/splits --pretty
 ```
 
-This script automatically:
-- Downloads `ESResNeXtFBSP_AudioSet.pt` checkpoint
-- Places it in `./urbansound_segment_task/goals/goal2_esresnext/checkpoints/` folder
+Embedding extraction is a full-dataset operation and requires explicit confirmation:
 
-### Running
-
-#### Full Fine-tuning (GPU required) - Recommended
 ```bash
-python -m urbansound_segment_task.goals.goal2_esresnext.run_finetune \
-  --data_dir ./data \
-  --out ./urbansound_segment_task/goals/goal2_esresnext/results_finetune_v2 \
-  --sr 44100 --win_sec 0.96 --overlap 0.5 \
-  --batch_size 128 \
-  --warmup_epochs 4 \
-  --finetune_epochs 32 \
-  --lr_head 1e-3 \
-  --lr_backbone 5e-5 \
-  --weight_decay 1e-4 \
-  --label_smoothing 0.05 \
-  --pretrained_ckpt ./urbansound_segment_task/goals/goal2_esresnext/checkpoints/ESResNeXtFBSP_AudioSet.pt \
-  --tta_shifts 2 \
-  --seed 42
+.venv-yamnet/bin/python scripts/extract_yamnet_embeddings.py \
+  --dataset-root "$URBANSOUND8K_ROOT" \
+  --artifact artifacts/yamnet/tfhub-v1 \
+  --cache-root cache/yamnet_embeddings \
+  --threads 8 --confirm-full-run \
+  --output results/reproduction/yamnet-extraction.json --pretty
 ```
 
-**Path Explanations:**
-- `--data_dir ./data`: UrbanSound8K dataset location
-- `--out ./urbansound_segment_task/goals/goal2_esresnext/results_finetune_v2`: Output folder for results
-- `--pretrained_ckpt ./urbansound_segment_task/goals/goal2_esresnext/checkpoints/ESResNeXtFBSP_AudioSet.pt`: AudioSet pretrained model
+Official cross-fold classifiers:
 
-### Results
-**Source:** `results_finetune_v2/metrics_test.json`, `results_finetune_v2/metrics_val.json`
-
-**Test Performance:**
-- **Segment-level:** accuracy = 0.768, macro-F1 = 0.740
-- **Clip-level:** accuracy = **0.841**, macro-F1 = **0.836**
-
-**Training Details:**
-- **Training time:** 2629.8 seconds (~44 minutes)
-- **Validation inference:** 18.6 seconds
-- **Hyperparameters:** batch_size=128, lr_head=1e-3, lr_backbone=5e-5, epochs=32
-- **Hardware:** NVIDIA A100 40GB GPU
-- **Highest clip-level performance** among all methods
-
----
-
-## GOAL 3 — AudioCLIP Fine-tuning
-
-### Working Principle
-Adapts AudioCLIP to UrbanSound8K via **domain adaptation**. Performs transfer learning using only the audio branch of the multi-modal (audio+text) pretrained model. results_ft_q → fine-tuning quality results (best hyperparameter combination).
-
-### Description
-- **AudioCLIP** multi-modal model is used (audio branch only)
-- ~134M trainable parameters
-- Fully fine-tunes the model if GPU is available, otherwise only the classifier head
-
-***If AudioCLIP is not in external/ folder, run this command:***
-```
-git clone --depth 1 https://github.com/AndreyGuzhov/AudioCLIP.git ./external/AudioCLIP  
-```
-
-### Running
 ```bash
-# Full fine-tuning (Best results)
-python -m urbansound_segment_task.goals.goal3_audioclip.run \
-  --data_dir ./data \
-  --out ./urbansound_segment_task/goals/goal3_audioclip/results_ft_q \
-  --mode finetune \
-  --epochs 40 \
-  --warmup_epochs 6 \
-  --bs 64 \
-  --accum_steps 2 \
-  --lr_backbone 2e-5 \
-  --lr_head 3e-4 \
-  --label_smoothing 0.10 \
-  --early_stop 8 \
-  --bn_eval 1 \
-  --head_warmup_epochs 3 \
-  --clip_agg logit_mean \
-  --tta_shifts 2 \
-  --aug_gain_db 6.0 \
-  --aug_shift_frac 0.10 \
-  --aug_noise_snr_low 10 \
-  --aug_noise_snr_high 25 \
-  --seed 42 \
-  --emb_dim 1024
+.venv-yamnet/bin/python scripts/run_lightgbm_cross_fold.py \
+  --cache-root cache/yamnet_embeddings \
+  --split-manifest-dir results/reproduction/splits \
+  --output-dir results/reproduction/lightgbm \
+  --threads 8 --resume --pretty
+
+.venv-yamnet/bin/python scripts/run_compact_classifier_cross_fold.py \
+  --cache-root cache/yamnet_embeddings \
+  --split-manifest-dir results/reproduction/splits \
+  --output-dir results/reproduction/compact \
+  --models linear,mlp128 --threads 8 --resume --pretty
 ```
 
-### Results
-**Source:** `results_ft_q/metrics_test.json`, `results_ft_q/metrics_throughput.json`, `results_ft_q/run_args.json`
+Fold 1 FP32 ONNX export and parity:
 
-**Test Performance:**
-- **Segment-level:** accuracy = 0.769, macro-F1 = 0.755
-- **Clip-level:** accuracy = 0.798, macro-F1 = 0.798
-- **Inference speed:** ~464 segments/second* (**fastest**)
+```bash
+.venv-onnx/bin/python scripts/export_linear_onnx.py \
+  --run-manifest results/reproduction/compact/run-manifest.json \
+  --model linear --fold 1 --opset 15 \
+  --output artifacts/compact_classifier/linear-fold1-fp32-onnx-reproduction/model.onnx \
+  --manifest artifacts/compact_classifier/linear-fold1-fp32-onnx-reproduction/artifact-manifest.json \
+  --pretty
 
-**Training Details:**
-- **Best epoch:** 5
-- **Validation inference:** 11.1 seconds (5134 segments)
-- **Hyperparameters:** batch_size=64, lr_head=3e-4, lr_backbone=2e-5, epochs=40
-- **Hardware:** NVIDIA A100 40GB GPU
+.venv-onnx/bin/python scripts/validate_linear_onnx.py \
+  --run-manifest results/reproduction/compact/run-manifest.json \
+  --cache-root cache/yamnet_embeddings \
+  --onnx-artifact artifacts/compact_classifier/linear-fold1-fp32-onnx-reproduction \
+  --sample-count 1000 \
+  --output-dir results/reproduction/onnx-parity --pretty
+```
 
----
+Offline inference and robustness evaluation:
 
-## Comprehensive Comparison
+```bash
+.venv-edge-runtime/bin/python scripts/run_offline_audio_inference.py \
+  --audio local-example.wav \
+  --yamnet-artifact artifacts/yamnet/tfhub-v1 \
+  --classifier-artifact artifacts/compact_classifier/linear-all-data-fp32-onnx-v1 \
+  --output results/reproduction/offline-inference.json --pretty
 
-**All metrics are calculated on the test set. Source files are available in each goal's results folders.**
+.venv-edge-runtime/bin/python scripts/run_audio_robustness.py \
+  --dataset-root "$URBANSOUND8K_ROOT" \
+  --model-run results/reproduction/compact \
+  --yamnet-artifact artifacts/yamnet/tfhub-v1 \
+  --clips-per-class-per-fold 20 \
+  --conditions clean,white_noise_snr_20db,white_noise_snr_10db,white_noise_snr_0db,gain_minus_12db,bandlimit_8khz_roundtrip \
+  --output-dir results/reproduction/robustness \
+  --resume --pretty
+```
 
-| Metric | Goal 1 (YAMNet+LGB) | Goal 2 (ESResNeXt) | Goal 3 (AudioCLIP) |
-|--------|---------------------|---------------------|---------------------|
-| **Test Segment Accuracy** | 74.4% | **76.8%** | 76.9% |
-| **Test Segment macro-F1** | **75.8%** | 74.0% | 75.5% |
-| **Test Clip Accuracy** | 80.2% | **84.1%** | 79.8% |
-| **Test Clip macro-F1** | 81.9% | **83.6%** | 79.8% |
-| **Inference Speed*** | ~220 seg/s | - | **~464 seg/s** |
-| **Training Time** | ~15 min | ~44 min | ~60-90 min |
-| **Trainable Params** | ~134K | ~25M | ~134M |
-| **GPU Requirement** | No** | Yes | Yes |
-| **Source File** | `results/` | `results_finetune_v2/` | `results_ft_q/` |
+Long-running extraction, training, and full evaluation commands should be reviewed before execution. Detailed benchmark scope and artifact references are in [BENCHMARKS.md](docs/BENCHMARKS.md).
 
-*Inference speed: Measured on validation set with NVIDIA A100 GPU  
-**Works without GPU but takes longer
+## Repository structure
 
-### Key Insights
-1. **Best Accuracy:** Goal 2 (ESResNeXt) - 84.1% clip accuracy
-2. **Best Speed/Accuracy Balance:** Goal 1 (YAMNet+LGB) - Baseline
-3. **Fastest Inference:** Goal 3 (AudioCLIP) - 2x faster
-4. **Practical Choice:** Goal 1 is sufficient and efficient for most applications
+```text
+urbansound_segment_task/
+  edge_v2/                  # CPU-first data, models, export, runtime, demo, evaluation
+  goals/                    # preserved historical case-study implementations
+scripts/                    # public CLI entry points
+requirements/               # platform-specific inputs and exact environment locks
+artifacts/                  # small manifests; large model binaries are ignored
+results/                    # machine-readable scientific and benchmark outputs
+docs/                       # audit, methodology-oriented guides, model card
+tests/unit/                 # framework-light and runtime unit tests
+cache/                      # ignored local YAMNet embedding cache
+```
 
-## Technical Details
+## Limitations
 
-### Data Splits
-- **Training:** Fold 1-8
-- **Validation:** Fold 9
-- **Test:** Fold 10
-- **Leak prevention:** Segments from the same clip never go to different sets
+- UrbanSound8K contains only ten urban sound classes and does not represent open-world audio.
+- The deployment all-data classifier has no independent held-out test metric.
+- Softmax confidence is uncalibrated and must not be interpreted as guaranteed correctness.
+- YAMNet dominates end-to-end latency and memory despite the tiny classifier.
+- The demo analyzes completed uploads or recordings; it is not streaming inference.
+- Audio shorter than 0.96 seconds has zero legacy segments and receives no prediction.
+- Incomplete tails are dropped rather than padded.
+- Robustness perturbations are controlled synthetic shifts, not a complete model of real environments.
+- Class support is limited for some fold/class combinations, especially `gun_shot`.
+- Included lock files are validated for macOS arm64 with Python 3.11, not every OS/CPU.
 
-### Segmentation
-- **Window length:** 0.96s (YAMNet compatible)
-- **Overlap:** 50%
-- **Sample rate:** 16kHz mono
+## Scientific integrity notes
 
-### Reproducibility
-- Fixed seed (42)
-- Deterministic data splits  
-- Pinned package versions
-- Fold-based split (official UrbanSound8K protocol)
+- Historical Goal results use a legacy single split unless explicitly stated otherwise.
+- Official Linear and LightGBM values are ten-fold means with population standard deviations.
+- Segments from one clip never cross train, validation, and test partitions.
+- Test folds are not used for model selection.
+- The robustness evaluation uses fold-specific models only on their own held-out folds.
+- The deployment-only all-data model is never used for scientific robustness metrics.
+- Classifier-only latency values are not presented as end-to-end audio-pipeline speedups.
+- Every final numeric claim above points to a machine-readable result artifact.
 
-### Hardware
-**Test Environment:** Tested with NVIDIA A100 40GB GPU. Also works on CPU but takes longer.
+## Artifact and license notes
+
+Datasets, embedding caches, pretrained checkpoints, Keras weights, ONNX binaries, and other large generated artifacts are intentionally excluded from Git. Trackable manifests record their expected hashes, sizes, contracts, and provenance.
+
+UrbanSound8K, YAMNet, TensorFlow, ONNX Runtime, Gradio, ESResNeXt, AudioCLIP, and other third-party components remain subject to their respective upstream terms. Verify those terms before redistribution or commercial use. This repository currently has no top-level `LICENSE` file; choosing and adding a project license is a release blocker that requires an explicit owner decision.

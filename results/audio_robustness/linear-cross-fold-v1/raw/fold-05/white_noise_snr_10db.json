@@ -1,0 +1,5854 @@
+{
+  "clean_control": null,
+  "clips": [
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-0.wav",
+      "confidence": 0.37597798449652536,
+      "confidence_change": -0.04161350216184345,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.9999999968063,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-1.wav",
+      "confidence": 0.4769654848745891,
+      "confidence_change": 0.016004700745855083,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994532248,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-10.wav",
+      "confidence": 0.39809228692735943,
+      "confidence_change": -0.04128463992050718,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002160485,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-11.wav",
+      "confidence": 0.36664151719638277,
+      "confidence_change": 0.006028421223163605,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000007254714,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-12.wav",
+      "confidence": 0.30585138286863056,
+      "confidence_change": -0.13853365182876587,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999230008,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-13.wav",
+      "confidence": 0.2924832488809313,
+      "confidence_change": -0.1905732899904251,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001242155,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-14.wav",
+      "confidence": 0.29893119101013454,
+      "confidence_change": -0.2022157939417022,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998135689,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-15.wav",
+      "confidence": 0.3579269903046744,
+      "confidence_change": -0.056868336030415134,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999993898935,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-16.wav",
+      "confidence": 0.340941920876503,
+      "confidence_change": -0.011848515697887974,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001003846,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-17.wav",
+      "confidence": 0.38595493137836456,
+      "confidence_change": 0.012865730694362087,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001045244,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-18.wav",
+      "confidence": 0.3726829524551119,
+      "confidence_change": -0.13061186884130754,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003515733,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-19.wav",
+      "confidence": 0.37201362209660666,
+      "confidence_change": -0.03513832816055845,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998972676,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-2.wav",
+      "confidence": 0.353676866207804,
+      "confidence_change": -0.06628860320363728,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002023153,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-20.wav",
+      "confidence": 0.396968631872109,
+      "confidence_change": -0.11334140705210821,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000008627282,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-21.wav",
+      "confidence": 0.6080468765326908,
+      "confidence_change": 0.10786871612071991,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001989244,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-22.wav",
+      "confidence": 0.45738344320229124,
+      "confidence_change": -0.05363267447267256,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999993077003,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 5,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-23.wav",
+      "confidence": 0.3906582849366324,
+      "confidence_change": -0.020221403666905002,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002742071,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-24.wav",
+      "confidence": 0.3921610436269215,
+      "confidence_change": -0.07408555064882555,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999993874034,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-25.wav",
+      "confidence": 0.4179083343063082,
+      "confidence_change": 0.1374041512608528,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000699647,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 0,
+      "clip_key": "fold5/100852-0-0-26.wav",
+      "confidence": 0.37988307007721495,
+      "confidence_change": 0.07601621747016907,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999244984,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-0-0.wav",
+      "confidence": 0.28765979409217834,
+      "confidence_change": -0.6214310228824615,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 22650,
+        "measured_snr_db": 10.000000008620336,
+        "output_sample_count": 22650,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-1-0.wav",
+      "confidence": 0.23583801090717316,
+      "confidence_change": -0.527036115527153,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 15840,
+        "measured_snr_db": 10.000000004638917,
+        "output_sample_count": 15840,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": true,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-2-0.wav",
+      "confidence": 0.3842907566577196,
+      "confidence_change": -0.036485958844423294,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 40770,
+        "measured_snr_db": 9.999999998463423,
+        "output_sample_count": 40770,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 4,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-3-0.wav",
+      "confidence": 0.5257687512785196,
+      "confidence_change": 0.10638007335364819,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 43035,
+        "measured_snr_db": 10.000000001570461,
+        "output_sample_count": 43035,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 4,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-4-0.wav",
+      "confidence": 0.31151594904561836,
+      "confidence_change": -0.21898712528248626,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 61120,
+        "measured_snr_db": 9.999999997737469,
+        "output_sample_count": 61120,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 6,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-5-0.wav",
+      "confidence": 0.3952312469482422,
+      "confidence_change": 0.09717604517936707,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 22650,
+        "measured_snr_db": 10.000000009106158,
+        "output_sample_count": 22650,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": true,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-6-0.wav",
+      "confidence": 0.427581624686718,
+      "confidence_change": -0.21077929884195323,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 47520,
+        "measured_snr_db": 10.000000001455767,
+        "output_sample_count": 47520,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 5,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/185436-1-7-0.wav",
+      "confidence": 0.40649479627609253,
+      "confidence_change": -0.43823349475860596,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 20320,
+        "measured_snr_db": 10.000000016929656,
+        "output_sample_count": 20320,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/26177-1-1-0.wav",
+      "confidence": 0.7787890434265137,
+      "confidence_change": -0.10260480642318726,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 18720,
+        "measured_snr_db": 9.999999983332584,
+        "output_sample_count": 18720,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/26177-1-2-0.wav",
+      "confidence": 0.6475820541381836,
+      "confidence_change": 0.062398046255111694,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 24099,
+        "measured_snr_db": 9.999999986904957,
+        "output_sample_count": 24099,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/46391-1-0-0.wav",
+      "confidence": 0.34767800250223707,
+      "confidence_change": -0.49210152775049204,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000102078,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/46391-1-1-0.wav",
+      "confidence": 0.47549551725387573,
+      "confidence_change": -0.051201462745666504,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17440,
+        "measured_snr_db": 9.999999996486991,
+        "output_sample_count": 17440,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/71439-1-0-0.wav",
+      "confidence": 0.9464333653450012,
+      "confidence_change": -0.05261421203613281,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 22080,
+        "measured_snr_db": 10.000000006408637,
+        "output_sample_count": 22080,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-0.wav",
+      "confidence": 0.543337515422276,
+      "confidence_change": -0.02152769693306522,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001486933,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-1.wav",
+      "confidence": 0.31041939769472393,
+      "confidence_change": -0.0800620264240674,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000006838963,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-2.wav",
+      "confidence": 0.2847943199532373,
+      "confidence_change": -0.21806031858847869,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001330696,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-3.wav",
+      "confidence": 0.3874500771718366,
+      "confidence_change": -0.011237123182841702,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000736161,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-4.wav",
+      "confidence": 0.4118046446570328,
+      "confidence_change": 0.026941524286355267,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000004673266,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 1,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-0-5.wav",
+      "confidence": 0.4099614694714546,
+      "confidence_change": -0.10490567024265018,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996581417,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 1,
+      "clip_key": "fold5/72259-1-1-0.wav",
+      "confidence": 0.31815009339091677,
+      "confidence_change": -0.16920410570067668,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 60320,
+        "measured_snr_db": 9.999999997499028,
+        "output_sample_count": 60320,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": true,
+      "segment_count": 6,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-117.wav",
+      "confidence": 0.5813167041965893,
+      "confidence_change": -0.12336747241871704,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001685535,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-121.wav",
+      "confidence": 0.573367355125291,
+      "confidence_change": -0.1763889640569687,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002159501,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-126.wav",
+      "confidence": 0.5041689574718475,
+      "confidence_change": -0.17583905799048283,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000123251,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-137.wav",
+      "confidence": 0.5690673930304391,
+      "confidence_change": -0.15115653617041458,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999545444,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-143.wav",
+      "confidence": 0.5963559704167503,
+      "confidence_change": -0.15227118985993515,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000176268,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-161.wav",
+      "confidence": 0.5542520965848651,
+      "confidence_change": -0.08951641832079205,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002404036,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-3.wav",
+      "confidence": 0.3883079705493791,
+      "confidence_change": -0.13015409771885184,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001211271,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/100263-2-0-36.wav",
+      "confidence": 0.3598920000450952,
+      "confidence_change": -0.17512477934360499,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999426928,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-1.wav",
+      "confidence": 0.9405315603528704,
+      "confidence_change": 0.2433268300124578,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002864661,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-15.wav",
+      "confidence": 0.9141624314444405,
+      "confidence_change": 0.03154027462005615,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002038302,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-20.wav",
+      "confidence": 0.9658700057438442,
+      "confidence_change": 0.2186950658048903,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997030745,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-29.wav",
+      "confidence": 0.838075944355556,
+      "confidence_change": -0.07962672199521736,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000280263,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-3.wav",
+      "confidence": 0.7953333567295756,
+      "confidence_change": 0.08196977313075748,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999800057,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-5.wav",
+      "confidence": 0.9662887709481376,
+      "confidence_change": 0.1834450406687601,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999556196,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-0-7.wav",
+      "confidence": 0.5657005906105042,
+      "confidence_change": 0.17440182782177416,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999995225346,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/104421-2-1-3.wav",
+      "confidence": 0.5837949525032725,
+      "confidence_change": 0.021067560783454398,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998524437,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/159439-2-0-0.wav",
+      "confidence": 0.6758712748331683,
+      "confidence_change": -0.245730957282441,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998680318,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/159439-2-0-10.wav",
+      "confidence": 0.6898183545895985,
+      "confidence_change": -0.16490813876901356,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000026736,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 2,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/159439-2-0-11.wav",
+      "confidence": 0.3826818125588553,
+      "confidence_change": -0.2364299552781241,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997867144,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 2,
+      "clip_key": "fold5/159439-2-0-19.wav",
+      "confidence": 0.48771333055836813,
+      "confidence_change": -0.1611060734306063,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999992158727,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/102547-3-0-2.wav",
+      "confidence": 0.5418363729757922,
+      "confidence_change": -0.3672068709773676,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997424846,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/102547-3-0-7.wav",
+      "confidence": 0.5465673885773867,
+      "confidence_change": -0.1936574198771268,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000027326,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/102547-3-0-8.wav",
+      "confidence": 0.5615067021655185,
+      "confidence_change": -0.24936988444200592,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999995192395,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/110371-3-0-1.wav",
+      "confidence": 0.850757509469986,
+      "confidence_change": -0.11143282907349727,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001901252,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/110371-3-1-0.wav",
+      "confidence": 0.47180711078856674,
+      "confidence_change": -0.10876599246902119,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994377847,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/110371-3-1-1.wav",
+      "confidence": 0.4514903192009245,
+      "confidence_change": -0.11585365235805506,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999940467,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/116163-3-2-0.wav",
+      "confidence": 0.43992459774017334,
+      "confidence_change": -0.5598426461219788,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17901,
+        "measured_snr_db": 9.999999995686489,
+        "output_sample_count": 17901,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/126521-3-0-12.wav",
+      "confidence": 0.45509231090545654,
+      "confidence_change": 0.24536108438457763,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999990232928,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/126521-3-0-17.wav",
+      "confidence": 0.5839892838682447,
+      "confidence_change": 0.3225944678166082,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996125874,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/126521-3-0-18.wav",
+      "confidence": 0.6046694197825023,
+      "confidence_change": 0.3094229815261705,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000007514894,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/126521-3-0-2.wav",
+      "confidence": 0.44146040081977844,
+      "confidence_change": 0.21637493797710963,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000289688,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/13577-3-0-0.wav",
+      "confidence": 0.405390046154415,
+      "confidence_change": -0.03507282259358491,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001702567,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/13577-3-0-2.wav",
+      "confidence": 0.38859308298145023,
+      "confidence_change": -0.2218993934137481,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998049843,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/13577-3-5-0.wav",
+      "confidence": 0.6584412285259792,
+      "confidence_change": 0.3516908460961921,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999199078,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/139948-3-0-0.wav",
+      "confidence": 0.5052248418331147,
+      "confidence_change": 0.20111512541770937,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 49866,
+        "measured_snr_db": 10.000000005475183,
+        "output_sample_count": 49866,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 5,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/139948-3-1-0.wav",
+      "confidence": 0.6541227132081986,
+      "confidence_change": 0.2260000109672547,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 47840,
+        "measured_snr_db": 10.000000000907267,
+        "output_sample_count": 47840,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 5,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/139948-3-2-0.wav",
+      "confidence": 0.8835312724113464,
+      "confidence_change": 0.05219578742980957,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 20960,
+        "measured_snr_db": 10.000000006886939,
+        "output_sample_count": 20960,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/139948-3-4-0.wav",
+      "confidence": 0.9425103664398193,
+      "confidence_change": 0.053807079792022705,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 19680,
+        "measured_snr_db": 9.99999999693456,
+        "output_sample_count": 19680,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/173993-3-0-25.wav",
+      "confidence": 0.42019202400531086,
+      "confidence_change": -0.2076307072171143,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000004034831,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 3,
+      "clip_key": "fold5/173993-3-0-39.wav",
+      "confidence": 0.6628978933606829,
+      "confidence_change": -0.16310400622231613,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998297417,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/118440-4-4-0.wav",
+      "confidence": 0.9994903802871704,
+      "confidence_change": 0.006862223148345947,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 15520,
+        "measured_snr_db": 9.999999993542968,
+        "output_sample_count": 15520,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-0-16.wav",
+      "confidence": 0.7240008514906678,
+      "confidence_change": -0.06941129746181629,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999724764,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-0-17.wav",
+      "confidence": 0.7988394243376595,
+      "confidence_change": -0.1377640877451216,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997382936,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-1-3.wav",
+      "confidence": 0.8882689135415214,
+      "confidence_change": -0.10320522955485745,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997280637,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-1-5.wav",
+      "confidence": 0.6783240905829838,
+      "confidence_change": 0.06738816414560589,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003811047,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-1-7.wav",
+      "confidence": 0.5853420879159655,
+      "confidence_change": -0.11199460285050522,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996681524,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-1-8.wav",
+      "confidence": 0.8377864360809326,
+      "confidence_change": -0.01988375186920166,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998622565,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-2-1.wav",
+      "confidence": 0.881630437714713,
+      "confidence_change": -0.06939062050410683,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003534764,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-2-13.wav",
+      "confidence": 0.932771120752607,
+      "confidence_change": -0.04057673045567112,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000377268,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-2-14.wav",
+      "confidence": 0.7850417218038014,
+      "confidence_change": -0.12994199352605007,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000975318,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-2-15.wav",
+      "confidence": 0.6660372561642102,
+      "confidence_change": -0.10041152260133202,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999201842,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-2-17.wav",
+      "confidence": 0.4352946696536882,
+      "confidence_change": 0.07451465353369713,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000231324,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-0.wav",
+      "confidence": 0.784103981086186,
+      "confidence_change": 0.2445291344608579,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002887564,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-1.wav",
+      "confidence": 0.6988388427666256,
+      "confidence_change": 0.0630813155855452,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999327329,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-10.wav",
+      "confidence": 0.8711838722229004,
+      "confidence_change": -0.07670044047491886,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999481367,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-2.wav",
+      "confidence": 0.8274242877960205,
+      "confidence_change": -0.011934535843985405,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996537419,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-22.wav",
+      "confidence": 0.8132113644054958,
+      "confidence_change": 0.2552599821771895,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003593644,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-24.wav",
+      "confidence": 0.7870389563696725,
+      "confidence_change": 0.014861345291137695,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999992444957,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180125-4-3-4.wav",
+      "confidence": 0.8284762586866107,
+      "confidence_change": -0.06275204249790733,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999995459728,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 4,
+      "clip_key": "fold5/180128-4-0-0.wav",
+      "confidence": 0.6365469034229007,
+      "confidence_change": -0.04666192829608917,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997307935,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/106487-5-0-0.wav",
+      "confidence": 0.7869742512702942,
+      "confidence_change": -0.19240696089608333,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997020444,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/106487-5-0-1.wav",
+      "confidence": 0.8263643554278782,
+      "confidence_change": -0.16601918424878803,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998482227,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/106487-5-0-2.wav",
+      "confidence": 0.6729245185852051,
+      "confidence_change": -0.31716227531433105,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001240664,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-0.wav",
+      "confidence": 0.5174980142286846,
+      "confidence_change": -0.23544807306357796,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996568905,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-1.wav",
+      "confidence": 0.60940968138831,
+      "confidence_change": -0.2216360994747707,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003302214,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-10.wav",
+      "confidence": 0.32593284121581484,
+      "confidence_change": -0.207564472087792,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002913445,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-11.wav",
+      "confidence": 0.5150256305932999,
+      "confidence_change": 0.08416128531098366,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.9999999944134,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 3,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-12.wav",
+      "confidence": 0.24855183703558786,
+      "confidence_change": -0.30542936495372225,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001605452,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-2.wav",
+      "confidence": 0.5170292258262634,
+      "confidence_change": -0.304461521761758,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001395527,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-3.wav",
+      "confidence": 0.49671782340322224,
+      "confidence_change": -0.2369384510176522,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.9999999947222,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-4.wav",
+      "confidence": 0.5326050711529595,
+      "confidence_change": -0.2409517786332539,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999091454,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-5.wav",
+      "confidence": 0.40133836013930185,
+      "confidence_change": -0.28089758753776545,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996713333,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-6.wav",
+      "confidence": 0.3306264031146254,
+      "confidence_change": -0.3474604226648808,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003560022,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-7.wav",
+      "confidence": 0.5973900215966361,
+      "confidence_change": -0.316668553011758,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.0000000007459,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-8.wav",
+      "confidence": 0.3115035061325346,
+      "confidence_change": -0.2564405288015093,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999708917,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-0-9.wav",
+      "confidence": 0.31134219467639923,
+      "confidence_change": -0.1267555042036942,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996342238,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-1-0.wav",
+      "confidence": 0.6403861897332328,
+      "confidence_change": -0.1830790511199406,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998810697,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-2-0.wav",
+      "confidence": 0.4700684632573809,
+      "confidence_change": 0.031801494769752026,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996433287,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-2-1.wav",
+      "confidence": 0.6912493918623243,
+      "confidence_change": 0.12563089174883701,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000352669,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 5,
+      "clip_key": "fold5/156634-5-2-2.wav",
+      "confidence": 0.689740777015686,
+      "confidence_change": 0.2564092917101724,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997589264,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145609-6-0-0.wav",
+      "confidence": 0.4718383252620697,
+      "confidence_change": -0.526471883058548,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 20251,
+        "measured_snr_db": 9.99999999284663,
+        "output_sample_count": 20251,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145609-6-1-0.wav",
+      "confidence": 0.9768329858779907,
+      "confidence_change": -0.02120453119277954,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17387,
+        "measured_snr_db": 9.999999997130901,
+        "output_sample_count": 17387,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145611-6-0-0.wav",
+      "confidence": 0.5064398646354675,
+      "confidence_change": -0.42920589447021484,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 18509,
+        "measured_snr_db": 9.999999994252223,
+        "output_sample_count": 18509,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145611-6-1-0.wav",
+      "confidence": 0.46541425585746765,
+      "confidence_change": -0.5327868759632111,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 18808,
+        "measured_snr_db": 10.000000006024539,
+        "output_sample_count": 18808,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145611-6-2-0.wav",
+      "confidence": 0.7584953308105469,
+      "confidence_change": -0.23967105150222778,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17600,
+        "measured_snr_db": 9.999999992164012,
+        "output_sample_count": 17600,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145611-6-3-0.wav",
+      "confidence": 0.5310375690460205,
+      "confidence_change": -0.46392178535461426,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17912,
+        "measured_snr_db": 9.999999999743261,
+        "output_sample_count": 17912,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/145611-6-4-0.wav",
+      "confidence": 0.6452077627182007,
+      "confidence_change": -0.35162287950515747,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 16960,
+        "measured_snr_db": 10.00000000940944,
+        "output_sample_count": 16960,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/148841-6-0-0.wav",
+      "confidence": 0.5642295330762863,
+      "confidence_change": -0.43402551114559174,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 24320,
+        "measured_snr_db": 10.000000005197196,
+        "output_sample_count": 24320,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/148841-6-1-0.wav",
+      "confidence": 0.9716804027557373,
+      "confidence_change": -0.027572214603424072,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 21277,
+        "measured_snr_db": 9.999999998028086,
+        "output_sample_count": 21277,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/148841-6-2-0.wav",
+      "confidence": 0.504743573255837,
+      "confidence_change": -0.06484682392328978,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 26490,
+        "measured_snr_db": 10.000000009311268,
+        "output_sample_count": 26490,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-0-0.wav",
+      "confidence": 0.36574993282556534,
+      "confidence_change": -0.6337463185191154,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 30371,
+        "measured_snr_db": 10.000000006561278,
+        "output_sample_count": 30371,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-1-0.wav",
+      "confidence": 0.2914542108774185,
+      "confidence_change": -0.706286296248436,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 32640,
+        "measured_snr_db": 10.000000000870665,
+        "output_sample_count": 32640,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 3,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-2-0.wav",
+      "confidence": 0.2138979807496071,
+      "confidence_change": -0.7859396263957024,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 24960,
+        "measured_snr_db": 10.000000001006754,
+        "output_sample_count": 24960,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-3-0.wav",
+      "confidence": 0.44434184790588915,
+      "confidence_change": -0.5549931728746742,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 28000,
+        "measured_snr_db": 9.999999997434355,
+        "output_sample_count": 28000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-4-0.wav",
+      "confidence": 0.3457347129782041,
+      "confidence_change": -0.6539359912276268,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 36960,
+        "measured_snr_db": 9.999999995901645,
+        "output_sample_count": 36960,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 3,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-5-0.wav",
+      "confidence": 0.2951491333078593,
+      "confidence_change": -0.5626734339166433,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 39040,
+        "measured_snr_db": 10.000000001687733,
+        "output_sample_count": 39040,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 4,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159701-6-6-0.wav",
+      "confidence": 0.35739211935045506,
+      "confidence_change": -0.6382907162284635,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 32261,
+        "measured_snr_db": 10.00000000490845,
+        "output_sample_count": 32261,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 0,
+      "prediction_flipped": true,
+      "segment_count": 3,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/159703-6-0-0.wav",
+      "confidence": 0.4665986984036863,
+      "confidence_change": -0.5332952649332583,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 29920,
+        "measured_snr_db": 9.99999999719316,
+        "output_sample_count": 29920,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 2,
+      "segment_start_samples": [
+        0,
+        7680
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/162432-6-0-0.wav",
+      "confidence": 0.6446829438209534,
+      "confidence_change": -0.3419949412345886,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 16956,
+        "measured_snr_db": 10.000000006914313,
+        "output_sample_count": 16956,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "clip_key": "fold5/162432-6-1-0.wav",
+      "confidence": 0.8880072832107544,
+      "confidence_change": -0.09698915481567383,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 17440,
+        "measured_snr_db": 9.999999999578955,
+        "output_sample_count": 17440,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 6,
+      "prediction_flipped": false,
+      "segment_count": 1,
+      "segment_start_samples": [
+        0
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-0-5.wav",
+      "confidence": 0.6853878327778408,
+      "confidence_change": -0.08567534174237934,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003929351,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-1.wav",
+      "confidence": 0.9185774070875985,
+      "confidence_change": 0.048577197960444796,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999993791883,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-10.wav",
+      "confidence": 0.92612943478993,
+      "confidence_change": 0.11957062993730816,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000004088985,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-13.wav",
+      "confidence": 0.9765768647193909,
+      "confidence_change": 0.022580759865897027,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994313507,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-15.wav",
+      "confidence": 0.9906720433916364,
+      "confidence_change": 0.02555779899869637,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999127527,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-8.wav",
+      "confidence": 0.9138533983911786,
+      "confidence_change": 0.07287802866527004,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000006750081,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-10-9.wav",
+      "confidence": 0.8774429048810687,
+      "confidence_change": 0.09377045290810726,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999991288266,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-11-0.wav",
+      "confidence": 0.982811621257237,
+      "confidence_change": 0.0026100448199680715,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994697754,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-11-2.wav",
+      "confidence": 0.9263025777680534,
+      "confidence_change": -0.034865507057734835,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000390967,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-12-2.wav",
+      "confidence": 0.8875787854194641,
+      "confidence_change": -0.0043361527579171,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002910356,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-14-1.wav",
+      "confidence": 0.9326683964048114,
+      "confidence_change": 0.07645802838461746,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999984558,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-14-5.wav",
+      "confidence": 0.9575308305876595,
+      "confidence_change": -0.011963231222970161,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999176044,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-14-6.wav",
+      "confidence": 0.96250433581216,
+      "confidence_change": -0.012595534324645996,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000215957,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-15-1.wav",
+      "confidence": 0.9378045541899545,
+      "confidence_change": -0.01420072146824436,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999996503469,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-15-3.wav",
+      "confidence": 0.9551821351051331,
+      "confidence_change": -0.006490656307765463,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000451825,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-15-5.wav",
+      "confidence": 0.8896733777863639,
+      "confidence_change": -0.03613768305097309,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000574342,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-15-9.wav",
+      "confidence": 0.9066484315054757,
+      "confidence_change": 0.012047180107661593,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000544993,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-16-0.wav",
+      "confidence": 0.9351508702550616,
+      "confidence_change": -0.04244207484381535,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003317489,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-16-10.wav",
+      "confidence": 0.7809273856026786,
+      "confidence_change": 0.013772615364619711,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999234412,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 7,
+      "clip_key": "fold5/104998-7-16-11.wav",
+      "confidence": 0.7116968589169639,
+      "confidence_change": -0.07897454074450894,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001011866,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 7,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-0.wav",
+      "confidence": 0.8307390468461173,
+      "confidence_change": -0.1661260638918195,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999862167,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-1.wav",
+      "confidence": 0.5960821679660252,
+      "confidence_change": -0.37586530617305214,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000055028,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-10.wav",
+      "confidence": 0.9722493972097125,
+      "confidence_change": -0.026688490595136338,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998569601,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-11.wav",
+      "confidence": 0.917036601475307,
+      "confidence_change": -0.08191120624542236,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002407619,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-12.wav",
+      "confidence": 0.5938878474490983,
+      "confidence_change": -0.3776594411049571,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001199151,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-13.wav",
+      "confidence": 0.6240224721176284,
+      "confidence_change": -0.36415817375694004,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999995180232,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-14.wav",
+      "confidence": 0.9433419874736241,
+      "confidence_change": -0.054223273481641465,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002989847,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-15.wav",
+      "confidence": 0.986793577671051,
+      "confidence_change": -0.011941952364785346,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.99999999411404,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-16.wav",
+      "confidence": 0.9812078986849103,
+      "confidence_change": -0.017447045871189726,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000000953024,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-17.wav",
+      "confidence": 0.7712062001228333,
+      "confidence_change": -0.22137056078229633,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999998370502,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-18.wav",
+      "confidence": 0.6175647580197879,
+      "confidence_change": -0.36495155628238407,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997511305,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-19.wav",
+      "confidence": 0.7772565654345921,
+      "confidence_change": -0.21876712356294903,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001724914,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-2.wav",
+      "confidence": 0.6122398525476456,
+      "confidence_change": -0.37326816362994053,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002085594,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-20.wav",
+      "confidence": 0.8860482445784977,
+      "confidence_change": -0.10874832102230614,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997397806,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-21.wav",
+      "confidence": 0.9892326763698033,
+      "confidence_change": -0.008757718971797446,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999355838,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-22.wav",
+      "confidence": 0.9613222224371774,
+      "confidence_change": -0.0367862922804697,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999993362945,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-3.wav",
+      "confidence": 0.8781109622546605,
+      "confidence_change": -0.11850680623735699,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999520458,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-4.wav",
+      "confidence": 0.9839522412845066,
+      "confidence_change": -0.015084377356938017,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000385316,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-5.wav",
+      "confidence": 0.9871623175484794,
+      "confidence_change": -0.010970354080200195,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002377794,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 8,
+      "clip_key": "fold5/111671-8-0-6.wav",
+      "confidence": 0.9654756443841117,
+      "confidence_change": -0.03268906048365994,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999991126105,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 8,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-1.wav",
+      "confidence": 0.30310224422386717,
+      "confidence_change": -0.3100068345665931,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000172589,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-10.wav",
+      "confidence": 0.45924280158111025,
+      "confidence_change": -0.4797381098781313,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999940844,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-12.wav",
+      "confidence": 0.27657634552036015,
+      "confidence_change": -0.3624229207634926,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001866926,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-13.wav",
+      "confidence": 0.36167892600808826,
+      "confidence_change": -0.2430211901664734,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000007432657,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-14.wav",
+      "confidence": 0.571374135357993,
+      "confidence_change": -0.17423925229481285,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999999316534,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/105425-9-0-23.wav",
+      "confidence": 0.48236810096672605,
+      "confidence_change": -0.39432535214083536,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000002215879,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-15.wav",
+      "confidence": 0.6572036147117615,
+      "confidence_change": -0.29634398221969604,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994646831,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-2.wav",
+      "confidence": 0.6041986112083707,
+      "confidence_change": -0.3080167834247862,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994878245,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-27.wav",
+      "confidence": 0.7815234405653817,
+      "confidence_change": -0.13932756866727558,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994424304,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-30.wav",
+      "confidence": 0.633473025900977,
+      "confidence_change": -0.335812053510121,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000079166,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-44.wav",
+      "confidence": 0.8267147966793605,
+      "confidence_change": -0.10530351740973332,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999995010516,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/108357-9-0-49.wav",
+      "confidence": 0.684246518782207,
+      "confidence_change": -0.23663855024746483,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000003055495,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/109263-9-0-34.wav",
+      "confidence": 0.593848147562572,
+      "confidence_change": -0.09462276526859825,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997385798,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/109263-9-0-39.wav",
+      "confidence": 0.4088178426027298,
+      "confidence_change": -0.27066224600587574,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999994331892,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/109263-9-0-54.wav",
+      "confidence": 0.5087099117892129,
+      "confidence_change": -0.08240925839969093,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000338643,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/109263-9-0-61.wav",
+      "confidence": 0.3840874859264919,
+      "confidence_change": -0.3065815355096544,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000006952085,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/109263-9-0-78.wav",
+      "confidence": 0.8624876993043082,
+      "confidence_change": 0.3171486678932395,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.999999997475621,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 4,
+      "prediction_flipped": true,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/113601-9-0-22.wav",
+      "confidence": 0.5101545325347355,
+      "confidence_change": -0.26544149858610977,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.000000001059941,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/113601-9-0-3.wav",
+      "confidence": 0.28099782126290457,
+      "confidence_change": -0.34252618040357313,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 9.9999999967179,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    },
+    {
+      "class_id": 9,
+      "clip_key": "fold5/113601-9-0-33.wav",
+      "confidence": 0.2743674899850573,
+      "confidence_change": -0.6650873380047935,
+      "fold": 5,
+      "perturbation": {
+        "condition": "white_noise_snr_10db",
+        "hard_clipping_applied": false,
+        "input_sample_count": 64000,
+        "measured_snr_db": 10.00000000588301,
+        "output_sample_count": 64000,
+        "segment_start_samples_unchanged": true,
+        "silent_input": false,
+        "target_snr_db": 10.0
+      },
+      "predicted_class_id": 9,
+      "prediction_flipped": false,
+      "segment_count": 7,
+      "segment_start_samples": [
+        0,
+        7680,
+        15360,
+        23040,
+        30720,
+        38400,
+        46080
+      ]
+    }
+  ],
+  "condition": "white_noise_snr_10db",
+  "created_at_utc": "2026-07-12T23:13:00Z",
+  "duration_seconds": 3.4144871248863637,
+  "fold": 5,
+  "metrics": {
+    "accuracy": 0.62,
+    "class_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "confidence_change_mean": -0.12781087630152857,
+    "confusion_matrix": [
+      [
+        11,
+        0,
+        0,
+        0,
+        0,
+        8,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        9,
+        2,
+        0,
+        3,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        10,
+        0,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        7,
+        0,
+        0,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        19,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        14,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        11,
+        0,
+        0,
+        0,
+        0,
+        9
+      ]
+    ],
+    "macro_f1": 0.6259163289608174,
+    "per_class": [
+      {
+        "class_id": 0,
+        "f1": 0.3283582089552239,
+        "precision": 0.23404255319148937,
+        "recall": 0.55,
+        "support": 20
+      },
+      {
+        "class_id": 1,
+        "f1": 0.6206896551724138,
+        "precision": 1.0,
+        "recall": 0.45,
+        "support": 20
+      },
+      {
+        "class_id": 2,
+        "f1": 0.625,
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "support": 20
+      },
+      {
+        "class_id": 3,
+        "f1": 0.7647058823529411,
+        "precision": 0.9285714285714286,
+        "recall": 0.65,
+        "support": 20
+      },
+      {
+        "class_id": 4,
+        "f1": 0.5714285714285714,
+        "precision": 0.4186046511627907,
+        "recall": 0.9,
+        "support": 20
+      },
+      {
+        "class_id": 5,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 20
+      },
+      {
+        "class_id": 6,
+        "f1": 0.8235294117647058,
+        "precision": 1.0,
+        "recall": 0.7,
+        "support": 20
+      },
+      {
+        "class_id": 7,
+        "f1": 0.9523809523809523,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "support": 20
+      },
+      {
+        "class_id": 8,
+        "f1": 0.9523809523809523,
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "support": 20
+      },
+      {
+        "class_id": 9,
+        "f1": 0.6206896551724138,
+        "precision": 1.0,
+        "recall": 0.45,
+        "support": 20
+      }
+    ],
+    "prediction_count": 200,
+    "prediction_flip_rate": 0.31,
+    "segment_count": 1210
+  },
+  "model_identity": {
+    "architecture_id": "linear",
+    "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+    "fold_identity_sha256": "9c9db6b98c9920f4d16037bb04867b33b36674a0b8707c8e94b0a54edb663971",
+    "model_sha256": "6f8621f9d7bcb0b9686f38f8027e0d467a6270d675f60093d7c1d5097f62c04f",
+    "model_size_bytes": 47920,
+    "parameter_count": 10250,
+    "split_manifest_sha256": "6ef8381008fd9146ad92d43e9714d6fec91685c4d30bc571da19effcdb0c0c0c",
+    "test_fold": 5,
+    "validation_fold": 6
+  },
+  "panel_identity_sha256": "17da17adcbe3fb8c529728684688c63157bc79a802433ed1a2680bf8052ab656",
+  "result_sha256": "dba59e85ee78f69a0f65a00b05b5e0793031035d1152e92222fd0117c98f5511",
+  "run_identity_sha256": "bdcaae935e9a68955a2d23a9a83d7655bf6890b4df1f19eec7306db5e802d6a8",
+  "schema_version": "edge-v2.audio-robustness-fold-condition.v1",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "unit_identity_sha256": "d4a98b9d2582287163aed735ac4ba737c8a113d4580310a1db9bade07793c7de",
+  "validation_fold": 6
+}

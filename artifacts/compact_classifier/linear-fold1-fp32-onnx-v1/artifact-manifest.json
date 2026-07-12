@@ -1,0 +1,107 @@
+{
+  "architecture_id": "linear",
+  "converter": {
+    "method": "tf2onnx.convert.from_keras",
+    "onnx_version": "1.17.0",
+    "tensorflow_version": "2.15.1",
+    "tf2onnx_version": "1.16.1",
+    "tf_keras_version": "2.15.1"
+  },
+  "created_at_utc": "2026-07-12T20:57:14Z",
+  "fold_identity": {
+    "fold_identity_sha256": "2f4e76b9a2a1a146b998c5d6f325a52d142ff16cc5708605ac24aeb1fbb1825e",
+    "selection_reason": "deterministic_first_fold_not_best_fold_selection",
+    "test_fold": 1,
+    "validation_fold": 2
+  },
+  "input_contract": {
+    "dtype": "float32",
+    "name": "embedding",
+    "shape": [
+      "batch",
+      1024
+    ]
+  },
+  "limitations": [
+    "Accepts only precomputed 1024-value YAMNet embeddings.",
+    "Does not include YAMNet, raw audio decoding, segmentation, preprocessing, or clip aggregation.",
+    "Representative export smoke uses deterministic Fold 1 and is not a full deployment model.",
+    "No FP16 or INT8 conversion is included."
+  ],
+  "manifest_sha256": "e058298d78ae44196d7d2910aed74cc7625e4f0ac3ecbd3d3a51f009241fe9e9",
+  "onnx_artifact": {
+    "precision": "fp32",
+    "relative_path": "model.onnx",
+    "sha256": "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329",
+    "size_bytes": 41795
+  },
+  "onnx_graph": {
+    "graph": {
+      "custom_domains": [],
+      "initializer_count": 2,
+      "input": {
+        "dtype": "float32",
+        "name": "embedding",
+        "shape": [
+          "unk__6",
+          1024
+        ]
+      },
+      "node_count": 3,
+      "node_types": [
+        "MatMul",
+        "Add",
+        "Softmax"
+      ],
+      "output": {
+        "dtype": "float32",
+        "name": "probabilities",
+        "shape": [
+          "unk__7",
+          10
+        ]
+      }
+    },
+    "ir_version": 8,
+    "opset": 15,
+    "opset_imports": {
+      "": 15,
+      "ai.onnx.ml": 2
+    }
+  },
+  "opset": 15,
+  "output_contract": {
+    "dtype": "float32",
+    "name": "probabilities",
+    "semantic": "softmax_probabilities",
+    "shape": [
+      "batch",
+      10
+    ]
+  },
+  "parameter_count": 10250,
+  "runtime": {
+    "python_version": "3.11.15",
+    "target": "onnxruntime_cpu"
+  },
+  "schema_version": "edge-v2.onnx-export.v1",
+  "source_model": {
+    "architecture_id": "linear",
+    "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+    "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+    "fold_identity_sha256": "2f4e76b9a2a1a146b998c5d6f325a52d142ff16cc5708605ac24aeb1fbb1825e",
+    "parameter_count": 10250,
+    "run_identity_sha256": "fcd7b71f9677ffa8e2ad41c3e7af1cf77e9893b952b6b127e74e25af39443e31",
+    "source_model_identity": "21c902924da3de90c68fbdd6b7a7bc2151de5f06a96156653e303490343f1e86",
+    "split_manifest_sha256": "9fac5c3b1d0e1c13c9ffa9732dec00160ac05d667163134b93cfc768e3e88bbc",
+    "test_fold": 1,
+    "validation_fold": 2,
+    "weights_relative_path": "model.weights.h5"
+  },
+  "source_model_identity": "21c902924da3de90c68fbdd6b7a7bc2151de5f06a96156653e303490343f1e86",
+  "source_model_sha256": "7538f47869e4ad5901074a1602e1217d3a9192f98fbd6d3d9f9ebac9bc708301",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  }
+}

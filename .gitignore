@@ -12,6 +12,8 @@ __pycache__/
 
 .venv-yamnet/
 .venv-onnx/
+.venv-edge-runtime/
+.venv-demo/
 artifacts/yamnet/tfhub-v1/model/
 artifacts/compact_classifier/*/model.onnx
 artifacts/compact_classifier/*/model.int8.onnx
@@ -19,6 +21,7 @@ cache/yamnet_embeddings/
 results/lightgbm_legacy_reproduction/*/model.txt
 results/lightgbm_cross_fold/*/fold-*/model.txt
 results/compact_classifier_cross_fold/*/*/fold-*/model.weights.h5
+results/deployment_classifier/*/model.weights.h5
 
 *.npy
 *.npz
@@ -26,4 +29,3 @@ results/compact_classifier_cross_fold/*/*/fold-*/model.weights.h5
 *.csv.zip
 *.tar.gz
 *.log
-*.pt

@@ -1,0 +1,162 @@
+{
+  "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+  "conditions": [
+    "clean",
+    "white_noise_snr_20db",
+    "white_noise_snr_10db",
+    "white_noise_snr_0db",
+    "gain_minus_12db",
+    "bandlimit_8khz_roundtrip"
+  ],
+  "created_at_utc": "2026-07-12T23:25:17Z",
+  "dataset_manifest_sha256": "c77946581016eba9aacf00683ba073ccb537f0ca6bfd86ab50d9cea3734c7d2e",
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "model_identities": {
+    "1": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "2f4e76b9a2a1a146b998c5d6f325a52d142ff16cc5708605ac24aeb1fbb1825e",
+      "model_sha256": "7538f47869e4ad5901074a1602e1217d3a9192f98fbd6d3d9f9ebac9bc708301",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "9fac5c3b1d0e1c13c9ffa9732dec00160ac05d667163134b93cfc768e3e88bbc",
+      "test_fold": 1,
+      "validation_fold": 2
+    },
+    "10": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "6d943fa142c40463a1a9d8db4e2c0cdf7d28f38c0697fc635e9ec7b1d5286a16",
+      "model_sha256": "1ea8ed38194dc63fe90b765eceda7f2ecbb42ced2300b8b2e002981cfd778c9a",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "a34454196a4a0d3937a69d07f4ac17aed4276065191192ce1ded0a13fd447c18",
+      "test_fold": 10,
+      "validation_fold": 1
+    },
+    "2": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "7b3ba239a4101dce0ac1026272101ed419ba1c041b77453548516f31b02dfde7",
+      "model_sha256": "5624466ea57010b4f741bb2732a184e376326b8447e5f53f327f74b007a4a115",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "082537d7e83688fa7b2f4f37fe23069ff0bed9a3d43f589e04a710b806c79b77",
+      "test_fold": 2,
+      "validation_fold": 3
+    },
+    "3": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "7149bf490fe1ad0f3e90ef438d765f17dccd486af49bc445d92f188ef1acf4a1",
+      "model_sha256": "22c757d0d56bcee369048bcc3044cfb3a2849473e0a931da290df4fa7c810a99",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "a4c4fcf2e1ff2b96a41916ac8eef8b4844a2783f64d8b68425422b8c9c42f7f6",
+      "test_fold": 3,
+      "validation_fold": 4
+    },
+    "4": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "9de30624fa69c4f1bc23fa40420b5eb7db2a1078f438d104b36fe29de8c4a746",
+      "model_sha256": "6ca6e780ffceceb962f037e96dc7c5401b1349484297204f80bcc395181c5655",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "c1aeed49d9b2393a80063b8e35c880a3008a15ce0b8c45a8dcca6a208d11d1c8",
+      "test_fold": 4,
+      "validation_fold": 5
+    },
+    "5": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "9c9db6b98c9920f4d16037bb04867b33b36674a0b8707c8e94b0a54edb663971",
+      "model_sha256": "6f8621f9d7bcb0b9686f38f8027e0d467a6270d675f60093d7c1d5097f62c04f",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "6ef8381008fd9146ad92d43e9714d6fec91685c4d30bc571da19effcdb0c0c0c",
+      "test_fold": 5,
+      "validation_fold": 6
+    },
+    "6": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "f35942d1c683b2ff4f8ae39e2efab48f0b572f35019954f0e5f09ce564498d27",
+      "model_sha256": "3b3960e8a8e31767089ba86f12fc30f97fb97fc9036b78476acf29b5bf779e3a",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "086dd153b234ee0bf0c73d9b84edcfe9b0ae1cecfcd522b176abaa806fde7cc2",
+      "test_fold": 6,
+      "validation_fold": 7
+    },
+    "7": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "bff49dced443dbe4b069bd65fce4a832243d6bb15f043ba49237ecb06b57d9e0",
+      "model_sha256": "4b5a4f5f163d8362a223ccec533523cbe104e3a292521c449b83630cfcb69f75",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "4ac13fac6a4a40760af8e94d2af1a69b5e6621589248a78ad922d658a30bdd31",
+      "test_fold": 7,
+      "validation_fold": 8
+    },
+    "8": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "6a9c3551a80e23d0cee6c4e34d38118b157d6f16f22e2a2a368fec639946a5f1",
+      "model_sha256": "f11d9a5b48145b4682eaba601b9a18b27730ce9270bbbab7c30eb067f0fc55dd",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "ed5938816c72bb4e24fdd49537267bfb88677eba6c1bdcf64614371c20232e90",
+      "test_fold": 8,
+      "validation_fold": 9
+    },
+    "9": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "915626f6696a58b206cf5884fc1558f06d62bd3e8414ab9a39263e6bc6d5cbb4",
+      "model_sha256": "8f29a5fc47bb9aa1eeef3f5ae91e6f0ff5fcf212e53823ca8912ffbcb7de4853",
+      "model_size_bytes": 47920,
+      "parameter_count": 10250,
+      "split_manifest_sha256": "b29945784b4327a984d2050f82519719ff72cb38c5278aba8f2c31258ac5f09c",
+      "test_fold": 9,
+      "validation_fold": 10
+    }
+  },
+  "panel_identity_sha256": "17da17adcbe3fb8c529728684688c63157bc79a802433ed1a2680bf8052ab656",
+  "run_identity_sha256": "bdcaae935e9a68955a2d23a9a83d7655bf6890b4df1f19eec7306db5e802d6a8",
+  "runtime_config": {
+    "audio_loader": "librosa.load(sr=16000,mono=True,dtype=float32,res_type=soxr_hq)",
+    "classifier_runtime": "tensorflow_keras_weights",
+    "clip_aggregation": "arithmetic_mean_of_canonical_class_probabilities",
+    "cpu_only": true,
+    "threads": 8,
+    "yamnet_loader": "tf.saved_model.load(local_path)"
+  },
+  "schema_version": "edge-v2.audio-robustness-run.v1",
+  "segmentation_policy": {
+    "channels": "mono",
+    "hop_samples": 7680,
+    "model_input_dtype": "float32",
+    "normalization": "pcm_waveform_to_minus_one_plus_one",
+    "overlap_fraction": 0.5,
+    "policy_id": "yamnet-legacy-full-window-v1",
+    "short_clip_policy": "emit_zero_segment",
+    "tail_policy": "drop",
+    "target_sample_rate": 16000,
+    "window_duration_seconds": 0.96,
+    "window_samples": 15360
+  },
+  "yamnet_tree_sha256": "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a91229ff0336582e25c2"
+}
