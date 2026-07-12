@@ -18,6 +18,7 @@ from urbansound_segment_task.edge_v2.runtime.audio import (
     preprocess_audio,
 )
 from urbansound_segment_task.edge_v2.runtime.pipeline import (
+    AudioDurationLimitError,
     EXPECTED_YAMNET_TREE_SHA256,
     LocalOnnxClassifier,
     LocalYamnetAdapter,
@@ -219,6 +220,27 @@ class OfflineAudioRuntimeTests(unittest.TestCase):
         self.assertEqual(result["status"]["outcome"], "no_prediction")
         self.assertEqual(result["status"]["reason"], "zero_segments_under_legacy_policy")
         self.assertEqual(result["runtime"]["model_load_counts"], {"yamnet": 0, "onnx_classifier": 0})
+
+    def test_duration_limit_is_rejected_before_preprocessing_or_models(self) -> None:
+        too_long = raw_audio(np.zeros((1, 1), dtype=np.float32))
+        too_long = RawAudio(
+            samples=too_long.samples, audio_sha256=too_long.audio_sha256,
+            safe_name=too_long.safe_name, original_sample_rate=16_000,
+            original_channel_count=1, original_frame_count=496_000,
+            original_duration_seconds=31.0,
+        )
+        with patch(
+            "urbansound_segment_task.edge_v2.runtime.pipeline.verify_runtime_artifacts", return_value=verified()
+        ):
+            with self.assertRaises(AudioDurationLimitError):
+                run_offline_audio_inference(
+                    audio_path=Path("x.wav"), yamnet_artifact=Path("y"), classifier_artifact=Path("c"),
+                    audio_decoder=lambda path: too_long,
+                    audio_preprocessor=lambda raw: self.fail("preprocessing must not run"),
+                    yamnet_factory=lambda *args, **kwargs: self.fail("YAMNet must not load"),
+                    classifier_factory=lambda *args, **kwargs: self.fail("classifier must not load"),
+                    max_duration_seconds=30.0,
+                )
 
     def test_pipeline_reuses_legacy_segments_and_loads_models_once(self) -> None:
         with patch(

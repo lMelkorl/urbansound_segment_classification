@@ -37,6 +37,10 @@ EXPECTED_YAMNET_TREE_SHA256 = "5d3bccc6549dcf864250dd52b9ffa35a1aec0f2b6f88a9122
 EXPECTED_ONNX_SHA256 = "641f41921612048c8ed51d7c7c9d8f8f534827d08a091f87dd5900929731a329"
 
 
+class AudioDurationLimitError(ValueError):
+    """Raised before resampling or inference when the source WAV is too long."""
+
+
 @dataclass(frozen=True)
 class VerifiedClassifier:
     model_path: Path
@@ -203,6 +207,104 @@ def _top_predictions(probabilities: np.ndarray, count: int) -> list[dict[str, An
     ]
 
 
+class ReusableOfflineAudioRuntime:
+    """One verified model pair reused by every completed upload/microphone request."""
+
+    def __init__(
+        self,
+        *,
+        yamnet_artifact: Path,
+        classifier_artifact: Path,
+        threads: int = 1,
+        clock_ns: Callable[[], int] = time.perf_counter_ns,
+        yamnet_factory: Callable[..., Any] = LocalYamnetAdapter,
+        classifier_factory: Callable[..., Any] = LocalOnnxClassifier,
+    ) -> None:
+        if threads < 1:
+            raise ValueError("threads must be positive")
+        self.yamnet_artifact = Path(yamnet_artifact)
+        self.classifier_artifact = Path(classifier_artifact)
+        self.threads = threads
+        startup_start = int(clock_ns())
+        stage = int(clock_ns())
+        yamnet_identity, classifier_identity = verify_runtime_artifacts(
+            self.yamnet_artifact, self.classifier_artifact
+        )
+        verification_ns = int(clock_ns()) - stage
+        stage = int(clock_ns())
+        warm_raw = RawAudio(
+            samples=np.zeros((800, 1), dtype=np.float32),
+            audio_sha256="0" * 64,
+            safe_name="synthetic-warmup.wav",
+            original_sample_rate=8_000,
+            original_channel_count=1,
+            original_frame_count=800,
+            original_duration_seconds=0.1,
+        )
+        warm_audio = preprocess_audio(warm_raw)
+        resampling_warmup_ns = int(clock_ns()) - stage
+        if warm_audio.resampled_sample_count != 1_600:
+            raise ValueError("resampling warm-up contract mismatch")
+        stage = int(clock_ns())
+        yamnet = yamnet_factory(self.yamnet_artifact, threads=threads)
+        yamnet_load_ns = int(clock_ns()) - stage
+        stage = int(clock_ns())
+        classifier = classifier_factory(classifier_identity.model_path, threads=threads)
+        classifier_load_ns = int(clock_ns()) - stage
+        stage = int(clock_ns())
+        feature, shapes = yamnet.embed(np.zeros(15_360, dtype=np.float32))
+        probabilities = classifier.predict(np.asarray(feature, dtype=np.float32).reshape(1, 1024))
+        inference_warmup_ns = int(clock_ns()) - stage
+        if shapes["frame_count"] < 1 or probabilities.shape != (1, 10):
+            raise ValueError("runtime warm-up output contract mismatch")
+        self.yamnet_identity = yamnet_identity
+        self.classifier_identity = classifier_identity
+        self.yamnet = yamnet
+        self.classifier = classifier
+        self.model_load_counts = {"yamnet": 1, "onnx_classifier": 1}
+        self.request_count = 0
+        self.startup_timing = {
+            "artifact_verification_ns": verification_ns,
+            "resampling_warmup_ns": resampling_warmup_ns,
+            "yamnet_load_ns": yamnet_load_ns,
+            "onnx_session_creation_ns": classifier_load_ns,
+            "synthetic_inference_warmup_ns": inference_warmup_ns,
+            "startup_end_to_end_ns": int(clock_ns()) - startup_start,
+        }
+
+    def analyze(
+        self, audio_path: Path, *, max_duration_seconds: float = 30.0
+    ) -> dict[str, Any]:
+        result = run_offline_audio_inference(
+            audio_path=Path(audio_path),
+            yamnet_artifact=self.yamnet_artifact,
+            classifier_artifact=self.classifier_artifact,
+            threads=self.threads,
+            max_duration_seconds=max_duration_seconds,
+            yamnet_factory=lambda artifact, threads: self.yamnet,
+            classifier_factory=lambda model, threads: self.classifier,
+        )
+        self.request_count += 1
+        result["runtime"]["model_load_counts"] = dict(self.model_load_counts)
+        result["runtime"]["reusable_runtime_request_count"] = self.request_count
+        return result
+
+    def safe_status(self) -> dict[str, Any]:
+        return {
+            "ready": True,
+            "mode": "offline_local_only",
+            "model_load_counts": dict(self.model_load_counts),
+            "request_count": self.request_count,
+            "active_onnx_providers": list(self.classifier.active_providers),
+            "yamnet_artifact_tree_sha256": self.yamnet_identity["tree_sha256"],
+            "classifier_artifact_sha256": self.classifier_identity.onnx_sha256,
+            "deployment_only": self.classifier_identity.deployment_only,
+            "tensorflow_version": self.yamnet.tensorflow_version,
+            "onnxruntime_version": self.classifier.onnxruntime_version,
+            "startup_timing": dict(self.startup_timing),
+        }
+
+
 def run_offline_audio_inference(
     *,
     audio_path: Path,
@@ -216,6 +318,7 @@ def run_offline_audio_inference(
     audio_preprocessor: Callable[[RawAudio], DecodedAudio] = preprocess_audio,
     yamnet_factory: Callable[..., Any] = LocalYamnetAdapter,
     classifier_factory: Callable[..., Any] = LocalOnnxClassifier,
+    max_duration_seconds: Optional[float] = None,
     now: Any = None,
 ) -> dict[str, Any]:
     if threads < 1:
@@ -230,6 +333,11 @@ def run_offline_audio_inference(
     stage_start = int(clock_ns())
     raw_audio = audio_decoder(Path(audio_path))
     decode_ns = int(clock_ns()) - stage_start
+    if max_duration_seconds is not None:
+        if max_duration_seconds <= 0:
+            raise ValueError("maximum duration must be positive")
+        if raw_audio.original_duration_seconds > max_duration_seconds:
+            raise AudioDurationLimitError("audio duration exceeds the configured local demo limit")
     stage_start = int(clock_ns())
     audio = audio_preprocessor(raw_audio)
     preprocessing_ns = int(clock_ns()) - stage_start
@@ -368,7 +476,8 @@ def run_offline_audio_inference(
 
 
 __all__ = [
-    "EXPECTED_ONNX_SHA256", "EXPECTED_YAMNET_TREE_SHA256", "LocalOnnxClassifier",
-    "LocalYamnetAdapter", "VerifiedClassifier", "run_offline_audio_inference",
+    "AudioDurationLimitError", "EXPECTED_ONNX_SHA256", "EXPECTED_YAMNET_TREE_SHA256",
+    "LocalOnnxClassifier", "LocalYamnetAdapter", "ReusableOfflineAudioRuntime",
+    "VerifiedClassifier", "run_offline_audio_inference",
     "verify_classifier_artifact", "verify_runtime_artifacts",
 ]
