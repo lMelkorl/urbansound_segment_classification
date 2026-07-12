@@ -13,6 +13,9 @@ __pycache__/
 .venv-yamnet/
 artifacts/yamnet/tfhub-v1/model/
 cache/yamnet_embeddings/
+results/lightgbm_legacy_reproduction/*/model.txt
+results/lightgbm_cross_fold/*/fold-*/model.txt
+results/compact_classifier_cross_fold/*/*/fold-*/model.weights.h5
 
 *.npy
 *.npz

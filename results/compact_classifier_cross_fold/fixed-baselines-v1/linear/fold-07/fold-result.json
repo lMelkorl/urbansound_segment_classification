@@ -1,0 +1,1333 @@
+{
+  "architecture": {
+    "architecture_id": "linear",
+    "input_features": 1024,
+    "layers": [
+      {
+        "activation": "softmax",
+        "type": "dense",
+        "units": 10
+      }
+    ],
+    "parameter_count": 10250
+  },
+  "architecture_id": "linear",
+  "artifacts": {
+    "benchmark": {
+      "relative_path": "classifier-benchmark.json",
+      "sha256": "02dc7443cae6096311a4ef30b89231b96ebd59f73f6aa263fa166b7a354fecb2",
+      "size_bytes": 3039
+    },
+    "config": {
+      "relative_path": "training-config.json",
+      "sha256": "5569510791ca435614ce264760fff38afba4659184f7a1140f002945396e3a0b",
+      "size_bytes": 1423
+    },
+    "history": {
+      "relative_path": "epoch-history.csv",
+      "sha256": "46635d86e8ac34d273cd5079b6c5539f75df254cf31c2cb4ea774eca2c5ae5d2",
+      "size_bytes": 1125
+    },
+    "model": {
+      "architecture_id": "linear",
+      "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+      "fold_identity_sha256": "bff49dced443dbe4b069bd65fce4a832243d6bb15f043ba49237ecb06b57d9e0",
+      "format": "keras_hdf5_weights_only",
+      "keras_version": "2.15.0",
+      "parameter_count": 10250,
+      "relative_path": "model.weights.h5",
+      "sha256": "4b5a4f5f163d8362a223ccec533523cbe104e3a292521c449b83630cfcb69f75",
+      "size_bytes": 47920,
+      "tensorflow_version": "2.15.1"
+    },
+    "per_class": {
+      "relative_path": "per-class-metrics.csv",
+      "sha256": "0bbb96b40567275b7772cd76dacef924059468c0adef165f62bbb71c14e7664e",
+      "size_bytes": 2952
+    }
+  },
+  "cache_identity": "6b0807688796f3f19ca7129867a518f893d18566ffd057cb31a5302bd6fd17ce",
+  "class_weights": {
+    "0": 0.7823403113258186,
+    "1": 2.8976143141153083,
+    "2": 0.7909732272069464,
+    "3": 1.059743092583616,
+    "4": 0.9211080682536339,
+    "5": 0.7874122096164236,
+    "6": 7.684534270650263,
+    "7": 0.835243553008596,
+    "8": 0.8298538622129437,
+    "9": 0.7808035714285714
+  },
+  "classifier_benchmark": {
+    "first_call_latency": {
+      "duration": 258459,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "label": "classifier_only_cached_embedding_batch1",
+    "load_time": {
+      "duration": 4593500,
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "timer_source": "time.perf_counter_ns",
+      "unit": "nanoseconds"
+    },
+    "peak_rss": {
+      "after_bytes": 2119712768,
+      "approximate_incremental_bytes": 0,
+      "before_bytes": 2119712768,
+      "source": "resource.getrusage(RUSAGE_SELF).ru_maxrss"
+    },
+    "scope": {
+      "audio_decode_included": false,
+      "batch_size": 1,
+      "yamnet_included": false
+    },
+    "status": {
+      "error": null,
+      "outcome": "success"
+    },
+    "steady_state": {
+      "status": {
+        "error": null,
+        "outcome": "success"
+      },
+      "throughput": {
+        "calls_per_second": 5974.042903067032,
+        "items_per_second": 5974.042903067032,
+        "real_time_factor": null
+      },
+      "timing": {
+        "maximum": 199541,
+        "mean": 167390.83,
+        "minimum": 161292,
+        "p50": 165166.5,
+        "p95": 184879.44999999998,
+        "p99": 191869.49000000005,
+        "percentile_method": "linear_interpolation_at_rank_(n-1)*q",
+        "raw_samples": [
+          168084,
+          167083,
+          167459,
+          169708,
+          167416,
+          166083,
+          165583,
+          164875,
+          174417,
+          166792,
+          166541,
+          166125,
+          165167,
+          164458,
+          165625,
+          165166,
+          164250,
+          164834,
+          165458,
+          162500,
+          166500,
+          168625,
+          164750,
+          164666,
+          165167,
+          174292,
+          165417,
+          172166,
+          179791,
+          184792,
+          199541,
+          173458,
+          164625,
+          167334,
+          164542,
+          166291,
+          165125,
+          165875,
+          166625,
+          191792,
+          189750,
+          169250,
+          167334,
+          164000,
+          163334,
+          167417,
+          166583,
+          175375,
+          175000,
+          166583,
+          163666,
+          164834,
+          166708,
+          163792,
+          163792,
+          163333,
+          163583,
+          164875,
+          164583,
+          164166,
+          164292,
+          165042,
+          164417,
+          163625,
+          164208,
+          161292,
+          162666,
+          162875,
+          163875,
+          162000,
+          163458,
+          162834,
+          163375,
+          166375,
+          172125,
+          171292,
+          166167,
+          168542,
+          163833,
+          164542,
+          162042,
+          161833,
+          161625,
+          162083,
+          163833,
+          163208,
+          163334,
+          164834,
+          171708,
+          186541,
+          186667,
+          166000,
+          163667,
+          165833,
+          162375,
+          162833,
+          169667,
+          170292,
+          163792,
+          163125
+        ],
+        "standard_deviation": 6677.716289353719,
+        "timer_source": "time.perf_counter_ns",
+        "unit": "nanoseconds"
+      }
+    }
+  },
+  "config_sha256": "1161b11855620601b39d82f08b5894e4ed135df20f2ea8db38fd72b8ce173605",
+  "created_at_utc": "2026-07-12T20:34:12Z",
+  "data_counts": {
+    "test": {
+      "evaluable_clip_count": 803,
+      "excluded_zero_segment_clip_count": 35,
+      "feature_dtype": "float32",
+      "feature_shape": [
+        5265,
+        1024
+      ],
+      "folds": [
+        7
+      ],
+      "metadata_clip_count": 838,
+      "segment_count": 5265
+    },
+    "train": {
+      "evaluable_clip_count": 6741,
+      "excluded_zero_segment_clip_count": 347,
+      "feature_dtype": "float32",
+      "feature_shape": [
+        43725,
+        1024
+      ],
+      "folds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "metadata_clip_count": 7088,
+      "segment_count": 43725
+    },
+    "validation": {
+      "evaluable_clip_count": 755,
+      "excluded_zero_segment_clip_count": 51,
+      "feature_dtype": "float32",
+      "feature_shape": [
+        4928,
+        1024
+      ],
+      "folds": [
+        8
+      ],
+      "metadata_clip_count": 806,
+      "segment_count": 4928
+    }
+  },
+  "fold_identity_sha256": "bff49dced443dbe4b069bd65fce4a832243d6bb15f043ba49237ecb06b57d9e0",
+  "policy_id": "official-fold-rotating-validation-v1",
+  "run_identity_sha256": "fcd7b71f9677ffa8e2ad41c3e7af1cf77e9893b952b6b127e74e25af39443e31",
+  "runtime": {
+    "accelerator": "none_cpu_only",
+    "keras_version": "2.15.0",
+    "tensorflow_version": "2.15.1"
+  },
+  "schema_version": "edge-v2.compact-classifier-fold.v1",
+  "selection": {
+    "best_epoch": 5,
+    "best_validation_clip_macro_f1": 0.7769668420015515,
+    "epochs_completed": 10,
+    "metric": "validation_clip_macro_f1",
+    "restore_best_weights": true,
+    "source": "official_validation_fold_only",
+    "test_fold_used_for_selection": false
+  },
+  "split_manifest_sha256": "4ac13fac6a4a40760af8e94d2af1a69b5e6621589248a78ad922d658a30bdd31",
+  "status": {
+    "error": null,
+    "outcome": "success"
+  },
+  "test_fold": 7,
+  "test_metrics": {
+    "clip": {
+      "accuracy": 0.7982565379825654,
+      "aggregation": "arithmetic_mean_of_canonical_class_probabilities",
+      "class_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "confusion_matrix": [
+        [
+          74,
+          0,
+          0,
+          0,
+          8,
+          15,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          18,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          95,
+          1,
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          3,
+          84,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          92,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          21,
+          2,
+          0,
+          0,
+          0,
+          81,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          38,
+          0,
+          0,
+          0
+        ],
+        [
+          45,
+          0,
+          0,
+          0,
+          13,
+          4,
+          0,
+          14,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          57,
+          4
+        ],
+        [
+          0,
+          1,
+          4,
+          0,
+          4,
+          1,
+          0,
+          0,
+          2,
+          88
+        ]
+      ],
+      "evaluable_clip_count": 803,
+      "excluded_zero_segment_clip_count": 35,
+      "macro_f1": 0.7917229661474909,
+      "metadata_clip_count": 838,
+      "per_class": [
+        {
+          "class_id": 0,
+          "f1": 0.592,
+          "precision": 0.49333333333333335,
+          "recall": 0.74,
+          "support": 100
+        },
+        {
+          "class_id": 1,
+          "f1": 0.8,
+          "precision": 0.72,
+          "recall": 0.9,
+          "support": 20
+        },
+        {
+          "class_id": 2,
+          "f1": 0.9405940594059405,
+          "precision": 0.9313725490196079,
+          "recall": 0.95,
+          "support": 100
+        },
+        {
+          "class_id": 3,
+          "f1": 0.9545454545454546,
+          "precision": 0.9882352941176471,
+          "recall": 0.9230769230769231,
+          "support": 91
+        },
+        {
+          "class_id": 4,
+          "f1": 0.847926267281106,
+          "precision": 0.7796610169491526,
+          "recall": 0.9292929292929293,
+          "support": 99
+        },
+        {
+          "class_id": 5,
+          "f1": 0.7641509433962265,
+          "precision": 0.7641509433962265,
+          "recall": 0.7641509433962265,
+          "support": 106
+        },
+        {
+          "class_id": 6,
+          "f1": 0.987012987012987,
+          "precision": 0.9743589743589743,
+          "recall": 1.0,
+          "support": 38
+        },
+        {
+          "class_id": 7,
+          "f1": 0.2916666666666667,
+          "precision": 0.7,
+          "recall": 0.18421052631578946,
+          "support": 76
+        },
+        {
+          "class_id": 8,
+          "f1": 0.8321167883211679,
+          "precision": 0.890625,
+          "recall": 0.7808219178082192,
+          "support": 73
+        },
+        {
+          "class_id": 9,
+          "f1": 0.9072164948453608,
+          "precision": 0.9361702127659575,
+          "recall": 0.88,
+          "support": 100
+        }
+      ],
+      "prediction_count": 803
+    },
+    "prediction_seconds": 0.0026951248291879892,
+    "probability_alignment": {
+      "canonical_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "column_mapping": [
+        {
+          "canonical_column": 0,
+          "class_id": 0,
+          "model_column": 0
+        },
+        {
+          "canonical_column": 1,
+          "class_id": 1,
+          "model_column": 1
+        },
+        {
+          "canonical_column": 2,
+          "class_id": 2,
+          "model_column": 2
+        },
+        {
+          "canonical_column": 3,
+          "class_id": 3,
+          "model_column": 3
+        },
+        {
+          "canonical_column": 4,
+          "class_id": 4,
+          "model_column": 4
+        },
+        {
+          "canonical_column": 5,
+          "class_id": 5,
+          "model_column": 5
+        },
+        {
+          "canonical_column": 6,
+          "class_id": 6,
+          "model_column": 6
+        },
+        {
+          "canonical_column": 7,
+          "class_id": 7,
+          "model_column": 7
+        },
+        {
+          "canonical_column": 8,
+          "class_id": 8,
+          "model_column": 8
+        },
+        {
+          "canonical_column": 9,
+          "class_id": 9,
+          "model_column": 9
+        }
+      ],
+      "missing_model_classes": [],
+      "model_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "segment": {
+      "accuracy": 0.7388414055080722,
+      "class_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "confusion_matrix": [
+        [
+          505,
+          0,
+          1,
+          4,
+          47,
+          112,
+          2,
+          28,
+          1,
+          0
+        ],
+        [
+          2,
+          58,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          12
+        ],
+        [
+          41,
+          3,
+          562,
+          24,
+          8,
+          0,
+          3,
+          2,
+          16,
+          34
+        ],
+        [
+          22,
+          0,
+          30,
+          475,
+          6,
+          0,
+          10,
+          0,
+          21,
+          12
+        ],
+        [
+          49,
+          3,
+          0,
+          2,
+          574,
+          30,
+          0,
+          16,
+          1,
+          12
+        ],
+        [
+          123,
+          13,
+          4,
+          0,
+          1,
+          560,
+          1,
+          26,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          137,
+          0,
+          0,
+          0
+        ],
+        [
+          280,
+          10,
+          0,
+          2,
+          62,
+          24,
+          0,
+          70,
+          4,
+          0
+        ],
+        [
+          54,
+          37,
+          2,
+          14,
+          3,
+          20,
+          0,
+          0,
+          345,
+          32
+        ],
+        [
+          12,
+          11,
+          42,
+          1,
+          22,
+          2,
+          0,
+          0,
+          6,
+          604
+        ]
+      ],
+      "macro_f1": 0.7168416232563606,
+      "per_class": [
+        {
+          "class_id": 0,
+          "f1": 0.5636160714285714,
+          "precision": 0.4624542124542125,
+          "recall": 0.7214285714285714,
+          "support": 700
+        },
+        {
+          "class_id": 1,
+          "f1": 0.5471698113207547,
+          "precision": 0.42028985507246375,
+          "recall": 0.7837837837837838,
+          "support": 74
+        },
+        {
+          "class_id": 2,
+          "f1": 0.8425787106446777,
+          "precision": 0.8767550702028081,
+          "recall": 0.810966810966811,
+          "support": 693
+        },
+        {
+          "class_id": 3,
+          "f1": 0.8652094717668488,
+          "precision": 0.9099616858237548,
+          "recall": 0.8246527777777778,
+          "support": 576
+        },
+        {
+          "class_id": 4,
+          "f1": 0.813607370659107,
+          "precision": 0.7928176795580111,
+          "recall": 0.8355167394468704,
+          "support": 687
+        },
+        {
+          "class_id": 5,
+          "f1": 0.7567567567567568,
+          "precision": 0.7486631016042781,
+          "recall": 0.7650273224043715,
+          "support": 732
+        },
+        {
+          "class_id": 6,
+          "f1": 0.9225589225589226,
+          "precision": 0.8954248366013072,
+          "recall": 0.9513888888888888,
+          "support": 144
+        },
+        {
+          "class_id": 7,
+          "f1": 0.2356902356902357,
+          "precision": 0.49295774647887325,
+          "recall": 0.15486725663716813,
+          "support": 452
+        },
+        {
+          "class_id": 8,
+          "f1": 0.7632743362831859,
+          "precision": 0.8690176322418136,
+          "recall": 0.6804733727810651,
+          "support": 507
+        },
+        {
+          "class_id": 9,
+          "f1": 0.8579545454545454,
+          "precision": 0.8531073446327684,
+          "recall": 0.8628571428571429,
+          "support": 700
+        }
+      ],
+      "prediction_count": 5265
+    }
+  },
+  "training": {
+    "after_training_peak_rss_bytes": 2119712768,
+    "approximate_incremental_peak_rss_bytes": 0,
+    "before_training_peak_rss_bytes": 2119712768,
+    "duration_seconds": 1.0289504169486463
+  },
+  "training_folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9,
+    10
+  ],
+  "validation_fold": 8,
+  "validation_metrics": {
+    "clip": {
+      "accuracy": 0.7827814569536424,
+      "aggregation": "arithmetic_mean_of_canonical_class_probabilities",
+      "class_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "confusion_matrix": [
+        [
+          59,
+          0,
+          21,
+          0,
+          0,
+          5,
+          0,
+          4,
+          1,
+          10
+        ],
+        [
+          1,
+          13,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          74,
+          3,
+          0,
+          1,
+          3,
+          1,
+          8,
+          6
+        ],
+        [
+          2,
+          2,
+          3,
+          72,
+          4,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          93,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          76,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          16,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          48,
+          3,
+          0,
+          24,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          74,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          1,
+          3,
+          1,
+          90
+        ]
+      ],
+      "evaluable_clip_count": 755,
+      "excluded_zero_segment_clip_count": 51,
+      "macro_f1": 0.7769668420015515,
+      "metadata_clip_count": 806,
+      "per_class": [
+        {
+          "class_id": 0,
+          "f1": 0.6900584795321637,
+          "precision": 0.8309859154929577,
+          "recall": 0.59,
+          "support": 100
+        },
+        {
+          "class_id": 1,
+          "f1": 0.7647058823529411,
+          "precision": 0.6842105263157895,
+          "recall": 0.8666666666666667,
+          "support": 15
+        },
+        {
+          "class_id": 2,
+          "f1": 0.7254901960784313,
+          "precision": 0.7115384615384616,
+          "recall": 0.74,
+          "support": 100
+        },
+        {
+          "class_id": 3,
+          "f1": 0.8888888888888888,
+          "precision": 0.935064935064935,
+          "recall": 0.8470588235294118,
+          "support": 85
+        },
+        {
+          "class_id": 4,
+          "f1": 0.7591836734693878,
+          "precision": 0.636986301369863,
+          "recall": 0.9393939393939394,
+          "support": 99
+        },
+        {
+          "class_id": 5,
+          "f1": 0.8888888888888888,
+          "precision": 0.8837209302325582,
+          "recall": 0.8941176470588236,
+          "support": 85
+        },
+        {
+          "class_id": 6,
+          "f1": 0.8648648648648649,
+          "precision": 0.7619047619047619,
+          "recall": 1.0,
+          "support": 16
+        },
+        {
+          "class_id": 7,
+          "f1": 0.42105263157894735,
+          "precision": 0.6153846153846154,
+          "recall": 0.32,
+          "support": 75
+        },
+        {
+          "class_id": 8,
+          "f1": 0.896969696969697,
+          "precision": 0.8705882352941177,
+          "recall": 0.925,
+          "support": 80
+        },
+        {
+          "class_id": 9,
+          "f1": 0.8695652173913043,
+          "precision": 0.8411214953271028,
+          "recall": 0.9,
+          "support": 100
+        }
+      ],
+      "prediction_count": 755
+    },
+    "prediction_seconds": 0.0017782088834792376,
+    "probability_alignment": {
+      "canonical_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "column_mapping": [
+        {
+          "canonical_column": 0,
+          "class_id": 0,
+          "model_column": 0
+        },
+        {
+          "canonical_column": 1,
+          "class_id": 1,
+          "model_column": 1
+        },
+        {
+          "canonical_column": 2,
+          "class_id": 2,
+          "model_column": 2
+        },
+        {
+          "canonical_column": 3,
+          "class_id": 3,
+          "model_column": 3
+        },
+        {
+          "canonical_column": 4,
+          "class_id": 4,
+          "model_column": 4
+        },
+        {
+          "canonical_column": 5,
+          "class_id": 5,
+          "model_column": 5
+        },
+        {
+          "canonical_column": 6,
+          "class_id": 6,
+          "model_column": 6
+        },
+        {
+          "canonical_column": 7,
+          "class_id": 7,
+          "model_column": 7
+        },
+        {
+          "canonical_column": 8,
+          "class_id": 8,
+          "model_column": 8
+        },
+        {
+          "canonical_column": 9,
+          "class_id": 9,
+          "model_column": 9
+        }
+      ],
+      "missing_model_classes": [],
+      "model_classes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "segment": {
+      "accuracy": 0.7175324675324676,
+      "class_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "confusion_matrix": [
+        [
+          380,
+          10,
+          123,
+          2,
+          6,
+          59,
+          1,
+          19,
+          10,
+          90
+        ],
+        [
+          4,
+          63,
+          9,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2
+        ],
+        [
+          44,
+          7,
+          456,
+          61,
+          0,
+          8,
+          18,
+          13,
+          39,
+          50
+        ],
+        [
+          32,
+          11,
+          24,
+          384,
+          27,
+          5,
+          11,
+          3,
+          11,
+          7
+        ],
+        [
+          9,
+          28,
+          3,
+          0,
+          526,
+          12,
+          0,
+          19,
+          4,
+          1
+        ],
+        [
+          37,
+          2,
+          13,
+          0,
+          8,
+          475,
+          0,
+          36,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          37,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          265,
+          36,
+          0,
+          166,
+          0,
+          0
+        ],
+        [
+          19,
+          12,
+          2,
+          17,
+          11,
+          0,
+          16,
+          0,
+          465,
+          12
+        ],
+        [
+          16,
+          15,
+          23,
+          7,
+          5,
+          1,
+          8,
+          26,
+          15,
+          584
+        ]
+      ],
+      "macro_f1": 0.6816966191035682,
+      "per_class": [
+        {
+          "class_id": 0,
+          "f1": 0.6124093473005641,
+          "precision": 0.7024029574861368,
+          "recall": 0.5428571428571428,
+          "support": 700
+        },
+        {
+          "class_id": 1,
+          "f1": 0.5550660792951542,
+          "precision": 0.42567567567567566,
+          "recall": 0.7974683544303798,
+          "support": 79
+        },
+        {
+          "class_id": 2,
+          "f1": 0.676056338028169,
+          "precision": 0.6983154670750383,
+          "recall": 0.6551724137931034,
+          "support": 696
+        },
+        {
+          "class_id": 3,
+          "f1": 0.7757575757575758,
+          "precision": 0.8084210526315789,
+          "recall": 0.7456310679611651,
+          "support": 515
+        },
+        {
+          "class_id": 4,
+          "f1": 0.7250172294968987,
+          "precision": 0.6195524146054181,
+          "recall": 0.8737541528239202,
+          "support": 602
+        },
+        {
+          "class_id": 5,
+          "f1": 0.8126603934987169,
+          "precision": 0.7969798657718121,
+          "recall": 0.8289703315881326,
+          "support": 573
+        },
+        {
+          "class_id": 6,
+          "f1": 0.5648854961832062,
+          "precision": 0.40217391304347827,
+          "recall": 0.9487179487179487,
+          "support": 39
+        },
+        {
+          "class_id": 7,
+          "f1": 0.44148936170212766,
+          "precision": 0.5886524822695035,
+          "recall": 0.35319148936170214,
+          "support": 470
+        },
+        {
+          "class_id": 8,
+          "f1": 0.8469945355191257,
+          "precision": 0.8547794117647058,
+          "recall": 0.8393501805054152,
+          "support": 554
+        },
+        {
+          "class_id": 9,
+          "f1": 0.8066298342541437,
+          "precision": 0.7807486631016043,
+          "recall": 0.8342857142857143,
+          "support": 700
+        }
+      ],
+      "prediction_count": 4928
+    }
+  }
+}

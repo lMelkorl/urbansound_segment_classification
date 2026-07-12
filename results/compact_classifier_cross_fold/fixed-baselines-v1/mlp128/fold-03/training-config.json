@@ -1,0 +1,73 @@
+{
+  "architecture": {
+    "architecture_id": "mlp128",
+    "input_features": 1024,
+    "layers": [
+      {
+        "activation": "relu",
+        "type": "dense",
+        "units": 128
+      },
+      {
+        "rate": 0.2,
+        "type": "dropout"
+      },
+      {
+        "activation": "softmax",
+        "type": "dense",
+        "units": 10
+      }
+    ],
+    "parameter_count": 132490
+  },
+  "batch_size": 512,
+  "canonical_classes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "class_weight": {
+    "mode": "balanced",
+    "source": "training_segments_only"
+  },
+  "classifier_benchmark": {
+    "batch_size": 1,
+    "iterations": 100,
+    "label": "classifier_only_cached_embedding_batch1",
+    "warmup": 20,
+    "yamnet_included": false
+  },
+  "clip_aggregation": "arithmetic_mean_of_canonical_class_probabilities",
+  "config_sha256": "62f2f37f41e0ec7fd0c9f3a5f83cf72ac97748c39ffb7040add4044b1bd91161",
+  "cpu_only": true,
+  "early_stopping": {
+    "metric": "validation_clip_macro_f1",
+    "min_delta": 0.001,
+    "patience": 5,
+    "restore_best_weights": true
+  },
+  "learning_rate": 0.001,
+  "loss": "sparse_categorical_crossentropy",
+  "maximum_epochs": 30,
+  "model_artifact": {
+    "architecture_reconstructed_from_fixed_config": true,
+    "format": "keras_hdf5_weights_only",
+    "optimizer_state_included": false
+  },
+  "optimizer": "keras.optimizers.Adam",
+  "seed": 42,
+  "shuffle": {
+    "test": false,
+    "training": true,
+    "validation": false
+  },
+  "threads": 8,
+  "validation_source": "official_rotating_validation_fold"
+}
