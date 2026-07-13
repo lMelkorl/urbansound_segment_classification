@@ -1,5 +1,10 @@
 # Edge Audio V2 — Offline Urban Sound Classification
 
+
+<img width="887" height="872" alt="Ekran Resmi 2026-07-13 10 59 34" src="https://github.com/user-attachments/assets/c9ff9d70-426d-485d-b4e7-5681c0dfbe63" />
+<img width="522" height="769" alt="Ekran Resmi 2026-07-13 11 00 34" src="https://github.com/user-attachments/assets/54e36cab-7424-41a0-84c2-fc780b247b50" />
+
+
 ## Project overview
 
 Edge Audio V2 is a reproducible, CPU-first environmental sound classification system built on the UrbanSound8K case study in this repository. The deployable path is:
